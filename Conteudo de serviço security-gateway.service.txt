@@ -1,0 +1,13 @@
+[Unit]
+Description=Python Security Gateway for Juice Shop login
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/security_gateway.py
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target

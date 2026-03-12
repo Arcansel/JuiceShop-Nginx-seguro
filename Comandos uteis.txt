@@ -1,0 +1,8 @@
+sudo chown -R $USER:$USER .
+sudo chown -R root:root .
+script -t 2>timing.txt log.txt
+perl -pe 's/\e\[[0-9;?]*[ -\/]*[@-~]//g; s/\r//g; s/\e\][^\a]*(\a|\e\\)//g; s/[\x00-\x08\x0b-\x1f\x7f]//g' log.txt | col -b > clean.txt
+sudo tail -f /var/log/nginx/access.log
+for i in {1..100}; do curl -s -o /dev/null -w "%{http_code}\n" http://loja.local:8443; done | sort | uniq -c
+sudo fail2ban-client set vsftpd unbanip 172.20.155.61
+sudo systemctl start security-gateway.service

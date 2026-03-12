@@ -1,0 +1,232 @@
+#!/usr/bin/env python3
+import json
+import logging
+import re
+import time
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
+
+BACKEND_LOGIN_URL = "http://127.0.0.1:3000/rest/user/login"
+LISTEN_HOST = "127.0.0.1"
+LISTEN_PORT = 5001
+
+LOG_FILE = "/var/log/security-gateway.log"
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
+)
+
+EMAIL_REGEX = re.compile(r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$")
+
+SQLI_PATTERNS = [
+    re.compile(r"(?i)(\bor\b\s+\d+\s*=\s*\d+)"),
+    re.compile(r"(?i)(\bunion\b)"),
+    re.compile(r"(?i)(\bselect\b)"),
+    re.compile(r"(?i)(\binsert\b)"),
+    re.compile(r"(?i)(\bupdate\b)"),
+    re.compile(r"(?i)(\bdelete\b)"),
+    re.compile(r"(?i)(\bdrop\b)"),
+    re.compile(r"(?i)(--)"),
+    re.compile(r"(?i)(/\*)"),
+    re.compile(r"(?i)(\*/)")
+]
+
+XSS_PATTERNS = [
+    re.compile(r"(?i)<script"),
+    re.compile(r"(?i)javascript:"),
+    re.compile(r"(?i)onerror\s*="),
+    re.compile(r"(?i)onload\s*="),
+    re.compile(r"(?i)onmouseover\s*="),
+    re.compile(r"(?i)<img"),
+    re.compile(r"(?i)<svg"),
+    re.compile(r"(?i)<iframe"),
+    re.compile(r"(?i)document\.cookie"),
+    re.compile(r"(?i)alert\s*\("),
+    re.compile(r"(?i)prompt\s*\("),
+    re.compile(r"(?i)confirm\s*\(")
+]
+
+TEXT_SAFE_REGEX = re.compile(r"^[\w\s.,!?:;@#%&()\-_'\"/À-ÿ]{1,500}$")
+
+def is_safe_text(value: str, max_len: int = 500) -> bool:
+    if not value or len(value) > max_len:
+        return False
+    if contains_attack_pattern(value):
+        return False
+    return bool(TEXT_SAFE_REGEX.fullmatch(value))
+
+def contains_attack_pattern(value: str) -> bool:
+    for pattern in SQLI_PATTERNS + XSS_PATTERNS:
+        if pattern.search(value):
+            return True
+    return False
+
+
+def is_valid_email(value: str) -> bool:
+    return bool(EMAIL_REGEX.fullmatch(value))
+
+
+class SecurityGatewayHandler(BaseHTTPRequestHandler):
+    server_version = "nginx"
+    sys_version = ""
+
+    def _send_text(self, code: int, message: str):
+        body = message.encode("utf-8")
+        self.send_response(code)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _send_json(self, code: int, payload: dict):
+        body = json.dumps(payload).encode("utf-8")
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+        self.send_header("X-Security-Gateway", "active")
+
+    def _client_ip(self) -> str:
+        forwarded = self.headers.get("X-Forwarded-For")
+        if forwarded:
+            return forwarded.split(",")[0].strip()
+        return self.client_address[0]
+
+    def do_POST(self):
+        if self.path != "/rest/user/login":
+            self._send_json(404, {"error": "Not found"})
+            return
+
+        client_ip = self._client_ip()
+        content_type = self.headers.get("Content-Type", "")
+
+        if "application/json" not in content_type.lower():
+            logging.warning("Blocked invalid content-type from %s: %s", client_ip, content_type)
+            self._send_text(401, "Invalid email or password.")
+            time.sleep(1.5)  # Atraso para dificultar ataques automatizados
+            return
+
+        try:
+            content_length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            self._send_json(400, {"error": "Invalid Content-Length"})
+            return
+
+        if content_length <= 0 or content_length > 4096:
+            logging.warning("Blocked invalid body size from %s: %s", client_ip, content_length)
+            self._send_json(400, {"error": "Invalid request size"})
+            return
+
+        raw_body = self.rfile.read(content_length)
+
+        try:
+            data = json.loads(raw_body.decode("utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            logging.warning("Blocked malformed JSON from %s", client_ip)
+            self._send_json(400, {"error": "Malformed JSON"})
+            return
+
+        email = str(data.get("email", "")).strip()
+        password = str(data.get("password", ""))
+
+        if not email or not password:
+            logging.warning("Blocked empty credentials from %s", client_ip)
+            self._send_text(401, "Invalid email or password.")
+            time.sleep(1.5) # Atraso para dificultar ataques automatizados
+            return
+
+        if len(email) > 254 or len(password) > 128:
+            logging.warning("Blocked oversized credentials from %s", client_ip)
+            self._send_text(401, "Invalid email or password.")
+            time.sleep(1.5) # Atraso para dificultar ataques automatizados
+            return
+
+        # Defesa principal: allowlist para o email
+        if not is_valid_email(email):
+            logging.warning("Blocked invalid email format from %s: %r", client_ip, email)
+            self._send_text(401, "Invalid email or password.")
+            time.sleep(1.5)  # Atraso para dificultar ataques automatizados
+            return
+
+        # Defesa complementar: blacklist de padrões perigosos
+        if contains_attack_pattern(email) or contains_attack_pattern(password):
+            logging.warning("Blocked attack pattern from %s | email=%r", client_ip, email)
+            self._send_text(401, "Invalid email or password.")
+            time.sleep(1.5) # Atraso para dificultar ataques automatizados
+            return
+
+        forward_body = json.dumps({
+            "email": email,
+            "password": password
+        }).encode("utf-8")
+
+        forward_headers = {
+            "Content-Type": "application/json",
+            "Content-Length": str(len(forward_body))
+        }
+
+        try:
+            req = Request(
+                BACKEND_LOGIN_URL,
+                data=forward_body,
+                headers=forward_headers,
+                method="POST"
+            )
+
+            with urlopen(req, timeout=10) as resp:
+                backend_body = resp.read()
+                self.send_response(resp.status)
+
+                for header, value in resp.getheaders():
+                    if header.lower() in ("transfer-encoding", "connection", "server", "date", "content-length"):
+                        continue
+                    self.send_header(header, value)
+                    
+                self.send_header("X-Security-Gateway", "active")
+                self.send_header("Content-Length", str(len(backend_body)))
+                self.end_headers()
+                self.wfile.write(backend_body)
+
+        except HTTPError as e:
+            body = e.read()
+            self.send_response(e.code)
+
+            for header, value in e.headers.items():
+                if header.lower() in ("transfer-encoding", "connection", "server", "date", "content-length"):
+                    continue
+                self.send_header(header, value)
+                
+            self.send_header("X-Security-Gateway", "active")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        except URLError as e:
+            logging.error("Backend connection error from %s: %s", client_ip, e)
+            self._send_json(502, {"error": "Backend unavailable"})
+
+    def do_GET(self):
+        self._send_json(405, {"error": "Method not allowed"})
+
+    def do_PUT(self):
+        self._send_json(405, {"error": "Method not allowed"})
+
+    def do_DELETE(self):
+        self._send_json(405, {"error": "Method not allowed"})
+
+    def log_message(self, format, *args):
+        return
+
+
+def main():
+    server = HTTPServer((LISTEN_HOST, LISTEN_PORT), SecurityGatewayHandler)
+    logging.info("Security gateway listening on %s:%s", LISTEN_HOST, LISTEN_PORT)
+    server.serve_forever()
+
+
+if __name__ == "__main__":
+    main()
