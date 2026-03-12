@@ -1,0 +1,2145 @@
+Script started on 2026-03-11 10:28:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="31"]
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ exitsudo nano /etc/fail2ban/jail.localwhoami[Knano /etc/fail2ban/jail.localwhoami[Kteste de log5exit[Kcol -b < log.txt > clean.txt[4PHOST=127.0.0.1 npm start[15P[C[C[C[C[C[C[C[C[Ccd /var/www/juiceexit[Kscript -t 2>timing4.txt log4.txtudo whoami[K[7Pexitsudo tail -f /var/log/fail2ban.log[2Pvsftpd.log[2Pauth.logfail2ban-client status vsftpd[21Pftp localhostsudo fail2ban-client status sshd[19Pftp localhostsudo fail2ban-client status sshd[Ksystemctl restart fail2bannano /etc/fail2ban/jail.local[3Psystemctl restart fail2bannano /etc/fail2ban/jail.local[7Pfail2ban-client statusnano /etc/fail2ban/jail.local[7Pfail2ban-client statussystemctl status fail2ban[8Phttp://localhost:19999wget https://my-netdata.io/kickstart.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4@curl -Ss[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@bash <([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Psudo fail2ban-client statussystemctl restart fail2bannano /etc/fail2ban/jail.local[3Pnginx/nginx.conf[1Pssh/sshd_confignginx/nginx.conffail2ban/jail.local[3Pnginx/nginx.conf[1Pssh/sshd_configcurl -k https://loja.local:8443[6PI http://loja.localsudo systemctl reload nginx[14Pnginx -tln -s /etc/nginx/sites-available/loja.local /etc/nginx/sites-enabled/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[47Pls /etc/nginx/sites-enabledsudo rm /etc/nginx/sites-enabled/default[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pls /etc/nginx/sites-enabledsudo rm /etc/nginx/sites-enabled/defaultnano /etc/nginx/sites-available/loja.local
+[?2004l[sudo] password for arcansel: 
+[?2004h[?1049h[22;0;0t[1;31r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[29;50H(B[0;7m[ Reading... ](B[m[29;48H(B[0;7m[ Read 85 lines ](B[m[H(B[0;7m  GNU nano 7.2                          /etc/nginx/sites-available/loja.local                                   [1;111H(B[m[30d(B[0;7m^G(B[m Help[30;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[30;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[31d(B[0;7m^X(B[m Exit[31;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[31;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dserver {[3;5Hlisten 80;[4;5Hserver_name loja.local;[6;5Hreturn 301 https://$host:8443$request_uri;[7d}[9dserver {[10;5Hlisten 8443 ssl;[11;5Hserver_name loja.local;[13;5Hssl_certificate /etc/nginx/ssl/loja.crt;[14;5Hssl_certificate_key /etc/nginx/ssl/loja.key;[16;5Hlimit_req_status 429;[18;5Hif ($request_method !~ ^(GET|POST|HEAD)$ ) {[19;9Hreturn 405;[20;5H}[22daccess_log /var/log/nginx/loja_access.log;[23;5Herror_log /var/log/nginx/loja_error.log;[25;5Hif ($host !~ ^loja\.local$) {[26;9Hreturn 444;[27;5H}[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[29d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h[24d[?25l[?12l[?25h[25d[?25l[?12l[?25h[26d[?25l[?12l[?25h[27d[?25l[?12l[?25h[28d[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5Hlocation ~ /\.(env|git|htaccess|htpasswd|log|bak|swp)$ {[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hdeny all;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hreturn 403;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5Hlocation ~* (\.\./|%2e%2e%2f|%2e%2e/|..%2f) {[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hdeny all;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hreturn 403;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5Hif ($request_uri ~* "(\.\./|\.\.\\|%2e%2e)") {[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hreturn 403;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5Hlocation ~* "%2e%2e" {[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hreturn 403;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5Hlocation ^~ /rest/user/login {[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hlimit_req zone=iplimit burst=5 nodelay;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[24d[?25l[?12l[?25h[25d[?25l[?12l[?25h[26d[?25l[?12l[?25h[27d[?25l[?12l[?25h[28d[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_pass [94mhttp://127.0.0.1:5001;[39m(B[m[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header Host $host;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header X-Real-IP $remote_addr;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header X-Forwarded-Proto $scheme;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5Hlocation / {[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hlimit_req zone=iplimit burst=20 nodelay;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_pass [94mhttp://127.0.0.1:3000;[39m(B[m[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header Host $host;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header X-Real-IP $remote_addr;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header X-Forwarded-Proto $scheme;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header Upgrade $http_upgrade;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_set_header Connection "upgrade";[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hproxy_hide_header ETag;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hadd_header X-Frame-Options "SAMEORIGIN" always;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hadd_header X-Content-Type-Options "nosniff" always;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hadd_header Referrer-Policy "strict-origin-when-cross-origin" always;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hadd_header X-XSS-Protection "1; mode=block" always;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hadd_header Content-Security-Policy "[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hdefault-src 'self';[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hscript-src 'self' 'unsafe-inline' [94mhttp://cdnjs.cloudflare.com[39m(B[m [94mhttps://cdnjs.cloudflare.com;[39m(B[m[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hstyle-src 'self' 'unsafe-inline' [94mhttp://cdnjs.cloudflare.com[39m(B[m [94mhttps://cdnjs.cloudflare.com;[39m(B[m[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Himg-src 'self' data:;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hfont-src 'self' [94mhttp://cdnjs.cloudflare.com[39m(B[m [94mhttps://cdnjs.cloudflare.com;[39m(B[m[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hconnect-src 'self' ws:;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9Hframe-ancestors 'self';[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;9H" always;[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;5H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H}[?25l[?12l[?25h7[2;29r8[29d
+[1;31r[28;1H[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[26d[?25l[?12l[?25h[A[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h"[?25l[?12l[?25h [?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25hw[?25l[?12l[?25ha[?25l[?12l[?25hy[?25l[?12l[?25hs[?25l[?12l[?25h;[?25l[1;79H(B[0;7m*[111G(B[m[26;29r[26;1HM[1;31r[26;1H[?12l[?25h[?25l[27d[K[28d    }[A[?12l[?25h[?25l[?12l[?25h[8G[38;5;208m[1K [39m(B[m[?25ladd_header Strict-Transport-Security "max-age=31536000" always;[?12l[?25h[?25l[?12l[?25h[28;6H[?25l[?12l[?25h[27;72H[?25l[?12l[?25h[A[?25l[?12l[?25h[25;18H[?25l[?12l[?25h[24;32H[?25l[?12l[?25h[A[?25l[?12l[?25h[22;72H[?25l[?12l[?25h[21;30H[?25l[?12l[?25h[20;72H[?25l[?12l[?25h[A[?25l[?12l[?25h[18;28H[?25l[?12l[?25h[17;45H[?25l[?12l[?25h[16;60H[?25l[?12l[?25h[A[?25l[?12l[?25h[14;72H[?25l[?12l[?25h[13;60H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[10;32H[?25l[?12l[?25h[A[?25l[?12l[?25h[8;47H[?25l[?12l[?25h[A;[?25l[?12l[?25h[A[?25l[?12l[?25h[5;52H[?25l[?12l[?25h[4;69H[?25l[?12l[?25h[3;49H[?25l[?12l[?25h[2;37H[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hproxy_pass [94mhttp://127.0.0.1:3000;[39m(B[m[?25l[?12l[?25h7[2;28r8M[1;31r[2;1H[?25l[?12l[?25h7[2;29r8M[1;31r[2;9Hlimit_req zone=iplimit burst=20 nodelay;[?25l[?12l[?25h7[2;28r8M[1;31r[2;5Hlocation / {[?25l[?12l[?25h[3;49H[?25l[?12l[?25h[2;17H[?25l[?12l[?25h7[2;28r8M[1;31r[2;1H[?25l[?12l[?25h7[2;28r8M[1;31r[2;5H}[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hproxy_set_header X-Forwarded-Proto $scheme;[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hproxy_set_header X-Real-IP $remote_addr;[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hproxy_set_header Host $host;[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hproxy_pass [94mhttp://127.0.0.1:5001;[39m(B[m[?25l[?12l[?25h7[2;28r8M[1;31r[2;1H[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hlimit_req zone=iplimit burst=5 nodelay;[?25l[?12l[?25h7[2;29r8M[1;31r[2;5Hlocation ^~ /rest/user/login {[?25l[?12l[?25h7[2;28r8M[1;31r[2;1H[?25l[?12l[?25h7[2;28r8M[1;31r[2;5H}[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hreturn 403;[?25l[?12l[?25h7[2;29r8M[1;31r[2;5Hlocation ~* "%2e%2e" {[?25l[?12l[?25h7[2;28r8M[1;31r[2;1H[?25l[?12l[?25h7[2;29r8M[1;31r[2;5H}[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hreturn 403;[?25l[?12l[?25h7[2;28r8M[1;31r[2;5Hif ($request_uri ~* "(\.\./|\.\.\\|%2e%2e)") {[?25l[?12l[?25h7[2;29r8M[1;31r[2;1H[?25l[?12l[?25h7[2;28r8M[1;31r[2;5H}[?25l[?12l[?25h[3d[?25l[?12l[?25h[4;51H[?25l[?12l[?25h[5;20H[?25l[?12l[?25h[6;6H[?25l[?12l[?25h[7d[?25l[?12l[?25h[8;27H[?25l[?12l[?25h[9;20H[?25l[?12l[?25h[8;27H[?25l[?12l[?25h[A[?25l[?12l[?25h[6;6H[?25l[?12l[?25h[5;20H[?25l[?12l[?25h[4;51H[?25l[?12l[?25h[A[?25l[?12l[?25h[2;6H[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hreturn 403;[?25l[?12l[?25h7[2;28r8M[1;31r[2;9Hdeny all;[?25l[30;17H            (B[0;7mM-D(B[m DOS Format[14X[30;57H(B[0;7mM-A(B[m Append        [81G    (B[0;7mM-B(B[m Backup File[K[31;2H(B[0;7mC(B[m Cancel[17G            (B[0;7mM-M(B[m Mac Format[49G        (B[0;7mM-P(B[m Prepend       [81G    (B[0;7m^T(B[m Browse[K[29d(B[0;7mFile Name to Write: /etc/nginx/sites-available/loja.local                                                       [29;58H(B[m[?12l[?25h[?25l[29;49H[1K (B[0;7m[ Writing... ](B[m[K[1;79H(B[0;7m [111G(B[m[29;48H(B[0;7m[ Wrote 87 lines ](B[m[30;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut          (B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[31;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste        (B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[?12l[?25h[2;18H[?25l[29d[J[31d[?12l[?25h[31;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo nano /etc/nginx/sites-available/loja.local[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Ksudo nano /etc/fail2ban/jail.localwhoami[Knano /etc/fail2ban/jail.localwhoami[Kteste de log5[2Psudo whoaminano /etc/fail2ban/jail.localwhoami[Kteste de log5exit[Kcol -b < log.txt > clean.txt[4PHOST=127.0.0.1 npm start[15P[C[C[C[C[C[C[C[C[Ccd /var/www/juiceexit[Kscript -t 2>timing4.txt log4.txtudo whoami[K[7Pexitsudo tail -f /var/log/fail2ban.log[2Pvsftpd.log[2Pauth.logfail2ban-client status vsftpd[21Pftp localhostsudo fail2ban-client status sshd[Ksystemctl restart fail2bannano /etc/fail2ban/jail.local[7Pfail2ban-client statussystemctl status fail2ban[8Phttp://localhost:19999wget https://my-netdata.io/kickstart.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Phttp://localhost:19999sudo systemctl status fail2ban[3Pfail2ban-client statusnano /etc/fail2ban/jail.local[7Pfail2ban-client statussystemctl status fail2ban[8Phttp://localhost:19999wget https://my-netdata.io/kickstart.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4@curl -Ss[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@bash <([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Psudo fail2ban-client statussystemctl restart fail2bannano /etc/fail2ban/jail.local[3Pnginx/nginx.conffail2ban/jail.local[3Pnginx/nginx.conf
+[?2004l[?2004h[?1049h[22;0;0t[1;31r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[29;50H(B[0;7m[ Reading... ](B[m[29;48H(B[0;7m[ Read 83 lines ](B[m[H(B[0;7m  GNU nano 7.2                                  /etc/nginx/nginx.conf                                           [1;111H(B[m[30d(B[0;7m^G(B[m Help[30;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[30;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[31d(B[0;7m^X(B[m Exit[31;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[31;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2duser www-data;[3dworker_processes auto;[4dpid /run/nginx.pid;[5derror_log /var/log/nginx/error.log;[6dinclude /etc/nginx/modules-enabled/*.conf;[8devents {[9;5Hworker_connections 768;[10d[36m    # multi_accept on;[11d[39m(B[m}[13dhttp {[15d[36m    ##[16d    # Basic Settings[17d    ##[19d[39m(B[msendfile on;[20;5Htcp_nopush on;[21;5Htypes_hash_max_size 2048;[23;5Hserver_tokens off;[24;5Hautoindex off;[25;5Hetag off;[27;5Hlimit_req_zone $binary_remote_addr zone=iplimit:10m rate=5r/s;[2d[?12l[?25h[?25l[29d[J[31d[?12l[?25h[31;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudi[Kio[K[Ko nano [7m/etc/ssh/sshd_config[27m/etc/ssh/sshd_config[C
+[?2004l[?2004h[?1049h[22;0;0t[1;31r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[29;50H(B[0;7m[ Reading... ](B[m[29;48H(B[0;7m[ Read 139 lines ](B[m[H(B[0;7m  GNU nano 7.2                                  /etc/ssh/sshd_config                                            [1;111H(B[m[30d(B[0;7m^G(B[m Help[30;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[30;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[31d(B[0;7m^X(B[m Exit[31;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[31;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[3d[36m# This is the sshd server system-wide configuration file.  See[4d# sshd_config(5) for more information.[6d# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games[8d# The strategy used for options in the default sshd_config shipped with[9d# OpenSSH is to specify options with their default value where[10d# possible, but leave them commented.  Uncommented options override the[11d# default value.[13d[39m(B[mInclude /etc/ssh/sshd_config.d/*.conf[15dPasswordAuthentication no[16dPubkeyAuthentication yes[17dPermitRootLogin no[19dCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com[20dMACs hmac-sha2-512-etm@openssh.com[21dKexAlgorithms curve25519-sha256[23d[36m# When systemd socket activation is used (the default), the socket[24d# configuration must be re-generated after changing Port, AddressFamily, or[25d# ListenAddress.[26d#[27d# For changes to take effect, run:[28d#[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[29d[J[31d[?12l[?25h[31;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mcut -d: -f1 /etc/passwd[27mcut -d: -f1 /etc/passwd
+[?2004lroot
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+arcansel
+ftp
+alunoftp
+sshd
+tcpdump
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7malunoftp[27m
+[7mftp[27m
+[7marcansel[27m[A[A]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ alunoftp
+ftp
+[1Parcanse[K[K[K[K[K[K[K[K[A[C[C[C[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[7mcat /etc/passwd | cut -d: -f1[27mcat /etc/passwd | cut -d: -f1
+[?2004lroot
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+arcansel
+ftp
+alunoftp
+sshd
+tcpdump
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mls /home[27mls /home
+[?2004l[0m[01;34malunoftp[0m  [01;34marcansel[0m
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mid alunoftp[27mid alunoftp
+[?2004luid=1001(alunoftp) gid=1001(alunoftp) groups=1001(alunoftp),100(users)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mls -ld /home/alunoftp[27mls -ld /home/alunoftp
+[?2004ldrwxr-xr-x 5 root root 4096 Mar 11 02:35 [0m[01;34m/home/alunoftp[0m
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mgrep alunoftp /etc/passwd[27mgrep alunoftp /etc/passwd
+[?2004l[01;31m[Kalunoftp[m[K:x:1001:1001:User completo,1,912345678,223456789:/home/[01;31m[Kalunoftp[m[K:/bin/bash
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mcat /etc/vsftpd.conf[27mcat /etc/vsftpd.conf
+[?2004l# Example config file /etc/vsftpd.conf
+#
+# The default compiled in settings are fairly paranoid. This sample file
+# loosens things up a bit, to make the ftp daemon more usable.
+# Please see vsftpd.conf.5 for all compiled in defaults.
+#
+# READ THIS: This example file is NOT an exhaustive list of vsftpd options.
+# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's
+# capabilities.
+#
+#
+# Run standalone?  vsftpd can run either from an inetd or as a standalone
+# daemon started from an initscript.
+
+# Allow anonymous FTP? (Disabled by default).
+anonymous_enable=NO
+
+# Uncomment this to allow local users to log in.
+local_enable=YES
+# Uncomment this to enable any form of FTP write command.
+write_enable=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+pasv_min_port=40000
+pasv_max_port=40100
+
+listen=YES
+#
+# This directive enables listening on IPv6 sockets. By default, listening
+# on the IPv6 "any" address (::) will accept connections from both IPv6
+# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6
+# sockets. If you want that (perhaps because you want to listen on specific
+# addresses) then you must run two copies of vsftpd with two configuration
+# files.
+listen_ipv6=NO
+#
+# Default umask for local users is 077. You may wish to change this to 022,
+# if your users expect that (022 is used by most other ftpd's)
+#local_umask=022
+#
+# Uncomment this to allow the anonymous FTP user to upload files. This only
+# has an effect if the above global write enable is activated. Also, you will
+# obviously need to create a directory writable by the FTP user.
+#anon_upload_enable=YES
+#
+# Uncomment this if you want the anonymous FTP user to be able to create
+# new directories.
+#anon_mkdir_write_enable=YES
+#
+# Activate directory messages - messages given to remote users when they
+# go into a certain directory.
+dirmessage_enable=YES
+#
+# If enabled, vsftpd will display directory listings with the time
+# in  your  local  time  zone.  The default is to display GMT. The
+# times returned by the MDTM FTP command are also affected by this
+# option.
+use_localtime=YES
+#
+# Activate logging of uploads/downloads.
+xferlog_enable=YES
+#
+# Make sure PORT transfer connections originate from port 20 (ftp-data).
+connect_from_port_20=YES
+#
+# If you want, you can arrange for uploaded anonymous files to be owned by
+# a different user. Note! Using "root" for uploaded files is not
+# recommended!
+#chown_uploads=YES
+#chown_username=whoever
+#
+# You may override where the log file goes if you like. The default is shown
+# below.
+#xferlog_file=/var/log/vsftpd.log
+#
+# If you want, you can have your log file in standard ftpd xferlog format.
+# Note that the default log file location is /var/log/xferlog in this case.
+#xferlog_std_format=YES
+#
+# You may change the default value for timing out an idle session.
+#idle_session_timeout=600
+#
+# You may change the default value for timing out a data connection.
+#data_connection_timeout=120
+#
+# It is recommended that you define on your system a unique user which the
+# ftp server can use as a totally isolated and unprivileged user.
+#nopriv_user=ftpsecure
+#
+# Enable this and the server will recognise asynchronous ABOR requests. Not
+# recommended for security (the code is non-trivial). Not enabling it,
+# however, may confuse older FTP clients.
+#async_abor_enable=YES
+#
+# By default the server will pretend to allow ASCII mode but in fact ignore
+# the request. Turn on the below options to have the server actually do ASCII
+# mangling on files when in ASCII mode.
+# Beware that on some FTP servers, ASCII support allows a denial of service
+# attack (DoS) via the command "SIZE /big/file" in ASCII mode. vsftpd
+# predicted this attack and has always been safe, reporting the size of the
+# raw file.
+# ASCII mangling is a horrible feature of the protocol.
+#ascii_upload_enable=YES
+#ascii_download_enable=YES
+#
+# You may fully customise the login banner string:
+#ftpd_banner=Welcome to blah FTP service.
+#
+# You may specify a file of disallowed anonymous e-mail addresses. Apparently
+# useful for combatting certain DoS attacks.
+#deny_email_enable=YES
+# (default follows)
+#banned_email_file=/etc/vsftpd.banned_emails
+#
+# You may restrict local users to their home directories.  See the FAQ for
+# the possible risks in this before using chroot_local_user or
+# chroot_list_enable below.
+#chroot_local_user=YES
+#
+# You may specify an explicit list of local users to chroot() to their home
+# directory. If chroot_local_user is YES, then this list becomes a list of
+# users to NOT chroot().
+# (Warning! chroot'ing can be very dangerous. If using chroot, make sure that
+# the user does not have write access to the top level directory within the
+# chroot)
+#chroot_list_enable=YES
+# (default follows)
+#chroot_list_file=/etc/vsftpd.chroot_list
+#
+# You may activate the "-R" option to the builtin ls. This is disabled by
+# default to avoid remote users being able to cause excessive I/O on large
+# sites. However, some broken FTP clients such as "ncftp" and "mirror" assume
+# the presence of the "-R" option, so there is a strong case for enabling it.
+#ls_recurse_enable=YES
+#
+# Customization
+#
+# Some of vsftpd's settings don't fit the filesystem layout by
+# default.
+#
+# This option should be the name of a directory which is empty.  Also, the
+# directory should not be writable by the ftp user. This directory is used
+# as a secure chroot() jail at times vsftpd does not require filesystem
+# access.
+secure_chroot_dir=/var/run/vsftpd/empty
+#
+# This string is the name of the PAM service vsftpd will use.
+pam_service_name=vsftpd
+#
+# This option specifies the location of the RSA certificate to use for SSL
+# encrypted connections.
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=YES
+force_local_logins_ssl=YES
+force_local_data_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+ssl_ciphers=HIGH
+require_ssl_reuse=NO
+
+#
+# Uncomment this to indicate that vsftpd use a utf8 filesystem.
+#utf8_filesystem=YES
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mcat /etc/vsftpd.userlist[27mcat /etc/vsftpd.userlist
+[?2004lcat: /etc/vsftpd.userlist: No such file or directory
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo adduser alunoftp[27msudo adduser alunoftp[C[1Pftp[1Pftp[1Pftp[1Pftp[1Pftp[C[C[Cdedicadp[Ko[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pdedicado[1Pdedicadotdedicadopdedicado[C[C[C[C[C[C[C[C
+[?2004l[sudo] password for arcansel: 
+info: Adding user `ftpdedicado' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `ftpdedicado' (1002) ...
+info: Adding new user `ftpdedicado' (1002) with group `ftpdedicado (1002)' ...
+info: Creating home directory `/home/ftpdedicado' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for ftpdedicado
+Enter the new value, or press ENTER for the default
+	Full Name []: John Brook
+	Room Number []: 2
+	Work Phone []: 912345678
+	Home Phone []: 221234567
+	Other []: 
+Is the information correct? [Y/n] y
+info: Adding new user `ftpdedicado' to supplemental / extra groups `users' ...
+info: Adding user `ftpdedicado' to group `users' ...
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo usermod -s /usr/sbin/nologin alunoftp[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo usermod -s /usr/sbin/nologin alunoftp[C[K[K[K[K[K[K[K[Kftpdedicado[C
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo chown alunoftp:alunoftp /home/alunoftp[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chown alunoftp:alunoftp /home/alunoftp[C
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo chown alunoftp:alunoftp /home/alunoftp[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chown alunoftp:alunoftp /home/alunoftp[1P[1P[1P[1P[1P[1P[1P[1P[11@[7mftpdedicado[27mftpdedicado[C[C[C[C[C[C[C[C[C[1P /home/alunoftp[1P /home/alunoftp[1P /home/alunoftp[1P /home/alunoftp[1P /home/alunoftp[1P /home/alunoftp[1P /home/alunoftp[1P /home/alunoftp[7mftpdedicado[27m /home/alunoftpftpdedicado[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[7mftpdedicado[27mftpdedicado
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo chmod 750 /home/alunoftp[27msudo chmod 750 /home/alunoftp[C[K[K[K[K[K[K[K[K[7mftpdedicado[27mftpdedicado[C
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl restart vsftpd[27msudo systemctl restart vsftpd[C
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mftp localhost[27mftp localhost[C
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+[?2004hftp> user
+[?2004l(username) ftpdedicado
+331 Please specify the password.
+Password: 
+530 Login incorrect.
+Login failed.
+[?2004hftp> 3e[K[Kexit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mgrep ftpdedicado /etc/passwd[27mgrep ftpdedicado /etc/passwd
+[?2004l[01;31m[Kftpdedicado[m[K:x:1002:1002:John Brook,2,912345678,221234567:/home/[01;31m[Kftpdedicado[m[K:/usr/sbin/nologin
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mcat /etc/shells[27mcat /etc/shells
+[?2004l# /etc/shells: valid login shells
+/bin/sh
+/usr/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/dash
+/usr/bin/tmux
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nano /etc/shells[27msudo nano /etc/shells
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;53H(B[0;7m[ Read 9 lines ](B[m[H(B[0;7m  GNU nano 7.2                                           /etc/shells                                                    [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[36m# /etc/shells: valid login shells[3d[39m(B[m/bin/sh[4d/usr/bin/sh[5d/bin/bash[6d/usr/bin/bash[7d/bin/rbash[8d/usr/bin/rbash[9d/usr/bin/dash[10d/usr/bin/tmux[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h/[?25l[?12l[?25hu[?25l[?12l[?25hs[?25l[?12l[?25hr[?25l[?12l[?25h/[?25l[?12l[?25hb[?25l[?12l[?25hi[?25l[?12l[?25hn[?25l[?12l[?25h/[?25l[?12l[?25ht[?25l[?12l[?25hm[?25l[28d[K[?12l[?25h[10;13H[?25l[?12l[?25hx[?25l[?12l[?25h[11d[?25l[?12l[?25h[10;14H[?25l[1;70H(B[0;7m*[119G(B[m[11d[?12l[?25h[?25l/usr/sbin/nologin[?12l[?25h[?25l[29;16H[15X[29;31H(B[0;7mM-D(B[m DOS Format       [29;61H(B[0;7mM-A(B[m Append[16X[29;93H(B[0;7mB(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[16G[15X[30;31H(B[0;7mM-M(B[m Mac Format         [61G(B[0;7mM-P(B[m Prepend[19X[30;91H(B[0;7m^T(B[m Browse[K[28d(B[0;7mFile Name to Write: /etc/shells                                                                                         [28;32H(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;70H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 10 lines ](B[m[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[93G(B[0;7mU(B[m Undo       (B[0;7mM-A(B[m Set Mark[30;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo [106G(B[0;7mM-6(B[m Copy[?12l[?25h[11;18H[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo nano /etc/shells
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;52H(B[0;7m[ Read 10 lines ](B[m[H(B[0;7m  GNU nano 7.2                                           /etc/shells                                                    [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[36m# /etc/shells: valid login shells[3d[39m(B[m/bin/sh[4d/usr/bin/sh[5d/bin/bash[6d/usr/bin/bash[7d/bin/rbash[8d/usr/bin/rbash[9d/usr/bin/dash[10d/usr/bin/tmux[11d/usr/sbin/nologin[2d[?12l[?25h[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl restart vsftpd[27msudo systemctl restart vsftpd
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mftp localhost[27mftp localhost
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+[?2004hftp> cd -[K/etc/
+[?2004l550 Failed to change directory.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nano /etc/vsftpd.userlist[27msudo nano /etc/vsftpd.userlist
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;55H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                      /etc/vsftpd.userlist                                                [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[28d[K[1;74H(B[0;7m*[119G(B[m[2dalunoftp[3dftpdedicado[?12l[?25h[?25l[29;16H[15X[29;31H(B[0;7mM-D(B[m DOS Format       [29;61H(B[0;7mM-A(B[m Append[16X[29;93H(B[0;7mB(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[16G[15X[30;31H(B[0;7mM-M(B[m Mac Format         [61G(B[0;7mM-P(B[m Prepend[19X[30;91H(B[0;7m^T(B[m Browse[K[28d(B[0;7mFile Name to Write: /etc/vsftpd.userlist                                                                                [28;41H(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;74H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 2 lines ](B[m[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[93G(B[0;7mU(B[m Undo       (B[0;7mM-A(B[m Set Mark[30;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo [106G(B[0;7mM-6(B[m Copy[?12l[?25h[3;12H[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nano /etc/vsftpd.conf[27msudo nano /etc/vsftpd.conf
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;52H(B[0;7m[ Read 165 lines ](B[m[H(B[0;7m  GNU nano 7.2                                        /etc/vsftpd.conf                                                  [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[36m# Example config file /etc/vsftpd.conf[3d#[4d# The default compiled in settings are fairly paranoid. This sample file[5d# loosens things up a bit, to make the ftp daemon more usable.[6d# Please see vsftpd.conf.5 for all compiled in defaults.[7d#[8d# READ THIS: This example file is NOT an exhaustive list of vsftpd options.[9d# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's[10d# capabilities.[11d#[12d#[13d# Run standalone?  vsftpd can run either from an inetd or as a standalone[14d# daemon started from an initscript.[16d# Allow anonymous FTP? (Disabled by default).[17d[39m(B[manonymous_enable=NO[19d[36m# Uncomment this to allow local users to log in.[20d[39m(B[mlocal_enable=YES[21d[36m# Uncomment this to enable any form of FTP write command.[22d[39m(B[mwrite_enable=YES[23dchroot_local_user=YES[24dallow_writeable_chroot=YES[25dpasv_min_port=40000[26dpasv_max_port=40100[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[28d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h[24d[?25l[?12l[?25h[25d[?25l[?12l[?25h[26d[?25l[?12l[?25h[27d[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hlisten=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# This directive enables listening on IPv6 sockets. By default, listening[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# on the IPv6 "any" address (::) will accept connections from both IPv6[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# sockets. If you want that (perhaps because you want to listen on specific[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# addresses) then you must run two copies of vsftpd with two configuration[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# files.[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[1;72H(B[0;7m*[119G(B[m[19;27r[19;1HM[1;30r[20;1H[?12l[?25h[?25l[?12l[?25h[A[?25l7[19;27r8M[1;30r[20;1H[?12l[?25h[?25l[19;27r[19;1H[2T[1;30r[20;1Huserlist_enable=YES[21duserlist_file=/etc/vsftpd.userlist[22duserlist_deny=NO[?12l[?25h[?25l[29;16H[15X[29;31H(B[0;7mM-D(B[m DOS Format       [29;61H(B[0;7mM-A(B[m Append[16X[29;93H(B[0;7mB(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[16G[15X[30;31H(B[0;7mM-M(B[m Mac Format         [61G(B[0;7mM-P(B[m Prepend[19X[30;91H(B[0;7m^T(B[m Browse[K[28d(B[0;7mFile Name to Write: /etc/vsftpd.conf                                                                                    [28;37H(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;72H(B[0;7m [119G(B[m[28;51H(B[0;7m[ Wrote 169 lines ](B[m[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[93G(B[0;7mU(B[m Undo       (B[0;7mM-A(B[m Set Mark[30;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo [106G(B[0;7mM-6(B[m Copy[?12l[?25h[22;17H[?25l[?12l[?25h[23d[?25l[?12l[?25h[24;11H[?25l[?12l[?25h[25;2H[?25l[?12l[?25h[26;17H[?25l[?12l[?25h[27d[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# sockets. If you want that (perhaps because you want to listen on specific[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# addresses) then you must run two copies of vsftpd with two configuration[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# files.[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1Hlisten_ipv6=NO[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# Default umask for local users is 077. You may wish to change this to 022,[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# if your users expect that (022 is used by most other ftpd's)[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m#local_umask=022[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# Uncomment this to allow the anonymous FTP user to upload files. This only[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# has an effect if the above global write enable is activated. Also, you will[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m# obviously need to create a directory writable by the FTP user.[27;17H[39m(B[m[?25l[?12l[?25h7[2;27r8
+[1;30r[27;1H[36m#anon_upload_enable=YES[17G[39m(B[m[?25l[28d[K[?12l[?25h7[2;28r8
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Uncomment this if you want the anonymous FTP user to be able to create[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# new directories.[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#anon_mkdir_write_enable=YES[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Activate directory messages - messages given to remote users when they[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# go into a certain directory.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hdirmessage_enable=YES[17G[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# If enabled, vsftpd will display directory listings with the time[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# in  your  local  time  zone.  The default is to display GMT. The[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# times returned by the MDTM FTP command are also affected by this[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# option.[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Huse_localtime=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Activate logging of uploads/downloads.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hxferlog_enable=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Make sure PORT transfer connections originate from port 20 (ftp-data).[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hconnect_from_port_20=YES[27;17H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# If you want, you can arrange for uploaded anonymous files to be owned by[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# a different user. Note! Using "root" for uploaded files is not[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# recommended![39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#chown_uploads=YES[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#chown_username=whoever[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may override where the log file goes if you like. The default is shown[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# below.[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#xferlog_file=/var/log/vsftpd.log[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# If you want, you can have your log file in standard ftpd xferlog format.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Note that the default log file location is /var/log/xferlog in this case.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#xferlog_std_format=YES[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may change the default value for timing out an idle session.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#idle_session_timeout=600[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may change the default value for timing out a data connection.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#data_connection_timeout=120[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# It is recommended that you define on your system a unique user which the[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# ftp server can use as a totally isolated and unprivileged user.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#nopriv_user=ftpsecure[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Enable this and the server will recognise asynchronous ABOR requests. Not[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# recommended for security (the code is non-trivial). Not enabling it,[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# however, may confuse older FTP clients.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#async_abor_enable=YES[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# By default the server will pretend to allow ASCII mode but in fact ignore[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# the request. Turn on the below options to have the server actually do ASCII[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# mangling on files when in ASCII mode.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Beware that on some FTP servers, ASCII support allows a denial of service[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# attack (DoS) via the command "SIZE /big/file" in ASCII mode. vsftpd[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# predicted this attack and has always been safe, reporting the size of the[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# raw file.[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# ASCII mangling is a horrible feature of the protocol.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#ascii_upload_enable=YES[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#ascii_download_enable=YES[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may fully customise the login banner string:[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#ftpd_banner=Welcome to blah FTP service.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may specify a file of disallowed anonymous e-mail addresses. Apparently[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# useful for combatting certain DoS attacks.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#deny_email_enable=YES[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# (default follows)[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#banned_email_file=/etc/vsftpd.banned_emails[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may restrict local users to their home directories.  See the FAQ for[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# the possible risks in this before using chroot_local_user or[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# chroot_list_enable below.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#chroot_local_user=YES[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may specify an explicit list of local users to chroot() to their home[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# directory. If chroot_local_user is YES, then this list becomes a list of[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# users to NOT chroot().[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# (Warning! chroot'ing can be very dangerous. If using chroot, make sure that[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# the user does not have write access to the top level directory within the[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# chroot)[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#chroot_list_enable=YES[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# (default follows)[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#chroot_list_file=/etc/vsftpd.chroot_list[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# You may activate the "-R" option to the builtin ls. This is disabled by[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# default to avoid remote users being able to cause excessive I/O on large[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# sites. However, some broken FTP clients such as "ncftp" and "mirror" assume[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# the presence of the "-R" option, so there is a strong case for enabling it.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#ls_recurse_enable=YES[17G[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Customization[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Some of vsftpd's settings don't fit the filesystem layout by[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# default.[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# This option should be the name of a directory which is empty.  Also, the[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# directory should not be writable by the ftp user. This directory is used[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# as a secure chroot() jail at times vsftpd does not require filesystem[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# access.[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hsecure_chroot_dir=/var/run/vsftpd/empty[27;17H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# This string is the name of the PAM service vsftpd will use.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hpam_service_name=vsftpd[17G[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# This option specifies the location of the RSA certificate to use for SSL[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# encrypted connections.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hrsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem[27;17H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hrsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key[27;17H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hssl_enable=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hforce_local_logins_ssl=YES[27;17H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hforce_local_data_ssl=YES[27;17H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hssl_tlsv1=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hssl_sslv2=NO[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hssl_sslv3=NO[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hssl_ciphers=HIGH[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hrequire_ssl_reuse=NO[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# Uncomment this to indicate that vsftpd use a utf8 filesystem.[27;17H[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#utf8_filesystem=YES[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[26;17H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[C[?25l[?12l[?25h[A[?25l[?12l[?25h[24;2H[?25l[?12l[?25h[25;17H[?25l[?12l[?25h[26d[?25l[?12l[?25h[27d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[26;17H[?25l[?12l[?25h[A[?25l[29d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo nano /etc/vsftpd.confuserlist[17Pftp localhost
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+[?2004hftp> exit[K[K[K[Kcd /etc/
+[?2004l550 Failed to change directory.
+[?2004hftp> ex[K[Kuser
+[?2004l(username) alunoftp
+530 Can't change to another user.
+Login failed.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ftp localhostsudo nano /etc/vsftpd.confuserlist[17Pftp localhost
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+[?2004hftp> cd /etc/
+[?2004l550 Failed to change directory.
+[?2004hftp> exit[K[K[K[Kexit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ftp localhost
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): anonymous
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+530 Anonymous sessions may not use encryption.
+Login failed.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl status ssh[27msudo systemctl status ssh
+[?2004l[?1h=○ ssh.service - OpenBSD Secure Shell server[m
+     Loaded: loaded (]8;;file://Main/usr/lib/systemd/system/ssh.service/usr/lib/systemd/system/ssh.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;32menabled[0m)[m
+     Active: inactive (dead)[m
+TriggeredBy: [0;1;32m●[0m ssh.socket[m
+       Docs: ]8;;man:sshd(8)man:sshd(8)]8;;[m
+             ]8;;man:sshd_config(5)man:sshd_config(5)]8;;[m
+[K[?1l>[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl start ssh[27msudo systemctl start ssh
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo systemctl start ssh[1@tus[C[C[C[C
+[?2004l[?1h=[0;1;32m●[0m ssh.service - OpenBSD Secure Shell server[m
+     Loaded: loaded (]8;;file://Main/usr/lib/systemd/system/ssh.service/usr/lib/systemd/system/ssh.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;32menabled[0m)[m
+     Active: [0;1;32mactive (running)[0m since Wed 2026-03-11 12:06:10 WET; 1s ago[m
+TriggeredBy: [0;1;32m●[0m ssh.socket[m
+       Docs: ]8;;man:sshd(8)man:sshd(8)]8;;[m
+             ]8;;man:sshd_config(5)man:sshd_config(5)]8;;[m
+    Process: 2247 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)[m
+   Main PID: 2249 (sshd)[m
+      Tasks: 1 (limit: 19104)[m
+     Memory: 2.4M (peak: 2.8M)[m
+        CPU: 22ms[m
+     CGroup: /system.slice/ssh.service[m
+             └─[0;38;5;245m2249 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"[0m[m
+[m
+Mar 11 12:06:10 Main systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...[m
+Mar 11 12:06:10 Main sshd[2249]: Server listening on 0.0.0.0 port 2222.[m
+Mar 11 12:06:10 Main sshd[2249]: Server listening on :: port 2222.[m
+Mar 11 12:06:10 Main systemd[1]: Started ssh.service - OpenBSD Secure Shell server.[m
+[K[?1l>[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mip a[27mip a
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:a0:d2:ef brd ff:ff:ff:ff:ff:ff
+    inet 172.20.155.61/20 brd 172.20.159.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fea0:d2ef/64 scope link 
+       valid_lft forever preferred_lft forever
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mhostname -I[27mhostname -I
+[?2004l172.20.155.61 
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo sshd -T | grep permitrootlogin[27msudo sshd -T | grep permitrootlogin[C
+[?2004l[01;31m[Kpermitrootlogin[m[K no
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mssh -v localhost[27mssh -v localhost
+[?2004lOpenSSH_9.6p1 Ubuntu-3ubuntu13.14, OpenSSL 3.0.13 30 Jan 2024
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to localhost [127.0.0.1] port 22.
+debug1: connect to address 127.0.0.1 port 22: Connection refused
+ssh: connect to host localhost port 22: Connection refused
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -sV localhost[27mnmap -sV localhost
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:08 WET
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mcat /etc/ssh/sshd_config | grep PermitRootLogin[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat /etc/ssh/sshd_config | grep PermitRootLogin
+[?2004l[01;31m[KPermitRootLogin[m[K no
+#[01;31m[KPermitRootLogin[m[K prohibit-password
+# the setting of "[01;31m[KPermitRootLogin[m[K prohibit-password".
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -p 2222 localhost[27mnmap -p 2222 localhost
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:12 WET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00020s latency).
+
+PORT     STATE SERVICE
+2222/tcp open  EtherNetIP-1
+
+Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -sV localhost[27mnmap -sV localhost
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:12 WET
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -p- localhost[27mnmap -p- localhost
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:12 WET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00013s latency).
+Not shown: 65530 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+80/tcp   open  http
+2222/tcp open  EtherNetIP-1
+5001/tcp open  commplex-link
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 1.99 seconds
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mgrep Port /etc/ssh/sshd_config[27mgrep Port /etc/ssh/sshd_config
+[?2004l# configuration must be re-generated after changing [01;31m[KPort[m[K, AddressFamily, or
+[01;31m[KPort[m[K 2222
+#Gateway[01;31m[KPort[m[Ks no
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl status fail2ban[27msudo systemctl status fail2ban
+[?2004l[?1h=[0;1;32m●[0m fail2ban.service - Fail2Ban Service[m
+     Loaded: loaded (]8;;file://Main/usr/lib/systemd/system/fail2ban.service/usr/lib/systemd/system/fail2ban.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)[m
+     Active: [0;1;32mactive (running)[0m since Wed 2026-03-11 10:10:11 WET; 2h 10min ago[m
+       Docs: ]8;;man:fail2ban(1)man:fail2ban(1)]8;;[m
+   Main PID: 255 (fail2ban-server)[m
+      Tasks: 9 (limit: 19104)[m
+     Memory: 47.7M (peak: 74.2M)[m
+        CPU: 9.863s[m
+     CGroup: /system.slice/fail2ban.service[m
+             └─[0;38;5;245m255 /usr/bin/python3 /usr/bin/fail2ban-server -xf start[0m[m
+[m
+Mar 11 10:10:11 Main systemd[1]: Started fail2ban.service - Fail2Ban Service.[m
+Mar 11 10:10:11 Main fail2ban-server[255]: 2026-03-11 10:10:11,484 fail2ban.configreader   [255]: WARNING 'allowipv6' n[m[7m>[27m
+Mar 11 10:10:11 Main fail2ban-server[255]: Server ready[m
+[7mlines 1-14/14 (END)[27m[K[K [KESCESC[Kqq[K[7mlines 1-14/14 (END)[27m[K[K[?1l>[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status[27msudo fail2ban-client status
+[?2004lStatus
+|- Number of jail:	3
+`- Jail list:	nginx-http-auth, sshd, vsftpd
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status sshd[27msudo fail2ban-client status sshd
+[?2004lStatus for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status sshd[27msudo fail2ban-client status sshd
+[?2004lStatus for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo fail2ban-client status sshd
+[?2004lStatus for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo iptables -L[27msudo iptables -L
+[?2004lChain INPUT (policy DROP)
+target     prot opt source               destination         
+ufw-before-logging-input  all  --  anywhere             anywhere            
+ufw-before-input  all  --  anywhere             anywhere            
+ufw-after-input  all  --  anywhere             anywhere            
+ufw-after-logging-input  all  --  anywhere             anywhere            
+ufw-reject-input  all  --  anywhere             anywhere            
+ufw-track-input  all  --  anywhere             anywhere            
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+ufw-before-logging-forward  all  --  anywhere             anywhere            
+ufw-before-forward  all  --  anywhere             anywhere            
+ufw-after-forward  all  --  anywhere             anywhere            
+ufw-after-logging-forward  all  --  anywhere             anywhere            
+ufw-reject-forward  all  --  anywhere             anywhere            
+ufw-track-forward  all  --  anywhere             anywhere            
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+ufw-before-logging-output  all  --  anywhere             anywhere            
+ufw-before-output  all  --  anywhere             anywhere            
+ufw-after-output  all  --  anywhere             anywhere            
+ufw-after-logging-output  all  --  anywhere             anywhere            
+ufw-reject-output  all  --  anywhere             anywhere            
+ufw-track-output  all  --  anywhere             anywhere            
+
+Chain ufw-after-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-after-input (1 references)
+target     prot opt source               destination         
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:netbios-ns
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:netbios-dgm
+ufw-skip-to-policy-input  tcp  --  anywhere             anywhere             tcp dpt:netbios-ssn
+ufw-skip-to-policy-input  tcp  --  anywhere             anywhere             tcp dpt:microsoft-ds
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:bootps
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:bootpc
+ufw-skip-to-policy-input  all  --  anywhere             anywhere             ADDRTYPE match dst-type BROADCAST
+
+Chain ufw-after-logging-forward (1 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warn prefix "[UFW BLOCK] "
+
+Chain ufw-after-logging-input (1 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warn prefix "[UFW BLOCK] "
+
+Chain ufw-after-logging-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-after-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-forward (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+ACCEPT     icmp --  anywhere             anywhere             icmp destination-unreachable
+ACCEPT     icmp --  anywhere             anywhere             icmp time-exceeded
+ACCEPT     icmp --  anywhere             anywhere             icmp parameter-problem
+ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
+ufw-user-forward  all  --  anywhere             anywhere            
+
+Chain ufw-before-input (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+ufw-logging-deny  all  --  anywhere             anywhere             ctstate INVALID
+DROP       all  --  anywhere             anywhere             ctstate INVALID
+ACCEPT     icmp --  anywhere             anywhere             icmp destination-unreachable
+ACCEPT     icmp --  anywhere             anywhere             icmp time-exceeded
+ACCEPT     icmp --  anywhere             anywhere             icmp parameter-problem
+ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
+ACCEPT     udp  --  anywhere             anywhere             udp spt:bootps dpt:bootpc
+ufw-not-local  all  --  anywhere             anywhere            
+ACCEPT     udp  --  anywhere             mdns.mcast.net       udp dpt:mdns
+ACCEPT     udp  --  anywhere             239.255.255.250      udp dpt:1900
+ufw-user-input  all  --  anywhere             anywhere            
+
+Chain ufw-before-logging-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-logging-input (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-logging-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-output (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+ufw-user-output  all  --  anywhere             anywhere            
+
+Chain ufw-logging-allow (0 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warn prefix "[UFW ALLOW] "
+
+Chain ufw-logging-deny (2 references)
+target     prot opt source               destination         
+RETURN     all  --  anywhere             anywhere             ctstate INVALID limit: avg 3/min burst 10
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warn prefix "[UFW BLOCK] "
+
+Chain ufw-not-local (1 references)
+target     prot opt source               destination         
+RETURN     all  --  anywhere             anywhere             ADDRTYPE match dst-type LOCAL
+RETURN     all  --  anywhere             anywhere             ADDRTYPE match dst-type MULTICAST
+RETURN     all  --  anywhere             anywhere             ADDRTYPE match dst-type BROADCAST
+ufw-logging-deny  all  --  anywhere             anywhere             limit: avg 3/min burst 10
+DROP       all  --  anywhere             anywhere            
+
+Chain ufw-reject-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-reject-input (1 references)
+target     prot opt source               destination         
+
+Chain ufw-reject-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-skip-to-policy-forward (0 references)
+target     prot opt source               destination         
+DROP       all  --  anywhere             anywhere            
+
+Chain ufw-skip-to-policy-input (7 references)
+target     prot opt source               destination         
+DROP       all  --  anywhere             anywhere            
+
+Chain ufw-skip-to-policy-output (0 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+
+Chain ufw-track-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-track-input (1 references)
+target     prot opt source               destination         
+
+Chain ufw-track-output (1 references)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             ctstate NEW
+ACCEPT     udp  --  anywhere             anywhere             ctstate NEW
+
+Chain ufw-user-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-user-input (1 references)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             multiport dports http,https
+           tcp  --  anywhere             anywhere             tcp dpt:ssh ctstate NEW recent: SET name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit  tcp  --  anywhere             anywhere             tcp dpt:ssh ctstate NEW recent: UPDATE seconds: 30 hit_count: 6 name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit-accept  tcp  --  anywhere             anywhere             tcp dpt:ssh
+           tcp  --  anywhere             anywhere             tcp dpt:domain ctstate NEW recent: SET name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit  tcp  --  anywhere             anywhere             tcp dpt:domain ctstate NEW recent: UPDATE seconds: 30 hit_count: 6 name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit-accept  tcp  --  anywhere             anywhere             tcp dpt:domain
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:https
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ftp
+ACCEPT     tcp  --  anywhere             anywhere             multiport dports 30000:30100
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:2222
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:iprop
+ACCEPT     tcp  --  anywhere             anywhere             multiport dports 40000:40100
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:8443
+ACCEPT     tcp  --  localhost            anywhere             tcp dpt:3000
+ACCEPT     udp  --  localhost            anywhere             udp dpt:3000
+DROP       tcp  --  anywhere             anywhere             tcp dpt:3000
+DROP       udp  --  anywhere             anywhere             udp dpt:3000
+
+Chain ufw-user-limit (2 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 5 LOG level warn prefix "[UFW LIMIT BLOCK] "
+REJECT     all  --  anywhere             anywhere             reject-with icmp-port-unreachable
+
+Chain ufw-user-limit-accept (2 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+
+Chain ufw-user-logging-forward (0 references)
+target     prot opt source               destination         
+
+Chain ufw-user-logging-input (0 references)
+target     prot opt source               destination         
+
+Chain ufw-user-logging-output (0 references)
+target     prot opt source               destination         
+
+Chain ufw-user-output (1 references)
+target     prot opt source               destination         
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nft list ruleset[27msudo nft list ruleset
+[?2004l# Warning: table ip filter is managed by iptables-nft, do not touch!
+table ip filter {
+	chain ufw-before-logging-input {
+	}
+
+	chain ufw-before-logging-output {
+	}
+
+	chain ufw-before-logging-forward {
+	}
+
+	chain ufw-before-input {
+		iifname "lo" counter packets 135695 bytes 6837568 accept
+		ct state related,established counter packets 1506 bytes 7628244 accept
+		ct state invalid counter packets 0 bytes 0 jump ufw-logging-deny
+		ct state invalid counter packets 0 bytes 0 drop
+		ip protocol icmp icmp type destination-unreachable counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type time-exceeded counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type parameter-problem counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type echo-request counter packets 0 bytes 0 accept
+		udp sport 67 udp dport 68 counter packets 0 bytes 0 accept
+		counter packets 22 bytes 1672 jump ufw-not-local
+		ip daddr 224.0.0.251 udp dport 5353 counter packets 0 bytes 0 accept
+		ip daddr 239.255.255.250 udp dport 1900 counter packets 0 bytes 0 accept
+		counter packets 22 bytes 1672 jump ufw-user-input
+	}
+
+	chain ufw-before-output {
+		oifname "lo" counter packets 135695 bytes 6837568 accept
+		ct state related,established counter packets 1028 bytes 67144 accept
+		counter packets 247 bytes 18660 jump ufw-user-output
+	}
+
+	chain ufw-before-forward {
+		ct state related,established counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type destination-unreachable counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type time-exceeded counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type parameter-problem counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type echo-request counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw-user-forward
+	}
+
+	chain ufw-after-input {
+		udp dport 137 counter packets 12 bytes 1152 jump ufw-skip-to-policy-input
+		udp dport 138 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		tcp dport 139 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		tcp dport 445 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		udp dport 67 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		udp dport 68 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		fib daddr type broadcast counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+	}
+
+	chain ufw-after-output {
+	}
+
+	chain ufw-after-forward {
+	}
+
+	chain ufw-after-logging-input {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-after-logging-output {
+	}
+
+	chain ufw-after-logging-forward {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-reject-input {
+	}
+
+	chain ufw-reject-output {
+	}
+
+	chain ufw-reject-forward {
+	}
+
+	chain ufw-track-input {
+	}
+
+	chain ufw-track-output {
+		ip protocol tcp ct state new counter packets 7 bytes 420 accept
+		ip protocol udp ct state new counter packets 240 bytes 18240 accept
+	}
+
+	chain ufw-track-forward {
+	}
+
+	chain INPUT {
+		type filter hook input priority filter; policy drop;
+		counter packets 137223 bytes 14467484 jump ufw-before-logging-input
+		counter packets 137223 bytes 14467484 jump ufw-before-input
+		counter packets 12 bytes 1152 jump ufw-after-input
+		counter packets 0 bytes 0 jump ufw-after-logging-input
+		counter packets 0 bytes 0 jump ufw-reject-input
+		counter packets 0 bytes 0 jump ufw-track-input
+	}
+
+	chain OUTPUT {
+		type filter hook output priority filter; policy accept;
+		counter packets 136970 bytes 6923372 jump ufw-before-logging-output
+		counter packets 136970 bytes 6923372 jump ufw-before-output
+		counter packets 247 bytes 18660 jump ufw-after-output
+		counter packets 247 bytes 18660 jump ufw-after-logging-output
+		counter packets 247 bytes 18660 jump ufw-reject-output
+		counter packets 247 bytes 18660 jump ufw-track-output
+	}
+
+	chain FORWARD {
+		type filter hook forward priority filter; policy drop;
+		counter packets 0 bytes 0 jump ufw-before-logging-forward
+		counter packets 0 bytes 0 jump ufw-before-forward
+		counter packets 0 bytes 0 jump ufw-after-forward
+		counter packets 0 bytes 0 jump ufw-after-logging-forward
+		counter packets 0 bytes 0 jump ufw-reject-forward
+		counter packets 0 bytes 0 jump ufw-track-forward
+	}
+
+	chain ufw-logging-deny {
+		ct state invalid limit rate 3/minute burst 10 packets counter packets 0 bytes 0 return
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-logging-allow {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW ALLOW] "
+	}
+
+	chain ufw-skip-to-policy-input {
+		counter packets 12 bytes 1152 drop
+	}
+
+	chain ufw-skip-to-policy-output {
+		counter packets 0 bytes 0 accept
+	}
+
+	chain ufw-skip-to-policy-forward {
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw-not-local {
+		fib daddr type local counter packets 10 bytes 520 return
+		fib daddr type multicast counter packets 0 bytes 0 return
+		fib daddr type broadcast counter packets 12 bytes 1152 return
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 jump ufw-logging-deny
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw-user-input {
+		ip protocol tcp tcp dport { 80, 443 } counter packets 0 bytes 0 accept
+		tcp dport 22 ct state new xt match "recent" counter packets 10 bytes 520
+		tcp dport 22 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw-user-limit
+		tcp dport 22 counter packets 10 bytes 520 jump ufw-user-limit-accept
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw-user-limit
+		tcp dport 53 counter packets 0 bytes 0 jump ufw-user-limit-accept
+		tcp dport 80 counter packets 0 bytes 0 accept
+		tcp dport 443 counter packets 0 bytes 0 accept
+		tcp dport 21 counter packets 0 bytes 0 accept
+		ip protocol tcp tcp dport 30000-30100 counter packets 0 bytes 0 accept
+		tcp dport 2222 counter packets 0 bytes 0 accept
+		tcp dport 2121 counter packets 0 bytes 0 accept
+		ip protocol tcp tcp dport 40000-40100 counter packets 0 bytes 0 accept
+		tcp dport 8443 counter packets 0 bytes 0 accept
+		ip saddr 127.0.0.1 tcp dport 3000 counter packets 0 bytes 0 accept
+		ip saddr 127.0.0.1 udp dport 3000 counter packets 0 bytes 0 accept
+		tcp dport 3000 counter packets 0 bytes 0 drop
+		udp dport 3000 counter packets 0 bytes 0 drop
+	}
+
+	chain ufw-user-output {
+	}
+
+	chain ufw-user-forward {
+	}
+
+	chain ufw-user-logging-input {
+	}
+
+	chain ufw-user-logging-output {
+	}
+
+	chain ufw-user-logging-forward {
+	}
+
+	chain ufw-user-limit {
+		limit rate 3/minute burst 5 packets counter packets 0 bytes 0 log prefix "[UFW LIMIT BLOCK] "
+		counter packets 0 bytes 0 reject
+	}
+
+	chain ufw-user-limit-accept {
+		counter packets 10 bytes 520 accept
+	}
+}
+# Warning: table ip6 filter is managed by iptables-nft, do not touch!
+table ip6 filter {
+	chain ufw6-before-logging-input {
+	}
+
+	chain ufw6-before-logging-output {
+	}
+
+	chain ufw6-before-logging-forward {
+	}
+
+	chain ufw6-before-input {
+		iifname "lo" counter packets 1050 bytes 144296 accept
+		rt type 0 counter packets 0 bytes 0 drop
+		ct state related,established counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-reply counter packets 0 bytes 0 accept
+		ct state invalid counter packets 0 bytes 0 jump ufw6-logging-deny
+		ct state invalid counter packets 0 bytes 0 drop
+		meta l4proto ipv6-icmp icmpv6 type destination-unreachable counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type packet-too-big counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type time-exceeded counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type parameter-problem counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-request counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-solicit ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-solicit ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-query counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-report counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-done counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 ip6 daddr fe80::/10 udp sport 547 udp dport 546 counter packets 0 bytes 0 accept
+		ip6 daddr ff02::fb udp dport 5353 counter packets 0 bytes 0 accept
+		ip6 daddr ff02::f udp dport 1900 counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw6-user-input
+	}
+
+	chain ufw6-before-output {
+		oifname "lo" counter packets 1050 bytes 144296 accept
+		rt type 0 counter packets 0 bytes 0 drop
+		ct state related,established counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type destination-unreachable counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type packet-too-big counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type time-exceeded counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type parameter-problem counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-request counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-reply counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-solicit ip6 hoplimit 255 counter packets 10 bytes 560 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-solicit ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-query counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-report counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-done counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw6-user-output
+	}
+
+	chain ufw6-before-forward {
+		rt type 0 counter packets 0 bytes 0 drop
+		ct state related,established counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type destination-unreachable counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type packet-too-big counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type time-exceeded counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type parameter-problem counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-request counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-reply counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw6-user-forward
+	}
+
+	chain ufw6-after-input {
+		udp dport 137 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		udp dport 138 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		tcp dport 139 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		tcp dport 445 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		udp dport 546 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		udp dport 547 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+	}
+
+	chain ufw6-after-output {
+	}
+
+	chain ufw6-after-forward {
+	}
+
+	chain ufw6-after-logging-input {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw6-after-logging-output {
+	}
+
+	chain ufw6-after-logging-forward {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw6-reject-input {
+	}
+
+	chain ufw6-reject-output {
+	}
+
+	chain ufw6-reject-forward {
+	}
+
+	chain ufw6-track-input {
+	}
+
+	chain ufw6-track-output {
+		meta l4proto tcp ct state new counter packets 0 bytes 0 accept
+		meta l4proto udp ct state new counter packets 0 bytes 0 accept
+	}
+
+	chain ufw6-track-forward {
+	}
+
+	chain INPUT {
+		type filter hook input priority filter; policy drop;
+		counter packets 1050 bytes 144296 jump ufw6-before-logging-input
+		counter packets 1050 bytes 144296 jump ufw6-before-input
+		counter packets 0 bytes 0 jump ufw6-after-input
+		counter packets 0 bytes 0 jump ufw6-after-logging-input
+		counter packets 0 bytes 0 jump ufw6-reject-input
+		counter packets 0 bytes 0 jump ufw6-track-input
+	}
+
+	chain OUTPUT {
+		type filter hook output priority filter; policy accept;
+		counter packets 1060 bytes 144856 jump ufw6-before-logging-output
+		counter packets 1060 bytes 144856 jump ufw6-before-output
+		counter packets 0 bytes 0 jump ufw6-after-output
+		counter packets 0 bytes 0 jump ufw6-after-logging-output
+		counter packets 0 bytes 0 jump ufw6-reject-output
+		counter packets 0 bytes 0 jump ufw6-track-output
+	}
+
+	chain FORWARD {
+		type filter hook forward priority filter; policy drop;
+		counter packets 0 bytes 0 jump ufw6-before-logging-forward
+		counter packets 0 bytes 0 jump ufw6-before-forward
+		counter packets 0 bytes 0 jump ufw6-after-forward
+		counter packets 0 bytes 0 jump ufw6-after-logging-forward
+		counter packets 0 bytes 0 jump ufw6-reject-forward
+		counter packets 0 bytes 0 jump ufw6-track-forward
+	}
+
+	chain ufw6-logging-deny {
+		ct state invalid limit rate 3/minute burst 10 packets counter packets 0 bytes 0 return
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw6-logging-allow {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW ALLOW] "
+	}
+
+	chain ufw6-skip-to-policy-input {
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw6-skip-to-policy-output {
+		counter packets 0 bytes 0 accept
+	}
+
+	chain ufw6-skip-to-policy-forward {
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw6-user-input {
+		meta l4proto tcp tcp dport { 80, 443 } counter packets 0 bytes 0 accept
+		tcp dport 22 ct state new xt match "recent" counter packets 0 bytes 0
+		tcp dport 22 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw6-user-limit
+		tcp dport 22 counter packets 0 bytes 0 jump ufw6-user-limit-accept
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw6-user-limit
+		tcp dport 53 counter packets 0 bytes 0 jump ufw6-user-limit-accept
+		tcp dport 80 counter packets 0 bytes 0 accept
+		tcp dport 443 counter packets 0 bytes 0 accept
+		tcp dport 21 counter packets 0 bytes 0 accept
+		meta l4proto tcp tcp dport 30000-30100 counter packets 0 bytes 0 accept
+		tcp dport 2222 counter packets 0 bytes 0 accept
+		tcp dport 2121 counter packets 0 bytes 0 accept
+		meta l4proto tcp tcp dport 40000-40100 counter packets 0 bytes 0 accept
+		tcp dport 8443 counter packets 0 bytes 0 accept
+		tcp dport 3000 counter packets 0 bytes 0 drop
+		udp dport 3000 counter packets 0 bytes 0 drop
+	}
+
+	chain ufw6-user-output {
+	}
+
+	chain ufw6-user-forward {
+	}
+
+	chain ufw6-user-logging-input {
+	}
+
+	chain ufw6-user-logging-output {
+	}
+
+	chain ufw6-user-logging-forward {
+	}
+
+	chain ufw6-user-limit {
+		limit rate 3/minute burst 5 packets counter packets 0 bytes 0 log prefix "[UFW LIMIT BLOCK] "
+		counter packets 0 bytes 0 reject
+	}
+
+	chain ufw6-user-limit-accept {
+		counter packets 0 bytes 0 accept
+	}
+}
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo tail -f /var/log/fail2ban.log[27msudo tail -f /var/log/fail2ban.log
+[?2004l2026-03-11 10:10:11,719 fail2ban.jail           [255]: INFO    Jail 'vsftpd' started
+2026-03-11 10:10:11,761 fail2ban.filtersystemd  [255]: INFO    [nginx-http-auth] Jail is in operation now (process new journal entries)
+2026-03-11 10:10:11,761 fail2ban.filtersystemd  [255]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2026-03-11 10:10:11,820 fail2ban.filtersystemd  [255]: INFO    [vsftpd] Jail is in operation now (process new journal entries)
+2026-03-11 12:21:38,855 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:41,533 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:49,879 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:57,879 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:00,084 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:02,130 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+q 
+^[  ^C
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw limit 2222/tcp[27msudo ufw limit 2222/tcp
+[?2004lRule updated
+Rule updated (v6)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw status numbered[27msudo ufw status numbered
+[?2004lStatus: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 80,443/tcp                 ALLOW IN    Anywhere                  
+[ 2] 22/tcp                     LIMIT IN    Anywhere                  
+[ 3] 53/tcp                     LIMIT IN    Anywhere                  
+[ 4] 80/tcp                     ALLOW IN    Anywhere                  
+[ 5] 443/tcp                    ALLOW IN    Anywhere                  
+[ 6] 21/tcp                     ALLOW IN    Anywhere                  
+[ 7] 30000:30100/tcp            ALLOW IN    Anywhere                  
+[ 8] 2222/tcp                   LIMIT IN    Anywhere                  
+[ 9] 2121/tcp                   ALLOW IN    Anywhere                  
+[10] 40000:40100/tcp            ALLOW IN    Anywhere                  
+[11] 8443/tcp                   ALLOW IN    Anywhere                  
+[12] 3000                       ALLOW IN    127.0.0.1                 
+[13] 3000                       DENY IN     Anywhere                  
+[14] 80,443/tcp (v6)            ALLOW IN    Anywhere (v6)             
+[15] 22/tcp (v6)                LIMIT IN    Anywhere (v6)             
+[16] 53/tcp (v6)                LIMIT IN    Anywhere (v6)             
+[17] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[18] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+[19] 21/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[20] 30000:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[21] 2222/tcp (v6)              LIMIT IN    Anywhere (v6)             
+[22] 2121/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[23] 40000:40100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[24] 8443/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[25] 3000 (v6)                  DENY IN     Anywhere (v6)             
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status sshd[27msudo fail2ban-client status sshd
+[?2004lStatus for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	1
+   |- Total banned:	1
+   `- Banned IP list:	172.20.144.1
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo tail -f /var/log/fail2ban.log[27msudo tail -f /var/log/fail2ban.log
+[?2004l2026-03-11 12:21:38,855 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:41,533 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:49,879 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:57,879 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:00,084 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:02,130 fail2ban.filter         [255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:26:21,998 fail2ban.filter         [255]: INFO    [sshd] Found 172.20.144.1 - 2026-03-11 12:26:21
+2026-03-11 12:26:25,294 fail2ban.filter         [255]: INFO    [sshd] Found 172.20.144.1 - 2026-03-11 12:26:24
+2026-03-11 12:26:26,794 fail2ban.filter         [255]: INFO    [sshd] Found 172.20.144.1 - 2026-03-11 12:26:26
+2026-03-11 12:26:27,009 fail2ban.actions        [255]: NOTICE  [sshd] Ban 172.20.144.1
+^C
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo journalctl -u ssh --since "10 minutes ago"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo journalctl -u ssh --since "10 minutes ago"
+[?2004l[?1h=Mar 11 12:21:38 Main sshd[2592]: Invalid user fakeuser from ::1 port 47800[m
+Mar 11 12:21:38 Main sshd[2592]: Connection closed by invalid user fakeuser ::1 port 47800 [preauth][m
+Mar 11 12:21:41 Main sshd[2596]: Invalid user fakeuser from ::1 port 39472[m
+Mar 11 12:21:41 Main sshd[2596]: Connection closed by invalid user fakeuser ::1 port 39472 [preauth][m
+Mar 11 12:21:49 Main sshd[2598]: Invalid user fakeuser from ::1 port 39486[m
+Mar 11 12:21:49 Main sshd[2598]: Connection closed by invalid user fakeuser ::1 port 39486 [preauth][m
+Mar 11 12:21:57 Main sshd[2602]: Invalid user fakeuser from ::1 port 41140[m
+Mar 11 12:21:57 Main sshd[2602]: Connection closed by invalid user fakeuser ::1 port 41140 [preauth][m
+Mar 11 12:21:59 Main sshd[2606]: Invalid user fakeuser from ::1 port 41142[m
+Mar 11 12:21:59 Main sshd[2606]: Connection closed by invalid user fakeuser ::1 port 41142 [preauth][m
+Mar 11 12:22:01 Main sshd[2608]: Invalid user fakeuser from ::1 port 35916[m
+Mar 11 12:22:01 Main sshd[2608]: Connection closed by invalid user fakeuser ::1 port 35916 [preauth][m
+Mar 11 12:22:18 Main sshd[2614]: Accepted publickey for arcansel from ::1 port 48620 ssh2: RSA SHA256:G8K1QXnmfOsx3dqAa[m[7m>[27m
+Mar 11 12:22:18 Main sshd[2614]: pam_unix(sshd:session): session opened for user arcansel(uid=1000) by arcansel(uid=0)[m
+Mar 11 12:22:24 Main sshd[2877]: Connection closed by authenticating user arcansel 127.0.0.1 port 52154 [preauth][m
+Mar 11 12:22:26 Main sshd[2880]: Connection closed by authenticating user arcansel 127.0.0.1 port 52164 [preauth][m
+Mar 11 12:22:28 Main sshd[2883]: Connection closed by authenticating user arcansel 127.0.0.1 port 52166 [preauth][m
+Mar 11 12:22:29 Main sshd[2886]: Connection closed by authenticating user arcansel 127.0.0.1 port 52174 [preauth][m
+Mar 11 12:22:30 Main sshd[2889]: Connection closed by authenticating user arcansel 127.0.0.1 port 52180 [preauth][m
+Mar 11 12:26:21 Main sshd[2994]: Invalid user fakeuser from 172.20.144.1 port 3928[m
+Mar 11 12:26:21 Main sshd[2994]: Connection reset by invalid user fakeuser 172.20.144.1 port 3928 [preauth][m
+Mar 11 12:26:24 Main sshd[2996]: Invalid user fakeuser from 172.20.144.1 port 3930[m
+Mar 11 12:26:24 Main sshd[2996]: Connection reset by invalid user fakeuser 172.20.144.1 port 3930 [preauth][m
+Mar 11 12:26:26 Main sshd[2998]: Invalid user fakeuser from 172.20.144.1 port 3933[m
+Mar 11 12:26:26 Main sshd[2998]: Connection reset by invalid user fakeuser 172.20.144.1 port 3933 [preauth][m
+[7mlines 1-25/25 (END)[27m[K[K [KESCESC[Kqq[K[7mlines 1-25/25 (END)[27m[K[K[?1l>
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo journalctl -u ssh | tail -n 50[27msudo journalctl -u ssh | tail -n 50
+[?2004lMar 11 01:49:07 Main sshd[110153]: Server listening on :: port 2222.
+Mar 11 01:49:07 Main systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Mar 11 01:50:26 Main sshd[110154]: Connection closed by authenticating user root 127.0.0.1 port 42056 [preauth]
+Mar 11 04:02:52 Main sshd[156940]: Invalid user fakeuser from ::1 port 41634
+Mar 11 04:02:52 Main sshd[156940]: Connection closed by invalid user fakeuser ::1 port 41634 [preauth]
+Mar 11 04:03:01 Main sshd[157078]: Invalid user fakeuser from ::1 port 33024
+Mar 11 04:03:01 Main sshd[157078]: Connection closed by invalid user fakeuser ::1 port 33024 [preauth]
+Mar 11 04:03:03 Main sshd[157097]: Invalid user fakeuser from ::1 port 33040
+Mar 11 04:03:03 Main sshd[157097]: Connection closed by invalid user fakeuser ::1 port 33040 [preauth]
+Mar 11 04:03:06 Main sshd[157114]: Invalid user fakeuser from ::1 port 33056
+Mar 11 04:03:06 Main sshd[157114]: Connection closed by invalid user fakeuser ::1 port 33056 [preauth]
+Mar 11 04:13:53 Main systemd[1]: Stopping ssh.service - OpenBSD Secure Shell server...
+Mar 11 04:13:53 Main sshd[110153]: Received signal 15; terminating.
+Mar 11 04:13:53 Main systemd[1]: ssh.service: Deactivated successfully.
+Mar 11 04:13:53 Main systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+-- Boot 7ecc713a7e6440328d2e9133324e7e09 --
+Mar 11 12:06:10 Main systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Mar 11 12:06:10 Main sshd[2249]: Server listening on 0.0.0.0 port 2222.
+Mar 11 12:06:10 Main sshd[2249]: Server listening on :: port 2222.
+Mar 11 12:06:10 Main systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Mar 11 12:08:18 Main sshd[2267]: Connection closed by 127.0.0.1 port 46404
+Mar 11 12:11:27 Main sshd[2272]: Accepted publickey for arcansel from ::1 port 52752 ssh2: RSA SHA256:G8K1QXnmfOsx3dqAaaT1kV7oH7sNR3YTPSrbXHayXT4
+Mar 11 12:11:27 Main sshd[2272]: pam_unix(sshd:session): session opened for user arcansel(uid=1000) by arcansel(uid=0)
+Mar 11 12:11:44 Main sshd[2537]: Connection closed by authenticating user root ::1 port 51606 [preauth]
+Mar 11 12:12:14 Main sshd[2547]: Connection closed by 127.0.0.1 port 37486
+Mar 11 12:21:38 Main sshd[2592]: Invalid user fakeuser from ::1 port 47800
+Mar 11 12:21:38 Main sshd[2592]: Connection closed by invalid user fakeuser ::1 port 47800 [preauth]
+Mar 11 12:21:41 Main sshd[2596]: Invalid user fakeuser from ::1 port 39472
+Mar 11 12:21:41 Main sshd[2596]: Connection closed by invalid user fakeuser ::1 port 39472 [preauth]
+Mar 11 12:21:49 Main sshd[2598]: Invalid user fakeuser from ::1 port 39486
+Mar 11 12:21:49 Main sshd[2598]: Connection closed by invalid user fakeuser ::1 port 39486 [preauth]
+Mar 11 12:21:57 Main sshd[2602]: Invalid user fakeuser from ::1 port 41140
+Mar 11 12:21:57 Main sshd[2602]: Connection closed by invalid user fakeuser ::1 port 41140 [preauth]
+Mar 11 12:21:59 Main sshd[2606]: Invalid user fakeuser from ::1 port 41142
+Mar 11 12:21:59 Main sshd[2606]: Connection closed by invalid user fakeuser ::1 port 41142 [preauth]
+Mar 11 12:22:01 Main sshd[2608]: Invalid user fakeuser from ::1 port 35916
+Mar 11 12:22:01 Main sshd[2608]: Connection closed by invalid user fakeuser ::1 port 35916 [preauth]
+Mar 11 12:22:18 Main sshd[2614]: Accepted publickey for arcansel from ::1 port 48620 ssh2: RSA SHA256:G8K1QXnmfOsx3dqAaaT1kV7oH7sNR3YTPSrbXHayXT4
+Mar 11 12:22:18 Main sshd[2614]: pam_unix(sshd:session): session opened for user arcansel(uid=1000) by arcansel(uid=0)
+Mar 11 12:22:24 Main sshd[2877]: Connection closed by authenticating user arcansel 127.0.0.1 port 52154 [preauth]
+Mar 11 12:22:26 Main sshd[2880]: Connection closed by authenticating user arcansel 127.0.0.1 port 52164 [preauth]
+Mar 11 12:22:28 Main sshd[2883]: Connection closed by authenticating user arcansel 127.0.0.1 port 52166 [preauth]
+Mar 11 12:22:29 Main sshd[2886]: Connection closed by authenticating user arcansel 127.0.0.1 port 52174 [preauth]
+Mar 11 12:22:30 Main sshd[2889]: Connection closed by authenticating user arcansel 127.0.0.1 port 52180 [preauth]
+Mar 11 12:26:21 Main sshd[2994]: Invalid user fakeuser from 172.20.144.1 port 3928
+Mar 11 12:26:21 Main sshd[2994]: Connection reset by invalid user fakeuser 172.20.144.1 port 3928 [preauth]
+Mar 11 12:26:24 Main sshd[2996]: Invalid user fakeuser from 172.20.144.1 port 3930
+Mar 11 12:26:24 Main sshd[2996]: Connection reset by invalid user fakeuser 172.20.144.1 port 3930 [preauth]
+Mar 11 12:26:26 Main sshd[2998]: Invalid user fakeuser from 172.20.144.1 port 3933
+Mar 11 12:26:26 Main sshd[2998]: Connection reset by invalid user fakeuser 172.20.144.1 port 3933 [preauth]
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw status numbered[27msudo ufw status numbered
+[?2004lStatus: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 80,443/tcp                 ALLOW IN    Anywhere                  
+[ 2] 22/tcp                     LIMIT IN    Anywhere                  
+[ 3] 53/tcp                     LIMIT IN    Anywhere                  
+[ 4] 80/tcp                     ALLOW IN    Anywhere                  
+[ 5] 443/tcp                    ALLOW IN    Anywhere                  
+[ 6] 21/tcp                     ALLOW IN    Anywhere                  
+[ 7] 30000:30100/tcp            ALLOW IN    Anywhere                  
+[ 8] 2222/tcp                   LIMIT IN    Anywhere                  
+[ 9] 2121/tcp                   ALLOW IN    Anywhere                  
+[10] 40000:40100/tcp            ALLOW IN    Anywhere                  
+[11] 8443/tcp                   ALLOW IN    Anywhere                  
+[12] 3000                       ALLOW IN    127.0.0.1                 
+[13] 3000                       DENY IN     Anywhere                  
+[14] 80,443/tcp (v6)            ALLOW IN    Anywhere (v6)             
+[15] 22/tcp (v6)                LIMIT IN    Anywhere (v6)             
+[16] 53/tcp (v6)                LIMIT IN    Anywhere (v6)             
+[17] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[18] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+[19] 21/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[20] 30000:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[21] 2222/tcp (v6)              LIMIT IN    Anywhere (v6)             
+[22] 2121/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[23] 40000:40100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[24] 8443/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[25] 3000 (v6)                  DENY IN     Anywhere (v6)             
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client set sshd unbanip 172.20.144.1[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo fail2ban-client set sshd unbanip 172.20.144.1
+[?2004l1
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status sshd[27msudo fail2ban-client status sshd
+[?2004lStatus for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw delete 2[27msudo ufw delete 2
+[?2004lDeleting:
+ limit 22/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw delete 15[27msudo ufw delete 15
+[?2004lDeleting:
+ limit 53/tcp
+Proceed with operation (y|n)? n
+Aborted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 15[K4
+[?2004lDeleting:
+ limit 22/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nano /etc/vsftpd.conf[27msudo nano /etc/vsftpd.conf
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;52H(B[0;7m[ Read 169 lines ](B[m[H(B[0;7m  GNU nano 7.2                                        /etc/vsftpd.conf                                                  [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[36m# Example config file /etc/vsftpd.conf[3d#[4d# The default compiled in settings are fairly paranoid. This sample file[5d# loosens things up a bit, to make the ftp daemon more usable.[6d# Please see vsftpd.conf.5 for all compiled in defaults.[7d#[8d# READ THIS: This example file is NOT an exhaustive list of vsftpd options.[9d# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's[10d# capabilities.[11d#[12d#[13d# Run standalone?  vsftpd can run either from an inetd or as a standalone[14d# daemon started from an initscript.[16d# Allow anonymous FTP? (Disabled by default).[17d[39m(B[manonymous_enable=NO[19d[36m# Uncomment this to allow local users to log in.[20d[39m(B[mlocal_enable=YES[21d[36m# Uncomment this to enable any form of FTP write command.[22d[39m(B[mwrite_enable=YES[23dchroot_local_user=YES[24dallow_writeable_chroot=YES[25dpasv_min_port=40000[26dpasv_max_port=40100[2d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[28d[K[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h[24d[?25l[?12l[?25h[25d[?25l[?12l[?25h[26d[?25l[?12l[?25h[27d[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Huserlist_enable=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Huserlist_file=/etc/vsftpd.userlist[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Huserlist_deny=NO[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1Hlisten=YES[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m#[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# This directive enables listening on IPv6 sockets. By default, listening[39m(B[m[?25l[?12l[?25h7[2;28r8[28d
+[1;30r[27;1H[36m# on the IPv6 "any" address (::) will accept connections from both IPv6[39m(B[m[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;27r8M[1;30r[2;1H[36m# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's[39m(B[m[?25l[?12l[?25h7[2;27r8M[1;30r[2;1H[36m# READ THIS: This example file is NOT an exhaustive list of vsftpd options.[39m(B[m[?25l[?12l[?25h7[2;27r8M[1;30r[2;1H[36m#[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[11d[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;72H(B[0;7m*[119G(B[m[12;27r[12;1HM[1;30r[12;1H[?12l[?25h[?25l7[12;28r8M[1;30r[13;1H[?12l[?25h[?25l[?12l[?25h[A[?25llisten_port=2121[?12l[?25h[?25l[29;16H[15X[29;31H(B[0;7mM-D(B[m DOS Format       [29;61H(B[0;7mM-A(B[m Append[16X[29;93H(B[0;7mB(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[16G[15X[30;31H(B[0;7mM-M(B[m Mac Format         [61G(B[0;7mM-P(B[m Prepend[19X[30;91H(B[0;7m^T(B[m Browse[K[28d(B[0;7mFile Name to Write: /etc/vsftpd.conf                                                                                    [28;37H(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;72H(B[0;7m [119G(B[m[28;51H(B[0;7m[ Wrote 171 lines ](B[m[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[93G(B[0;7mU(B[m Undo       (B[0;7mM-A(B[m Set Mark[30;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo [106G(B[0;7mM-6(B[m Copy[?12l[?25h[12;17H[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl restart vsftpd[27msudo systemctl restart vsftpd
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mss -tulpn | grep vsftpd[27mss -tulpn | grep vsftpd
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mftp localhost 2121[27mftp localhost 2121
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mftp 172.20.155.61 2121[27mftp 172.20.155.61 2121
+[?2004lConnected to 172.20.155.61.
+220 (vsFTPd 3.0.5)
+Name (172.20.155.61:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -p- localhost[27mnmap -p- localhost
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:37 WET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00013s latency).
+Not shown: 65530 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+80/tcp   open  http
+2121/tcp open  ccproxy-ftp
+2222/tcp open  EtherNetIP-1
+5001/tcp open  commplex-link
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 2.12 seconds
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw delete <numero_da_regra_21>[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ufw delete <numero_da_regra_21>[C[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>[1P>5>[C[K[C[1P5[C
+[?2004lDeleting:
+ allow 21/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 5[C[K18
+[?2004lDeleting:
+ limit 2222/tcp
+Proceed with operation (y|n)? n
+Aborted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 18[C[K7
+[?2004lDeleting:
+ allow 30000:30100/tcp
+Proceed with operation (y|n)? n
+Aborted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 17[K9
+[?2004lDeleting:
+ allow 2121/tcp
+Proceed with operation (y|n)? n
+Aborted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 1978[1P5nmap -p- localhostftp 172.20.155.61 2121[4Plocalhost[C[C[C[C[Css -tulpn | grep vsftpd[6@udo systemctl restart[C[C[C[C[C[C[C[3Pnano /etc/vsftpd.conf[8Pufw delete 145[1P2fail2ban-client status sshdet sshd unbanip 172.20.144.1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pufw status numberedjournalctl -u ssh | tail -n 50--since "10 minutes ago"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Ptail -f /var/log/fail2ban.log[2Pfail2ban-client status sshd[8Pufw status numbered[1Plimit 2222/tcptail -f /var/log/fail2ban.log[13Pnft list ruleset[5Piptables -Lfail2ban-client status sshd[Ksystemctl status fail2ban[3Pfail2ban-client status sshd[16Piptables -Lnft list rulesettail -f /var/log/fail2ban.log[13Pnft list rulesettail -f /var/log/fail2ban.log[11Pufw limit 2222/tcpstatus numberedfail2ban-client status sshdtail -f /var/log/fail2ban.log[2Pfail2ban-client status sshd[8Pufw status numbered
+[?2004lStatus: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 80,443/tcp                 ALLOW IN    Anywhere                  
+[ 2] 53/tcp                     LIMIT IN    Anywhere                  
+[ 3] 80/tcp                     ALLOW IN    Anywhere                  
+[ 4] 443/tcp                    ALLOW IN    Anywhere                  
+[ 5] 30000:30100/tcp            ALLOW IN    Anywhere                  
+[ 6] 2222/tcp                   LIMIT IN    Anywhere                  
+[ 7] 2121/tcp                   ALLOW IN    Anywhere                  
+[ 8] 40000:40100/tcp            ALLOW IN    Anywhere                  
+[ 9] 8443/tcp                   ALLOW IN    Anywhere                  
+[10] 3000                       ALLOW IN    127.0.0.1                 
+[11] 3000                       DENY IN     Anywhere                  
+[12] 80,443/tcp (v6)            ALLOW IN    Anywhere (v6)             
+[13] 53/tcp (v6)                LIMIT IN    Anywhere (v6)             
+[14] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[15] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+[16] 21/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[17] 30000:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[18] 2222/tcp (v6)              LIMIT IN    Anywhere (v6)             
+[19] 2121/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[20] 40000:40100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[21] 8443/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[22] 3000 (v6)                  DENY IN     Anywhere (v6)             
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw status numbered[6Pdelete 19[K6
+[?2004lDeleting:
+ allow 21/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl restart vsftpd[27msudo systemctl restart vsftpd
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mftp localhost 2121[27mftp localhost 2121
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunofto p
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ftp localhost 2121
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+[?2004hftp> user
+[?2004l(username) alunoftp
+331 Please specify the password.
+Password: 
+530 Login incorrect.
+Login failed.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ftp localhost 2121sudo systemctl restart vsftpd[11Pftp localhost 2121
+[?2004lConnected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+[?2004hftp> user
+[?2004l(username) alunoftp
+331 Please specify the password.
+Password: 
+530 Login incorrect.
+Login failed.
+[?2004hftp> exit
+[?2004l221 Goodbye.
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ftp localhost 2121sudo systemctl restart vsftpd[11Pufw delete 16systemctl restart vsftpd[11Pufw delete 16status numbered[6Pdelete 19status numbered[6Pdelete 1978[1P5nmap -p- localhostftp 172.20.155.61 2121[4Pnmap -p- localhostftp 172.20.155.61 2121[4Plocalhost[C[C[C[C[Css -tulpn | grep vsftpd[6@udo systemctl restart[C[C[C[C[C[C[C[6Ps -tulpn | grep[C[C[C[C[C[C[C[6@udo systemctl restart[C[C[C[C[C[C[C[3Pnano /etc/vsftpd.conf[8Pufw delete 145[1P2fail2ban-client status sshdet sshd unbanip 172.20.144.1[18Ptatus sshd
+[?2004lStatus for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status vsftpd[27msudo fail2ban-client status vsftpd
+[?2004lStatus for the jail: vsftpd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo fail2ban-client status vsftpd
+[?2004lStatus for the jail: vsftpd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client get vsftpd logpath[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo fail2ban-client get vsftpd logpath
+[?2004lNo file is currently monitored
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nano /etc/fail2ban/jail.local[27msudo nano /etc/fail2ban/jail.local
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;52H(B[0;7m[ Read 22 lines ](B[m[H(B[0;7m  GNU nano 7.2                                    /etc/fail2ban/jail.local                                              [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d(B[0;1m[32m[DEFAULT][3d[39m(B[mbantime = 3600[4dfindtime = 600[5dmaxretry = 3[6dbackend = systemd[8d(B[0;1m[32m[sshd][9d[39m(B[menabled = true[10dport = 2222[11dlogpath = /var/log/auth.log[12dmaxretry = 3[14d(B[0;1m[32m[vsftpd][15d[39m(B[menabled = true[16dport = ftp,ftp-data,ftps[17dlogpath = /var/log/auth.log[18dmaxretry = 3[20d(B[0;1m[32m[nginx-http-auth][21d[39m(B[menabled = true[22dlogpath = /var/log/nginx/error.log[23dmaxretry = 3[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25hm[?25l[?12l[?25ha[?25l[?12l[?25hx[?25l[28d[K[?12l[?25h[18;5H[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25hr[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25h=[?25l[?12l[?25h [?25l[?12l[?25h3[?25l[1;76H(B[0;7m*[119G(B[m[?12l[?25h[18;12H [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[18;28r[28;1H
+[1;30r[17;28H[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[17;28r[28;1H
+[1;30r[16;25H[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[16;28r[28;1H
+[1;30r[15;15H[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[15;28r[28;1H
+[1;30r[14;9H[?12l[?25h[?25l[?12l[?25h[vsftpd[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[13;28r[13;1H[7T[1;30r[14;1H(B[0;1m[32m[vsftpd][15d[39m(B[menabled = true[16dport = 2121[17dfilter = vsftpd[18dlogpath = /var/log/auth.log[19dmaxretry = 5[20dbantime = 10m[21dfindtime = 10m[?12l[?25h[?25l[29;16H[15X[29;31H(B[0;7mM-D(B[m DOS Format       [29;61H(B[0;7mM-A(B[m Append[16X[29;93H(B[0;7mB(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[16G[15X[30;31H(B[0;7mM-M(B[m Mac Format         [61G(B[0;7mM-P(B[m Prepend[19X[30;91H(B[0;7m^T(B[m Browse[K[28d(B[0;7mFile Name to Write: /etc/fail2ban/jail.local                                                                            [28;45H(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;76H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 25 lines ](B[m[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[93G(B[0;7mU(B[m Undo       (B[0;7mM-A(B[m Set Mark[30;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo [106G(B[0;7mM-6(B[m Copy[?12l[?25h[21;15H[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[1;76H(B[0;7m*[119G(B[m[?12l[?25h[19;12H [?25l[?12l[?25h3[?25l[29;16H[15X[29;31H(B[0;7mM-D(B[m DOS Format       [29;61H(B[0;7mM-A(B[m Append[16X[29;93H(B[0;7mB(B[m Backup File[K[30;2H(B[0;7mC(B[m Cancel[16G[15X[30;31H(B[0;7mM-M(B[m Mac Format         [61G(B[0;7mM-P(B[m Prepend[19X[30;91H(B[0;7m^T(B[m Browse[K[28d(B[0;7mFile Name to Write: /etc/fail2ban/jail.local                                                                            [28;45H(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;76H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 25 lines ](B[m[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[93G(B[0;7mU(B[m Undo       (B[0;7mM-A(B[m Set Mark[30;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo [106G(B[0;7mM-6(B[m Copy[?12l[?25h[19;13H[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client get vsftpd filter[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo fail2ban-client get vsftpd filter
+[?2004l2026-03-11 12:51:08,325 fail2ban                [3567]: ERROR   NOK: ('Invalid command (no get action or not yet implemented)',)
+Invalid command (no get action or not yet implemented)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo systemctl restart fail2ban[27msudo systemctl restart fail2ban
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo systemctl restart fail2banfail2ban-client get vsftpd filter
+[?2004l2026-03-11 12:51:29,770 fail2ban                [3601]: ERROR   NOK: ('Invalid command (no get action or not yet implemented)',)
+Invalid command (no get action or not yet implemented)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status vsftpd[27msudo fail2ban-client status vsftpd
+[?2004lStatus for the jail: vsftpd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	0
+|  `- Journal matches:	
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	0
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mftp 172.20.155.61 2121[27mftp 172.20.155.61 2121
+[?2004lConnected to 172.20.155.61.
+220 (vsFTPd 3.0.5)
+Name (172.20.155.61:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+[?2004hftp> user
+[?2004l(username) alunoftp
+331 Please specify the password.
+Password: 
+530 Login incorrect.
+Login failed.
+[?2004hftp> user
+[?2004l(username) alunoftp
+331 Please specify the password.
+Password: 
+530 Login incorrect.
+Login failed.
+[?2004hftp> user
+[?2004l(username) alunoftp
+421 Service not available, remote server has closed connection
+Login failed.
+[?2004hftp> exit
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ftp 172.20.155.61 2121sudo fail2ban-client status vsftpd
+[?2004lStatus for the jail: vsftpd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	3
+|  `- Journal matches:	
+`- Actions
+   |- Currently banned:	1
+   |- Total banned:	1
+   `- Banned IP list:	172.20.155.61
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mpam_unix(vsftpd:auth): authentication failure[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpam_unix(vsftpd:auth): authentication failure
+[?2004lbash: syntax error near unexpected token `vsftpd:auth'
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo tail -f /var/log/auth.log[27msudo tail -f /var/log/auth.log
+[?2004l2026-03-11T12:51:36.962536+00:00 Main sudo: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/fail2ban-client status vsftpd
+2026-03-11T12:51:36.963663+00:00 Main sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-03-11T12:51:37.039209+00:00 Main sudo: pam_unix(sudo:session): session closed for user root
+2026-03-11T12:51:55.638372+00:00 Main vsftpd: pam_unix(vsftpd:auth): authentication failure; logname= uid=0 euid=0 tty=ftp ruser=alunoftp rhost=172.20.155.61  user=alunoftp
+2026-03-11T12:52:17.431357+00:00 Main vsftpd: message repeated 2 times: [ pam_unix(vsftpd:auth): authentication failure; logname= uid=0 euid=0 tty=ftp ruser=alunoftp rhost=172.20.155.61  user=alunoftp]
+2026-03-11T12:52:39.835596+00:00 Main sudo: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/fail2ban-client status vsftpd
+2026-03-11T12:52:39.836500+00:00 Main sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-03-11T12:52:39.910314+00:00 Main sudo: pam_unix(sudo:session): session closed for user root
+2026-03-11T12:52:56.415997+00:00 Main sudo: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log
+2026-03-11T12:52:56.417106+00:00 Main sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+^C
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client set vsftpd unbanip 172.20.155.61[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo fail2ban-client set vsftpd unbanip 172.20.155.61
+[?2004l1
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status vsftpd[27msudo fail2ban-client status vsftpd
+[?2004lStatus for the jail: vsftpd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	3
+|  `- Journal matches:	
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:	
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo fail2ban-client status vsftpdet vsftpd unbanip 172.20.155.61[19Ptatus vsftpd[Ksudo fail2ban-client status vsftpd[Ksusdo[K[K[Kdo systemctl restart nginx
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo tail -f /var/log/nginx/access.log[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo tail -f /var/log/nginx/access.log
+[?2004l127.0.0.1 - - [11/Mar/2026:03:49:30 +0000] "HEAD / HTTP/1.1" 301 0 "-" "curl/8.5.0"
+127.0.0.1 - - [11/Mar/2026:12:08:24 +0000] "GET / HTTP/1.0" 301 162 "-" "-"
+127.0.0.1 - - [11/Mar/2026:12:12:21 +0000] "GET / HTTP/1.0" 301 162 "-" "-"
+^C
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ss -tulpn | grep -E '(:80|:443|:8443|:3000|:5001|:8080)'[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ss -tulpn | grep -E '(:80|:443|:8443|:3000|:5001|:8080)'
+[?2004ltcp   LISTEN 0      511           0.0.0.0[01;31m[K:8443[m[K      0.0.0.0:*    users:(("nginx",pid=3921,fd=8),("nginx",pid=3920,fd=8),("nginx",pid=3919,fd=8),("nginx",pid=3918,fd=8),("nginx",pid=3917,fd=8),("nginx",pid=3916,fd=8),("nginx",pid=3915,fd=8),("nginx",pid=3914,fd=8),("nginx",pid=3913,fd=8),("nginx",pid=3911,fd=8),("nginx",pid=3910,fd=8),("nginx",pid=3909,fd=8),("nginx",pid=3908,fd=8),("nginx",pid=3907,fd=8),("nginx",pid=3906,fd=8),("nginx",pid=3905,fd=8),("nginx",pid=3904,fd=8))
+tcp   LISTEN 0      511           0.0.0.0[01;31m[K:80[m[K        0.0.0.0:*    users:(("nginx",pid=3921,fd=7),("nginx",pid=3920,fd=7),("nginx",pid=3919,fd=7),("nginx",pid=3918,fd=7),("nginx",pid=3917,fd=7),("nginx",pid=3916,fd=7),("nginx",pid=3915,fd=7),("nginx",pid=3914,fd=7),("nginx",pid=3913,fd=7),("nginx",pid=3911,fd=7),("nginx",pid=3910,fd=7),("nginx",pid=3909,fd=7),("nginx",pid=3908,fd=7),("nginx",pid=3907,fd=7),("nginx",pid=3906,fd=7),("nginx",pid=3905,fd=7),("nginx",pid=3904,fd=7))
+tcp   LISTEN 0      5           127.0.0.1[01;31m[K:5001[m[K      0.0.0.0:*    users:(("python3",pid=260,fd=4))                                                                                                                                                                                                                                                                                                                                                                                               
+tcp   LISTEN 0      511                 *[01;31m[K:3000[m[K            *:*    users:(("node",pid=3934,fd=26))                                                                                                                                                                                                                                                                                                                                                                                                
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo journalctl -f[27msudo journalctl -f
+[?2004lMar 11 13:03:27 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:04:00 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:04:33 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:04:40 Main sudo[3954]: pam_unix(sudo:session): session closed for user root
+Mar 11 13:04:42 Main sudo[4442]: [0;1;39m[0;1;31m[0;1;39marcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/ss -tulpn[0m
+Mar 11 13:04:42 Main sudo[4442]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Mar 11 13:04:42 Main sudo[4442]: pam_unix(sudo:session): session closed for user root
+Mar 11 13:05:07 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:05:29 Main sudo[4446]: [0;1;39m[0;1;31m[0;1;39marcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/journalctl -f[0m
+Mar 11 13:05:29 Main sudo[4446]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Mar 11 13:05:40 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:06:13 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+^C
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mps aux | grep node[27mps aux | grep node
+[?2004lroot         103  0.0  0.0 153068  1540 ?        Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/core24_1349.snap /snap/core24/1349 -o ro,[01;31m[Knode[m[Kv,allow_other,suid
+root         106  0.0  0.0 302596  6404 ?        Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/snapd_25935.snap /snap/snapd/25935 -o ro,[01;31m[Knode[m[Kv,allow_other,suid
+root         109  0.0  0.0 153068  1540 ?        Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/seclists_1214.snap /snap/seclists/1214 -o ro,[01;31m[Knode[m[Kv,allow_other,suid
+arcansel    3933  0.0  0.0   2804  1536 pts/5    S+   12:57   0:00 sh -c [01;31m[Knode[m[K build/app
+arcansel    3934  1.4  1.0 1400792 174556 pts/5  Sl+  12:57   0:07 [01;31m[Knode[m[K build/app
+arcansel    4455  0.0  0.0   4092  1920 pts/2    S+   13:06   0:00 grep --color=auto [01;31m[Knode[m[K
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo nano ~/.juice-shop/config/default.yml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo nano ~/.juice-shop/config/default.yml
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;29H(B[0;1m[37m[41m[ Directory '/home/arcansel/.juice-shop/config' does not exist ][39;49m(B[m[H(B[0;7m  GNU nano 7.2                          /home/arcansel/.juice-shop/config/default.yml                                   [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo touch /var/log/juice-shop.log[27msudo touch /var/log/juice-shop.log
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo chown arcansel:arcansel /var/log/juice-shop.log[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo chown arcansel:arcansel /var/log/juice-shop.log
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mtail -f /var/log/juice-shop.log[27mtail -f /var/log/juice-shop.log
+[?2004linfo: Required file [1mindex.html[22m is present ([32mOK[39m)
+info: Required file [1mstyles.css[22m is present ([32mOK[39m)
+info: Required file [1mmain.js[22m is present ([32mOK[39m)
+info: Required file [1mtutorial.js[22m is present ([32mOK[39m)
+info: Required file [1mruntime.js[22m is present ([32mOK[39m)
+info: Required file [1mvendor.js[22m is present ([32mOK[39m)
+info: Port [1m3000[22m is available ([32mOK[39m)
+info: Domain [1mhttps://www.alchemy.com/[22m is reachable ([32mOK[39m)
+info: Chatbot training data [1mbotDefaultTrainingData.json[22m validated ([32mOK[39m)
+info: [36mServer listening on port [1m3000[22m[39m
+^C
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mss -tulpn | grep 3000[27mss -tulpn | grep 3000
+[?2004ltcp   LISTEN 0      511                 *:[01;31m[K3000[m[K            *:*    users:(("node",pid=4487,fd=24))
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mpkill node[27mpkill node
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mss -tulpn | grep 3000[27mss -tulpn | grep 3000
+[?2004ltcp   LISTEN 0      511                 *:[01;31m[K3000[m[K            *:*    users:(("node",pid=4544,fd=26))
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ss -tulpn | grep 3000
+[?2004ltcp   LISTEN 0      511                 *:[01;31m[K3000[m[K            *:*    users:(("node",pid=4573,fd=26))
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ ps aux | grep node
+[?2004lroot         103  0.0  0.0 153068  1540 ?        Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/core24_1349.snap /snap/core24/1349 -o ro,[01;31m[Knode[m[Kv,allow_other,suid
+root         106  0.0  0.0 302596  6404 ?        Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/snapd_25935.snap /snap/snapd/25935 -o ro,[01;31m[Knode[m[Kv,allow_other,suid
+root         109  0.0  0.0 153068  1540 ?        Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/seclists_1214.snap /snap/seclists/1214 -o ro,[01;31m[Knode[m[Kv,allow_other,suid
+arcansel    4572  0.0  0.0   2804  1536 pts/5    S+   13:13   0:00 sh -c [01;31m[Knode[m[K build/app
+arcansel    4573  5.3  0.9 1386932 148400 pts/5  Sl+  13:13   0:03 [01;31m[Knode[m[K build/app
+arcansel    4588  0.0  0.0   4092  1920 pts/2    S+   13:14   0:00 grep --color=auto [01;31m[Knode[m[K
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw status numbered | grep 3000[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ufw status numbered | grep 3000
+[?2004l[ 5] [01;31m[K3000[m[K0:30100/tcp            ALLOW IN    Anywhere                  
+[10] [01;31m[K3000[m[K                       ALLOW IN    127.0.0.1                 
+[11] [01;31m[K3000[m[K                       DENY IN     Anywhere                  
+[16] [01;31m[K3000[m[K0:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[21] [01;31m[K3000[m[K (v6)                  DENY IN     Anywhere (v6)             
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw status verbose[27msudo ufw status verbose
+[?2004l[sudo] password for arcansel: 
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+80,443/tcp                 ALLOW IN    Anywhere                  
+53/tcp                     LIMIT IN    Anywhere                  
+80/tcp                     ALLOW IN    Anywhere                  
+443/tcp                    ALLOW IN    Anywhere                  
+30000:30100/tcp            ALLOW IN    Anywhere                  
+2222/tcp                   LIMIT IN    Anywhere                  
+2121/tcp                   ALLOW IN    Anywhere                  
+40000:40100/tcp            ALLOW IN    Anywhere                  
+8443/tcp                   ALLOW IN    Anywhere                  
+3000                       ALLOW IN    127.0.0.1                 
+3000                       DENY IN     Anywhere                  
+80,443/tcp (v6)            ALLOW IN    Anywhere (v6)             
+53/tcp (v6)                LIMIT IN    Anywhere (v6)             
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+30000:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+2222/tcp (v6)              LIMIT IN    Anywhere (v6)             
+2121/tcp (v6)              ALLOW IN    Anywhere (v6)             
+40000:40100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+8443/tcp (v6)              ALLOW IN    Anywhere (v6)             
+3000 (v6)                  DENY IN     Anywhere (v6)             
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ss -tulpn[27msudo ss -tulpn
+[?2004lNetid        State         Recv-Q        Send-Q                Local Address:Port               Peer Address:Port       Process                                                                                                                 
+udp          UNCONN        0             0                        127.0.0.54:53                      0.0.0.0:*           users:(("systemd-resolve",pid=208,fd=16))                                                                              
+udp          UNCONN        0             0                     127.0.0.53%lo:53                      0.0.0.0:*           users:(("systemd-resolve",pid=208,fd=14))                                                                              
+udp          UNCONN        0             0                    10.255.255.254:53                      0.0.0.0:*                                                                                                                                  
+udp          UNCONN        0             0                         127.0.0.1:323                     0.0.0.0:*                                                                                                                                  
+udp          UNCONN        0             0                             [::1]:323                        [::]:*                                                                                                                                  
+tcp          LISTEN        0             511                         0.0.0.0:8443                    0.0.0.0:*           users:(("nginx",pid=3921,fd=8),("nginx",pid=3920,fd=8),("nginx",pid=3919,fd=8),("nginx",pid=3918,fd=8),("nginx",pid=3917,fd=8),("nginx",pid=3916,fd=8),("nginx",pid=3915,fd=8),("nginx",pid=3914,fd=8),("nginx",pid=3913,fd=8),("nginx",pid=3911,fd=8),("nginx",pid=3910,fd=8),("nginx",pid=3909,fd=8),("nginx",pid=3908,fd=8),("nginx",pid=3907,fd=8),("nginx",pid=3906,fd=8),("nginx",pid=3905,fd=8),("nginx",pid=3904,fd=8))
+tcp          LISTEN        0             511                         0.0.0.0:80                      0.0.0.0:*           users:(("nginx",pid=3921,fd=7),("nginx",pid=3920,fd=7),("nginx",pid=3919,fd=7),("nginx",pid=3918,fd=7),("nginx",pid=3917,fd=7),("nginx",pid=3916,fd=7),("nginx",pid=3915,fd=7),("nginx",pid=3914,fd=7),("nginx",pid=3913,fd=7),("nginx",pid=3911,fd=7),("nginx",pid=3910,fd=7),("nginx",pid=3909,fd=7),("nginx",pid=3908,fd=7),("nginx",pid=3907,fd=7),("nginx",pid=3906,fd=7),("nginx",pid=3905,fd=7),("nginx",pid=3904,fd=7))
+tcp          LISTEN        0             1000                 10.255.255.254:53                      0.0.0.0:*                                                                                                                                  
+tcp          LISTEN        0             4096                        0.0.0.0:2222                    0.0.0.0:*           users:(("sshd",pid=2249,fd=3),("systemd",pid=1,fd=69))                                                                 
+tcp          LISTEN        0             32                          0.0.0.0:2121                    0.0.0.0:*           users:(("vsftpd",pid=3252,fd=3))                                                                                       
+tcp          LISTEN        0             4096                     127.0.0.54:53                      0.0.0.0:*           users:(("systemd-resolve",pid=208,fd=17))                                                                              
+tcp          LISTEN        0             4096                  127.0.0.53%lo:53                      0.0.0.0:*           users:(("systemd-resolve",pid=208,fd=15))                                                                              
+tcp          LISTEN        0             5                         127.0.0.1:5001                    0.0.0.0:*           users:(("python3",pid=260,fd=4))                                                                                       
+tcp          LISTEN        0             511                               *:3000                          *:*           users:(("node",pid=4605,fd=26))                                                                                        
+tcp          LISTEN        0             4096                           [::]:2222                       [::]:*           users:(("sshd",pid=2249,fd=4),("systemd",pid=1,fd=70))                                                                 
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo fail2ban-client status[27msudo fail2ban-client status
+[?2004lStatus
+|- Number of jail:	3
+`- Jail list:	nginx-http-auth, sshd, vsftpd
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw delete <número>[27msudo ufw delete <número>[K[K[K[K[K[K[K1[K[K1
+[?2004lDeleting:
+ allow 80,443/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 1[K12
+[?2004lDeleting:
+ limit 53/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 12
+[?2004lDeleting:
+ allow 80/tcp
+Proceed with operation (y|n)? n
+Aborted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 12[K1
+[?2004lDeleting:
+ allow 80,443/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7msudo ufw status numbered[27msudo ufw status numbered
+[?2004lStatus: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 53/tcp                     LIMIT IN    Anywhere                  
+[ 2] 80/tcp                     ALLOW IN    Anywhere                  
+[ 3] 443/tcp                    ALLOW IN    Anywhere                  
+[ 4] 30000:30100/tcp            ALLOW IN    Anywhere                  
+[ 5] 2222/tcp                   LIMIT IN    Anywhere                  
+[ 6] 2121/tcp                   ALLOW IN    Anywhere                  
+[ 7] 40000:40100/tcp            ALLOW IN    Anywhere                  
+[ 8] 8443/tcp                   ALLOW IN    Anywhere                  
+[ 9] 3000                       ALLOW IN    127.0.0.1                 
+[10] 3000                       DENY IN     Anywhere                  
+[11] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[12] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+[13] 30000:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[14] 2222/tcp (v6)              LIMIT IN    Anywhere (v6)             
+[15] 2121/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[16] 40000:40100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[17] 8443/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[18] 3000 (v6)                  DENY IN     Anywhere (v6)             
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw status numbered[6Pdelete 11[K
+[?2004lDeleting:
+ limit 53/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ sudo ufw delete 1status numbered
+[?2004lStatus: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 80/tcp                     ALLOW IN    Anywhere                  
+[ 2] 443/tcp                    ALLOW IN    Anywhere                  
+[ 3] 30000:30100/tcp            ALLOW IN    Anywhere                  
+[ 4] 2222/tcp                   LIMIT IN    Anywhere                  
+[ 5] 2121/tcp                   ALLOW IN    Anywhere                  
+[ 6] 40000:40100/tcp            ALLOW IN    Anywhere                  
+[ 7] 8443/tcp                   ALLOW IN    Anywhere                  
+[ 8] 3000                       ALLOW IN    127.0.0.1                 
+[ 9] 3000                       DENY IN     Anywhere                  
+[10] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[11] 443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+[12] 30000:30100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[13] 2222/tcp (v6)              LIMIT IN    Anywhere (v6)             
+[14] 2121/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[15] 40000:40100/tcp (v6)       ALLOW IN    Anywhere (v6)             
+[16] 8443/tcp (v6)              ALLOW IN    Anywhere (v6)             
+[17] 3000 (v6)                  DENY IN     Anywhere (v6)             
+
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -p- 172.20.155.61[27mnmap -p- 172.20.155.61
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 13:52 WET
+Nmap scan report for 172.20.155.61
+Host is up (0.00016s latency).
+Not shown: 65530 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+80/tcp   open  http
+2121/tcp open  ccproxy-ftp
+2222/tcp open  EtherNetIP-1
+3000/tcp open  ppp
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 2.34 seconds
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [7mnmap -A 172.20.155.61[27mnmap -A 172.20.155.61[C
+[?2004lStarting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 13:53 WET
+Nmap scan report for 172.20.155.61
+Host is up (0.00020s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     nginx
+|_http-title: Did not follow redirect to https://172.20.155.61:8443/
+2121/tcp open  ftp      vsftpd 3.0.5
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  ftp
+| ssl-cert: Subject: commonName=Main.localdomain
+| Subject Alternative Name: DNS:Main.localdomain
+| Not valid before: 2026-02-06T09:52:43
+|_Not valid after:  2036-02-04T09:52:43
+2222/tcp open  ssh      OpenSSH 9.6p1 Ubuntu 3ubuntu13.14 (Ubuntu Linux; protocol 2.0)
+3000/tcp open  ppp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Access-Control-Allow-Origin: *
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Feature-Policy: payment 'self'
+|     X-Recruiting: /#/jobs
+|     Accept-Ranges: bytes
+|     Cache-Control: public, max-age=0
+|     Last-Modified: Wed, 11 Mar 2026 13:15:23 GMT
+|     ETag: W/"1252f-19cdd09a885"
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 75055
+|     Vary: Accept-Encoding
+|     Date: Wed, 11 Mar 2026 13:53:38 GMT
+|     Connection: close
+|     <!--
+|     Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+|     SPDX-License-Identifier: MIT
+|     <!doctype html>
+|     <html lang="en" data-beasties-container>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>OWASP Juice Shop</title>
+|     <meta name="description" content="Probably the most modern and sophisticated insecure web application">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link id="favicon" rel="icon"
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 204 No Content
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Vary: Access-Control-Request-Headers
+|     Content-Length: 0
+|     Date: Wed, 11 Mar 2026 13:53:39 GMT
+|     Connection: close
+|   Help, NCP: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+8443/tcp open  ssl/http nginx
+| ssl-cert: Subject: commonName=loja.local/organizationName=Loja/stateOrProvinceName=Porto/countryName=PT
+| Not valid before: 2026-03-11T03:00:45
+|_Not valid after:  2027-03-11T03:00:45
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.94SVN%I=7%D=3/11%Time=69B173E3%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,8000,"HTTP/1\.1\x20200\x20OK\r\nAccess-Control-Allow-Origin
+SF::\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nFeature-Policy:\x20payment\x20'self'\r\nX-Recruiting:\x20/#
+SF:/jobs\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-ag
+SF:e=0\r\nLast-Modified:\x20Wed,\x2011\x20Mar\x202026\x2013:15:23\x20GMT\r
+SF:\nETag:\x20W/\"1252f-19cdd09a885\"\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=UTF-8\r\nContent-Length:\x2075055\r\nVary:\x20Accept-Encoding\r\n
+SF:Date:\x20Wed,\x2011\x20Mar\x202026\x2013:53:38\x20GMT\r\nConnection:\x2
+SF:0close\r\n\r\n<!--\n\x20\x20~\x20Copyright\x20\(c\)\x202014-2026\x20Bjo
+SF:ern\x20Kimminich\x20&\x20the\x20OWASP\x20Juice\x20Shop\x20contributors\
+SF:.\n\x20\x20~\x20SPDX-License-Identifier:\x20MIT\n\x20\x20-->\n\n<!docty
+SF:pe\x20html>\n<html\x20lang=\"en\"\x20data-beasties-container>\n<head>\n
+SF:\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>OWASP\x20Juice\x20S
+SF:hop</title>\n\x20\x20<meta\x20name=\"description\"\x20content=\"Probabl
+SF:y\x20the\x20most\x20modern\x20and\x20sophisticated\x20insecure\x20web\x
+SF:20application\">\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"width
+SF:=device-width,\x20initial-scale=1\">\n\x20\x20<link\x20id=\"favicon\"\x
+SF:20rel=\"icon\"\x20")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:onnection:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,EA,"HTTP/1\.1\x2020
+SF:4\x20No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Cont
+SF:rol-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access
+SF:-Control-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2011
+SF:\x20Mar\x202026\x2013:53:39\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(
+SF:RTSPRequest,EA,"HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-All
+SF:ow-Origin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH
+SF:,POST,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Leng
+SF:th:\x200\r\nDate:\x20Wed,\x2011\x20Mar\x202026\x2013:53:39\x20GMT\r\nCo
+SF:nnection:\x20close\r\n\r\n");
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.23 seconds
+[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ code .
+[?2004l[?2004h]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ [K]0;arcansel@Main: /mnt/c/Users/cyblp[01;32marcansel@Main[00m:[01;34m/mnt/c/Users/cyblp[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-11 14:15:33+00:00 [COMMAND_EXIT_CODE="0"]

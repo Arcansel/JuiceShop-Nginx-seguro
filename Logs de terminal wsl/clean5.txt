@@ -1,0 +1,2145 @@
+Script started on 2026-03-11 10:28:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="31"]
+arcansel@Main:/mnt/c/Users/cyblp$ exitsudo nano /etc/fail2ban/jail.localwhoaminano /etc/fail2ban/jail.localwhoamiteste de log5exitcol -b < log.txt > clean.txtHOST=127.0.0.1 npm startcd /var/www/juiceexitscript -t 2>timing4.txt log4.txtudo whoamiexitsudo tail -f /var/log/fail2ban.logvsftpd.logauth.logfail2ban-client status vsftpdftp localhostsudo fail2ban-client status sshdftp localhostsudo fail2ban-client status sshdsystemctl restart fail2bannano /etc/fail2ban/jail.localsystemctl restart fail2bannano /etc/fail2ban/jail.localfail2ban-client statusnano /etc/fail2ban/jail.localfail2ban-client statussystemctl status fail2banhttp://localhost:19999wget https://my-netdata.io/kickstart.shcurl -Ss)bash <(sudo fail2ban-client statussystemctl restart fail2bannano /etc/fail2ban/jail.localnginx/nginx.confssh/sshd_confignginx/nginx.conffail2ban/jail.localnginx/nginx.confssh/sshd_configcurl -k https://loja.local:8443I http://loja.localsudo systemctl reload nginxnginx -tln -s /etc/nginx/sites-available/loja.local /etc/nginx/sites-enabled/ls /etc/nginx/sites-enabledsudo rm /etc/nginx/sites-enabled/defaultls /etc/nginx/sites-enabledsudo rm /etc/nginx/sites-enabled/defaultnano /etc/nginx/sites-available/loja.local
+[sudo] password for arcansel:
+(B==(B(B[ Reading... ](B(B[ Read 85 lines ](B(B	 GNU nano 7.2			       /etc/nginx/sites-available/loja.local				       (B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	    (B^K(B Cut(B^T(B Execute(B^C(B Location	(BM-U(B Undo(B^X(B Exit(B^R(B Read File	   (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redoserver {listen 80;server_name loja.local;return 301 https://$host:8443$request_uri;}server {listen 8443 ssl;server_name loja.local;ssl_certificate /etc/nginx/ssl/loja.crt;ssl_certificate_key /etc/nginx/ssl/loja.key;limit_req_status 429;if ($request_method !~ ^(GET|POST|HEAD)$ ) {return 405;}access_log /var/log/nginx/loja_access.log;error_log /var/log/nginx/loja_error.log;if ($host !~ ^loja\.local$) {return 444;}78
+location ~ /\.(env|git|htaccess|htpasswd|log|bak|swp)$ {78
+deny all;78
+return 403;78
+}78
+78
+location ~* (\.\./|%2e%2e%2f|%2e%2e/|..%2f) {78
+deny all;78
+return 403;78
+}78
+78
+if ($request_uri ~* "(\.\./|\.\.\\|%2e%2e)") {78
+return 403;78
+}78
+78
+location ~* "%2e%2e" {78
+return 403;78
+}78
+78
+location ^~ /rest/user/login {78
+limit_req zone=iplimit burst=5 nodelay;78
+78
+proxy_pass http://127.0.0.1:5001;(B78
+proxy_set_header Host $host;78
+proxy_set_header X-Real-IP $remote_addr;78
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;78
+proxy_set_header X-Forwarded-Proto $scheme;78
+}78
+78
+location / {78
+limit_req zone=iplimit burst=20 nodelay;78
+78
+proxy_pass http://127.0.0.1:3000;(B78
+proxy_set_header Host $host;78
+proxy_set_header X-Real-IP $remote_addr;78
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;78
+proxy_set_header X-Forwarded-Proto $scheme;78
+78
+proxy_set_header Upgrade $http_upgrade;78
+proxy_set_header Connection "upgrade";78
+78
+proxy_hide_header ETag;78
+78
+add_header X-Frame-Options "SAMEORIGIN" always;78
+add_header X-Content-Type-Options "nosniff" always;78
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;78
+78
+add_header X-XSS-Protection "1; mode=block" always;78
+add_header Content-Security-Policy "78
+default-src 'self';78
+script-src 'self' 'unsafe-inline' http://cdnjs.cloudflare.com(B https://cdnjs.cloudflare.com;(B78
+style-src 'self' 'unsafe-inline' http://cdnjs.cloudflare.com(B https://cdnjs.cloudflare.com;(B78
+img-src 'self' data:;78
+font-src 'self' http://cdnjs.cloudflare.com(B https://cdnjs.cloudflare.com;(B78
+connect-src 'self' ws:;78
+frame-ancestors 'self';78
+" always;78
+}78
+}78
+	" always;(B*(BM	   } (Badd_header Strict-Transport-Security "max-age=31536000" always;;78Mproxy_pass http://127.0.0.1:3000;(B78M78Mlimit_req zone=iplimit burst=20 nodelay;78Mlocation / {78M78M}78Mproxy_set_header X-Forwarded-Proto $scheme;78Mproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;78Mproxy_set_header X-Real-IP $remote_addr;78Mproxy_set_header Host $host;78Mproxy_pass http://127.0.0.1:5001;(B78M78Mlimit_req zone=iplimit burst=5 nodelay;78Mlocation ^~ /rest/user/login {78M78M}78Mreturn 403;78Mlocation ~* "%2e%2e" {78M78M}78Mreturn 403;78Mif ($request_uri ~* "(\.\./|\.\.\\|%2e%2e)") {78M78M}78Mreturn 403;78Mdeny all;	     (BM-D(B DOS Format(BM-A(B Append		 (BM-B(B Backup File(BC(B Cancel	    (BM-M(B Mac Format	      (BM-P(B Prepend		(B^T(B Browse(BFile Name to Write: /etc/nginx/sites-available/loja.local						       (B (B[ Writing... ](B(B (B(B[ Wrote 87 lines ](B(B^O(B Write Out	   (B^W(B Where Is     (B^K(B Cut	   (B^T(B Execute(B^C(B Location     (BM-U(B Undo(BX(B Exit  (B^R(B Read File	 (B^\(B Replace(B^U(B Paste	   (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/sites-available/loja.localexitsudo nano /etc/fail2ban/jail.localwhoaminano /etc/fail2ban/jail.localwhoamiteste de log5sudo whoaminano /etc/fail2ban/jail.localwhoamiteste de log5exitcol -b < log.txt > clean.txtHOST=127.0.0.1 npm startcd /var/www/juiceexitscript -t 2>timing4.txt log4.txtudo whoamiexitsudo tail -f /var/log/fail2ban.logvsftpd.logauth.logfail2ban-client status vsftpdftp localhostsudo fail2ban-client status sshdsystemctl restart fail2bannano /etc/fail2ban/jail.localfail2ban-client statussystemctl status fail2banhttp://localhost:19999wget https://my-netdata.io/kickstart.shhttp://localhost:19999sudo systemctl status fail2banfail2ban-client statusnano /etc/fail2ban/jail.localfail2ban-client statussystemctl status fail2banhttp://localhost:19999wget https://my-netdata.io/kickstart.shcurl -Ss)bash <(sudo fail2ban-client statussystemctl restart fail2bannano /etc/fail2ban/jail.localnginx/nginx.conffail2ban/jail.localnginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 83 lines ](B(B	 GNU nano 7.2				       /etc/nginx/nginx.conf					       (B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	    (B^K(B Cut(B^T(B Execute(B^C(B Location	(BM-U(B Undo(B^X(B Exit(B^R(B Read File	   (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events {worker_connections 768;	  # multi_accept on;(B}http {	 ##    # Basic Settings	   ##(Bsendfile on;tcp_nopush on;types_hash_max_size 2048;server_tokens off;autoindex off;etag off;limit_req_zone $binary_remote_addr zone=iplimit:10m rate=5r/s;>arcansel@Main:/mnt/c/Users/cyblp$ sudiioo nano /etc/ssh/sshd_config/etc/ssh/sshd_config
+(B==(B(B[ Reading... ](B(B[ Read 139 lines ](B(B  GNU nano 7.2					/etc/ssh/sshd_config						(B(B^G(B Help(B^O(B Write Out	 (B^W(B Where Is     (B^K(B Cut(B^T(B Execute(B^C(B Location	 (BM-U(B Undo(B^X(B Exit(B^R(B Read File    (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line	(BM-E(B Redo# This is the sshd server system-wide configuration file.  See# sshd_config(5) for more information.# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games# The strategy used for options in the default sshd_config shipped with# OpenSSH is to specify options with their default value where# possible, but leave them commented.  Uncommented options override the# default value.(BInclude /etc/ssh/sshd_config.d/*.confPasswordAuthentication noPubkeyAuthentication yesPermitRootLogin noCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.comMACs hmac-sha2-512-etm@openssh.comKexAlgorithms curve25519-sha256# When systemd socket activation is used (the default), the socket# configuration must be re-generated after changing Port, AddressFamily, or# ListenAddress.## For changes to take effect, run:#(B>arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ cut -d: -f1 /etc/passwdcut -d: -f1 /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+arcansel
+ftp
+alunoftp
+sshd
+tcpdump
+arcansel@Main:/mnt/c/Users/cyblp$ alunoftp
+ftp
+arcanselarcansel@Main:/mnt/c/Users/cyblp$ alunoftp
+ftp
+arcansecat /etc/passwd | cut -d: -f1cat /etc/passwd | cut -d: -f1
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+arcansel
+ftp
+alunoftp
+sshd
+tcpdump
+arcansel@Main:/mnt/c/Users/cyblp$ ls /homels /home
+alunoftp  arcansel
+arcansel@Main:/mnt/c/Users/cyblp$ id alunoftpid alunoftp
+uid=1001(alunoftp) gid=1001(alunoftp) groups=1001(alunoftp),100(users)
+arcansel@Main:/mnt/c/Users/cyblp$ ls -ld /home/alunoftpls -ld /home/alunoftp
+drwxr-xr-x 5 root root 4096 Mar 11 02:35 /home/alunoftp
+arcansel@Main:/mnt/c/Users/cyblp$ grep alunoftp /etc/passwdgrep alunoftp /etc/passwd
+alunoftp:x:1001:1001:User completo,1,912345678,223456789:/home/alunoftp:/bin/bash
+arcansel@Main:/mnt/c/Users/cyblp$ cat /etc/vsftpd.confcat /etc/vsftpd.conf
+# Example config file /etc/vsftpd.conf
+#
+# The default compiled in settings are fairly paranoid. This sample file
+# loosens things up a bit, to make the ftp daemon more usable.
+# Please see vsftpd.conf.5 for all compiled in defaults.
+#
+# READ THIS: This example file is NOT an exhaustive list of vsftpd options.
+# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's
+# capabilities.
+#
+#
+# Run standalone?  vsftpd can run either from an inetd or as a standalone
+# daemon started from an initscript.
+
+# Allow anonymous FTP? (Disabled by default).
+anonymous_enable=NO
+
+# Uncomment this to allow local users to log in.
+local_enable=YES
+# Uncomment this to enable any form of FTP write command.
+write_enable=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+pasv_min_port=40000
+pasv_max_port=40100
+
+listen=YES
+#
+# This directive enables listening on IPv6 sockets. By default, listening
+# on the IPv6 "any" address (::) will accept connections from both IPv6
+# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6
+# sockets. If you want that (perhaps because you want to listen on specific
+# addresses) then you must run two copies of vsftpd with two configuration
+# files.
+listen_ipv6=NO
+#
+# Default umask for local users is 077. You may wish to change this to 022,
+# if your users expect that (022 is used by most other ftpd's)
+#local_umask=022
+#
+# Uncomment this to allow the anonymous FTP user to upload files. This only
+# has an effect if the above global write enable is activated. Also, you will
+# obviously need to create a directory writable by the FTP user.
+#anon_upload_enable=YES
+#
+# Uncomment this if you want the anonymous FTP user to be able to create
+# new directories.
+#anon_mkdir_write_enable=YES
+#
+# Activate directory messages - messages given to remote users when they
+# go into a certain directory.
+dirmessage_enable=YES
+#
+# If enabled, vsftpd will display directory listings with the time
+# in  your  local  time	 zone.	The default is to display GMT. The
+# times returned by the MDTM FTP command are also affected by this
+# option.
+use_localtime=YES
+#
+# Activate logging of uploads/downloads.
+xferlog_enable=YES
+#
+# Make sure PORT transfer connections originate from port 20 (ftp-data).
+connect_from_port_20=YES
+#
+# If you want, you can arrange for uploaded anonymous files to be owned by
+# a different user. Note! Using "root" for uploaded files is not
+# recommended!
+#chown_uploads=YES
+#chown_username=whoever
+#
+# You may override where the log file goes if you like. The default is shown
+# below.
+#xferlog_file=/var/log/vsftpd.log
+#
+# If you want, you can have your log file in standard ftpd xferlog format.
+# Note that the default log file location is /var/log/xferlog in this case.
+#xferlog_std_format=YES
+#
+# You may change the default value for timing out an idle session.
+#idle_session_timeout=600
+#
+# You may change the default value for timing out a data connection.
+#data_connection_timeout=120
+#
+# It is recommended that you define on your system a unique user which the
+# ftp server can use as a totally isolated and unprivileged user.
+#nopriv_user=ftpsecure
+#
+# Enable this and the server will recognise asynchronous ABOR requests. Not
+# recommended for security (the code is non-trivial). Not enabling it,
+# however, may confuse older FTP clients.
+#async_abor_enable=YES
+#
+# By default the server will pretend to allow ASCII mode but in fact ignore
+# the request. Turn on the below options to have the server actually do ASCII
+# mangling on files when in ASCII mode.
+# Beware that on some FTP servers, ASCII support allows a denial of service
+# attack (DoS) via the command "SIZE /big/file" in ASCII mode. vsftpd
+# predicted this attack and has always been safe, reporting the size of the
+# raw file.
+# ASCII mangling is a horrible feature of the protocol.
+#ascii_upload_enable=YES
+#ascii_download_enable=YES
+#
+# You may fully customise the login banner string:
+#ftpd_banner=Welcome to blah FTP service.
+#
+# You may specify a file of disallowed anonymous e-mail addresses. Apparently
+# useful for combatting certain DoS attacks.
+#deny_email_enable=YES
+# (default follows)
+#banned_email_file=/etc/vsftpd.banned_emails
+#
+# You may restrict local users to their home directories.  See the FAQ for
+# the possible risks in this before using chroot_local_user or
+# chroot_list_enable below.
+#chroot_local_user=YES
+#
+# You may specify an explicit list of local users to chroot() to their home
+# directory. If chroot_local_user is YES, then this list becomes a list of
+# users to NOT chroot().
+# (Warning! chroot'ing can be very dangerous. If using chroot, make sure that
+# the user does not have write access to the top level directory within the
+# chroot)
+#chroot_list_enable=YES
+# (default follows)
+#chroot_list_file=/etc/vsftpd.chroot_list
+#
+# You may activate the "-R" option to the builtin ls. This is disabled by
+# default to avoid remote users being able to cause excessive I/O on large
+# sites. However, some broken FTP clients such as "ncftp" and "mirror" assume
+# the presence of the "-R" option, so there is a strong case for enabling it.
+#ls_recurse_enable=YES
+#
+# Customization
+#
+# Some of vsftpd's settings don't fit the filesystem layout by
+# default.
+#
+# This option should be the name of a directory which is empty.	 Also, the
+# directory should not be writable by the ftp user. This directory is used
+# as a secure chroot() jail at times vsftpd does not require filesystem
+# access.
+secure_chroot_dir=/var/run/vsftpd/empty
+#
+# This string is the name of the PAM service vsftpd will use.
+pam_service_name=vsftpd
+#
+# This option specifies the location of the RSA certificate to use for SSL
+# encrypted connections.
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=YES
+force_local_logins_ssl=YES
+force_local_data_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+ssl_ciphers=HIGH
+require_ssl_reuse=NO
+
+#
+# Uncomment this to indicate that vsftpd use a utf8 filesystem.
+#utf8_filesystem=YES
+arcansel@Main:/mnt/c/Users/cyblp$ cat /etc/vsftpd.userlistcat /etc/vsftpd.userlist
+cat: /etc/vsftpd.userlist: No such file or directory
+arcansel@Main:/mnt/c/Users/cyblp$ sudo adduser alunoftpsudo adduser alunoftpftpftpftpftpftpdedicadpodedicadodedicadotdedicadopdedicado
+[sudo] password for arcansel:
+info: Adding user `ftpdedicado' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `ftpdedicado' (1002) ...
+info: Adding new user `ftpdedicado' (1002) with group `ftpdedicado (1002)' ...
+info: Creating home directory `/home/ftpdedicado' ...
+info: Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for ftpdedicado
+Enter the new value, or press ENTER for the default
+	Full Name []: John Brook
+	Room Number []: 2
+	Work Phone []: 912345678
+	Home Phone []: 221234567
+	Other []:
+Is the information correct? [Y/n] y
+info: Adding new user `ftpdedicado' to supplemental / extra groups `users' ...
+info: Adding user `ftpdedicado' to group `users' ...
+arcansel@Main:/mnt/c/Users/cyblp$ sudo usermod -s /usr/sbin/nologin alunoftpsudo usermod -s /usr/sbin/nologin alunoftpftpdedicado
+arcansel@Main:/mnt/c/Users/cyblp$ sudo chown alunoftp:alunoftp /home/alunoftpsudo chown alunoftp:alunoftp /home/alunoftp
+arcansel@Main:/mnt/c/Users/cyblp$ sudo chown alunoftp:alunoftp /home/alunoftpsudo chown alunoftp:alunoftp /home/alunoftpftpdedicadoftpdedicado /home/alunoftp /home/alunoftp /home/alunoftp /home/alunoftp /home/alunoftp /home/alunoftp /home/alunoftp /home/alunoftpftpdedicado /home/alunoftpftpdedicadoftpdedicadoftpdedicado
+arcansel@Main:/mnt/c/Users/cyblp$ sudo chmod 750 /home/alunoftpsudo chmod 750 /home/alunoftpftpdedicadoftpdedicado
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart vsftpdsudo systemctl restart vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhostftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> user
+(username) ftpdedicado
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> 3eexit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ grep ftpdedicado /etc/passwdgrep ftpdedicado /etc/passwd
+ftpdedicado:x:1002:1002:John Brook,2,912345678,221234567:/home/ftpdedicado:/usr/sbin/nologin
+arcansel@Main:/mnt/c/Users/cyblp$ cat /etc/shellscat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/usr/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/dash
+/usr/bin/tmux
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/shellssudo nano /etc/shells
+(B==(B(B[ Reading... ](B(B[ Read 9 lines ](B(B	GNU nano 7.2					       /etc/shells						      (B(B^G(B Help(B^O(B Write Out   (B^W(B Where Is	 (B^K(B Cut(B^T(B Execute     (B^C(B Location	 (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace     (B^U(B Paste(B^J(B Justify     (B^/(B Go To Line	(BM-E(B Redo(BM-6(B Copy# /etc/shells: valid login shells(B/bin/sh/usr/bin/sh/bin/bash/usr/bin/bash/bin/rbash/usr/bin/rbash/usr/bin/dash/usr/bin/tmux/usr/bin/tmx(B*(B/usr/sbin/nologin(BM-D(B DOS Format	(BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format	      (BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/shells											    (B (B[ Writing... ](B(B (B(B[ Wrote 10 lines ](B(B^O(B Write Out   (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute     (B^C(B Location(BU(B Undo       (BM-A(B Set Mark(BX(B Exit  (B^R(B Read File   (B^\(B Replace	 (B^U(B Paste(B^J(B Justify	(B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/shells
+(B==(B(B[ Reading... ](B(B[ Read 10 lines ](B(B	 GNU nano 7.2						/etc/shells						       (B(B^G(B Help(B^O(B Write Out   (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute     (B^C(B Location	  (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace     (B^U(B Paste(B^J(B Justify     (B^/(B Go To Line	 (BM-E(B Redo(BM-6(B Copy# /etc/shells: valid login shells(B/bin/sh/usr/bin/sh/bin/bash/usr/bin/bash/bin/rbash/usr/bin/rbash/usr/bin/dash/usr/bin/tmux/usr/sbin/nologin>arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart vsftpdsudo systemctl restart vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhostftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> cd -/etc/
+550 Failed to change directory.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/vsftpd.userlistsudo nano /etc/vsftpd.userlist
+(B==(B(B[ New File ](B(B  GNU nano 7.2					    /etc/vsftpd.userlist						(B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute	(B^C(B Location	   (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace	(B^U(B Paste(B^J(B Justify     (B^/(B Go To Line  (BM-E(B Redo(BM-6(B Copy(B*(Balunoftpftpdedicado(BM-D(B DOS Format	   (BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format	 (BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/vsftpd.userlist										       (B (B[ Writing... ](B(B (B(B[ Wrote 2 lines ](B(B^O(B Write Out	 (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	 (B^C(B Location(BU(B Undo	 (BM-A(B Set Mark(BX(B Exit  (B^R(B Read File	(B^\(B Replace	   (B^U(B Paste(B^J(B Justify	  (B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/vsftpd.confsudo nano /etc/vsftpd.conf
+(B==(B(B[ Reading... ](B(B[ Read 165 lines ](B(B  GNU nano 7.2					      /etc/vsftpd.conf							(B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute	(B^C(B Location	   (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace	(B^U(B Paste(B^J(B Justify     (B^/(B Go To Line  (BM-E(B Redo(BM-6(B Copy# Example config file /etc/vsftpd.conf## The default compiled in settings are fairly paranoid. This sample file# loosens things up a bit, to make the ftp daemon more usable.# Please see vsftpd.conf.5 for all compiled in defaults.## READ THIS: This example file is NOT an exhaustive list of vsftpd options.# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's# capabilities.### Run standalone?	 vsftpd can run either from an inetd or as a standalone# daemon started from an initscript.# Allow anonymous FTP? (Disabled by default).(Banonymous_enable=NO# Uncomment this to allow local users to log in.(Blocal_enable=YES# Uncomment this to enable any form of FTP write command.(Bwrite_enable=YESchroot_local_user=YESallow_writeable_chroot=YESpasv_min_port=40000pasv_max_port=4010078
+listen=YES78
+#(B78
+# This directive enables listening on IPv6 sockets. By default, listening(B78
+# on the IPv6 "any" address (::) will accept connections from both IPv6(B78
+# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6(B78
+# sockets. If you want that (perhaps because you want to listen on specific(B78
+# addresses) then you must run two copies of vsftpd with two configuration(B78
+# files.(B(B*(BM78Muserlist_enable=YESuserlist_file=/etc/vsftpd.userlistuserlist_deny=NO(BM-D(B DOS Format	 (BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format	       (BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/vsftpd.conf										     (B (B[ Writing... ](B(B (B(B[ Wrote 169 lines ](B(B^O(B Write Out	 (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	 (B^C(B Location(BU(B Undo	 (BM-A(B Set Mark(BX(B Exit  (B^R(B Read File	(B^\(B Replace	   (B^U(B Paste(B^J(B Justify	  (B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy78
+# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6(B78
+# sockets. If you want that (perhaps because you want to listen on specific(B78
+# addresses) then you must run two copies of vsftpd with two configuration(B78
+# files.(B78
+listen_ipv6=NO78
+#(B78
+# Default umask for local users is 077. You may wish to change this to 022,(B78
+# if your users expect that (022 is used by most other ftpd's)(B78
+#local_umask=022(B78
+#(B78
+# Uncomment this to allow the anonymous FTP user to upload files. This only(B78
+# has an effect if the above global write enable is activated. Also, you will(B78
+# obviously need to create a directory writable by the FTP user.(B78
+#anon_upload_enable=YES(B78
+#(B78
+# Uncomment this if you want the anonymous FTP user to be able to create(B78
+# new directories.(B78
+#anon_mkdir_write_enable=YES(B78
+#(B78
+# Activate directory messages - messages given to remote users when they(B78
+# go into a certain directory.(B78
+dirmessage_enable=YES78
+#(B78
+# If enabled, vsftpd will display directory listings with the time(B78
+# in  your  local  time	 zone.	The default is to display GMT. The(B78
+# times returned by the MDTM FTP command are also affected by this(B78
+# option.(B78
+use_localtime=YES78
+#(B78
+# Activate logging of uploads/downloads.(B78
+xferlog_enable=YES78
+#(B78
+# Make sure PORT transfer connections originate from port 20 (ftp-data).(B78
+connect_from_port_20=YES78
+#(B78
+# If you want, you can arrange for uploaded anonymous files to be owned by(B78
+# a different user. Note! Using "root" for uploaded files is not(B78
+# recommended!(B78
+#chown_uploads=YES(B78
+#chown_username=whoever(B78
+#(B78
+# You may override where the log file goes if you like. The default is shown(B78
+# below.(B78
+#xferlog_file=/var/log/vsftpd.log(B78
+#(B78
+# If you want, you can have your log file in standard ftpd xferlog format.(B78
+# Note that the default log file location is /var/log/xferlog in this case.(B78
+#xferlog_std_format=YES(B78
+#(B78
+# You may change the default value for timing out an idle session.(B78
+#idle_session_timeout=600(B78
+#(B78
+# You may change the default value for timing out a data connection.(B78
+#data_connection_timeout=120(B78
+#(B78
+# It is recommended that you define on your system a unique user which the(B78
+# ftp server can use as a totally isolated and unprivileged user.(B78
+#nopriv_user=ftpsecure(B78
+#(B78
+# Enable this and the server will recognise asynchronous ABOR requests. Not(B78
+# recommended for security (the code is non-trivial). Not enabling it,(B78
+# however, may confuse older FTP clients.(B78
+#async_abor_enable=YES(B78
+#(B78
+# By default the server will pretend to allow ASCII mode but in fact ignore(B78
+# the request. Turn on the below options to have the server actually do ASCII(B78
+# mangling on files when in ASCII mode.(B78
+# Beware that on some FTP servers, ASCII support allows a denial of service(B78
+# attack (DoS) via the command "SIZE /big/file" in ASCII mode. vsftpd(B78
+# predicted this attack and has always been safe, reporting the size of the(B78
+# raw file.(B78
+# ASCII mangling is a horrible feature of the protocol.(B78
+#ascii_upload_enable=YES(B78
+#ascii_download_enable=YES(B78
+#(B78
+# You may fully customise the login banner string:(B78
+#ftpd_banner=Welcome to blah FTP service.(B78
+#(B78
+# You may specify a file of disallowed anonymous e-mail addresses. Apparently(B78
+# useful for combatting certain DoS attacks.(B78
+#deny_email_enable=YES(B78
+# (default follows)(B78
+#banned_email_file=/etc/vsftpd.banned_emails(B78
+#(B78
+# You may restrict local users to their home directories.  See the FAQ for(B78
+# the possible risks in this before using chroot_local_user or(B78
+# chroot_list_enable below.(B78
+#chroot_local_user=YES(B78
+#(B78
+# You may specify an explicit list of local users to chroot() to their home(B78
+# directory. If chroot_local_user is YES, then this list becomes a list of(B78
+# users to NOT chroot().(B78
+# (Warning! chroot'ing can be very dangerous. If using chroot, make sure that(B78
+# the user does not have write access to the top level directory within the(B78
+# chroot)(B78
+#chroot_list_enable=YES(B78
+# (default follows)(B78
+#chroot_list_file=/etc/vsftpd.chroot_list(B78
+#(B78
+# You may activate the "-R" option to the builtin ls. This is disabled by(B78
+# default to avoid remote users being able to cause excessive I/O on large(B78
+# sites. However, some broken FTP clients such as "ncftp" and "mirror" assume(B78
+# the presence of the "-R" option, so there is a strong case for enabling it.(B78
+#ls_recurse_enable=YES(B78
+#(B78
+# Customization(B78
+#(B78
+# Some of vsftpd's settings don't fit the filesystem layout by(B78
+# default.(B78
+#(B78
+# This option should be the name of a directory which is empty.	 Also, the(B78
+# directory should not be writable by the ftp user. This directory is used(B78
+# as a secure chroot() jail at times vsftpd does not require filesystem(B78
+# access.(B78
+secure_chroot_dir=/var/run/vsftpd/empty78
+#(B78
+# This string is the name of the PAM service vsftpd will use.(B78
+pam_service_name=vsftpd78
+#(B78
+# This option specifies the location of the RSA certificate to use for SSL(B78
+# encrypted connections.(B78
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem78
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key78
+ssl_enable=YES78
+force_local_logins_ssl=YES78
+force_local_data_ssl=YES78
+ssl_tlsv1=YES78
+ssl_sslv2=NO78
+ssl_sslv3=NO78
+ssl_ciphers=HIGH78
+require_ssl_reuse=NO78
+78
+#(B78
+# Uncomment this to indicate that vsftpd use a utf8 filesystem.(B78
+#utf8_filesystem=YES(B78
+>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/vsftpd.confuserlistftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> exitcd /etc/
+550 Failed to change directory.
+ftp> exuser
+(username) alunoftp
+530 Can't change to another user.
+Login failed.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhostsudo nano /etc/vsftpd.confuserlistftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> cd /etc/
+550 Failed to change directory.
+ftp> exitexit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): anonymous
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+530 Anonymous sessions may not use encryption.
+Login failed.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl status sshsudo systemctl status ssh
+=○ ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: inactive (dead)
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+	     man:sshd_config(5)
+>arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl start sshsudo systemctl start ssh
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl start sshtus
+=● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Wed 2026-03-11 12:06:10 WET; 1s ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+	     man:sshd_config(5)
+    Process: 2247 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 2249 (sshd)
+      Tasks: 1 (limit: 19104)
+     Memory: 2.4M (peak: 2.8M)
+	CPU: 22ms
+     CGroup: /system.slice/ssh.service
+	     └─2249 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Mar 11 12:06:10 Main systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Mar 11 12:06:10 Main sshd[2249]: Server listening on 0.0.0.0 port 2222.
+Mar 11 12:06:10 Main sshd[2249]: Server listening on :: port 2222.
+Mar 11 12:06:10 Main systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+>arcansel@Main:/mnt/c/Users/cyblp$ ip aip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:a0:d2:ef brd ff:ff:ff:ff:ff:ff
+    inet 172.20.155.61/20 brd 172.20.159.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fea0:d2ef/64 scope link
+       valid_lft forever preferred_lft forever
+arcansel@Main:/mnt/c/Users/cyblp$ hostname -Ihostname -I
+172.20.155.61
+arcansel@Main:/mnt/c/Users/cyblp$ sudo sshd -T | grep permitrootloginsudo sshd -T | grep permitrootlogin
+permitrootlogin no
+arcansel@Main:/mnt/c/Users/cyblp$ ssh -v localhostssh -v localhost
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.14, OpenSSL 3.0.13 30 Jan 2024
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to localhost [127.0.0.1] port 22.
+debug1: connect to address 127.0.0.1 port 22: Connection refused
+ssh: connect to host localhost port 22: Connection refused
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -sV localhostnmap -sV localhost
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:08 WET
+
+arcansel@Main:/mnt/c/Users/cyblp$ cat /etc/ssh/sshd_config | grep PermitRootLogincat /etc/ssh/sshd_config | grep PermitRootLogin
+PermitRootLogin no
+#PermitRootLogin prohibit-password
+# the setting of "PermitRootLogin prohibit-password".
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -p 2222 localhostnmap -p 2222 localhost
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:12 WET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00020s latency).
+
+PORT	 STATE SERVICE
+2222/tcp open  EtherNetIP-1
+
+Nmap done: 1 IP address (1 host up) scanned in 0.03 seconds
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -sV localhostnmap -sV localhost
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:12 WET
+
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -p- localhostnmap -p- localhost
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:12 WET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00013s latency).
+Not shown: 65530 closed tcp ports (conn-refused)
+PORT	 STATE SERVICE
+21/tcp	 open  ftp
+80/tcp	 open  http
+2222/tcp open  EtherNetIP-1
+5001/tcp open  commplex-link
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 1.99 seconds
+arcansel@Main:/mnt/c/Users/cyblp$ grep Port /etc/ssh/sshd_configgrep Port /etc/ssh/sshd_config
+# configuration must be re-generated after changing Port, AddressFamily, or
+Port 2222
+#GatewayPorts no
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl status fail2bansudo systemctl status fail2ban
+=● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/usr/lib/systemd/system/fail2ban.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-03-11 10:10:11 WET; 2h 10min ago
+       Docs: man:fail2ban(1)
+   Main PID: 255 (fail2ban-server)
+      Tasks: 9 (limit: 19104)
+     Memory: 47.7M (peak: 74.2M)
+	CPU: 9.863s
+     CGroup: /system.slice/fail2ban.service
+	     └─255 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+
+Mar 11 10:10:11 Main systemd[1]: Started fail2ban.service - Fail2Ban Service.
+Mar 11 10:10:11 Main fail2ban-server[255]: 2026-03-11 10:10:11,484 fail2ban.configreader   [255]: WARNING 'allowipv6' n>
+Mar 11 10:10:11 Main fail2ban-server[255]: Server ready
+lines 1-14/14 (END) ESCESCqqlines 1-14/14 (END)>arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client statussudo fail2ban-client status
+Status
+|- Number of jail:	3
+`- Jail list:	nginx-http-auth, sshd, vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status sshdsudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	0
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status sshdsudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	0
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	0
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	0
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo iptables -Lsudo iptables -L
+Chain INPUT (policy DROP)
+target	   prot opt source		 destination
+ufw-before-logging-input  all  --  anywhere		anywhere
+ufw-before-input  all  --  anywhere		anywhere
+ufw-after-input	 all  --  anywhere	       anywhere
+ufw-after-logging-input	 all  --  anywhere	       anywhere
+ufw-reject-input  all  --  anywhere		anywhere
+ufw-track-input	 all  --  anywhere	       anywhere
+
+Chain FORWARD (policy DROP)
+target	   prot opt source		 destination
+ufw-before-logging-forward  all	 --  anywhere		  anywhere
+ufw-before-forward  all	 --  anywhere		  anywhere
+ufw-after-forward  all	--  anywhere		 anywhere
+ufw-after-logging-forward  all	--  anywhere		 anywhere
+ufw-reject-forward  all	 --  anywhere		  anywhere
+ufw-track-forward  all	--  anywhere		 anywhere
+
+Chain OUTPUT (policy ACCEPT)
+target	   prot opt source		 destination
+ufw-before-logging-output  all	--  anywhere		 anywhere
+ufw-before-output  all	--  anywhere		 anywhere
+ufw-after-output  all  --  anywhere		anywhere
+ufw-after-logging-output  all  --  anywhere		anywhere
+ufw-reject-output  all	--  anywhere		 anywhere
+ufw-track-output  all  --  anywhere		anywhere
+
+Chain ufw-after-forward (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-after-input (1 references)
+target	   prot opt source		 destination
+ufw-skip-to-policy-input  udp  --  anywhere		anywhere	     udp dpt:netbios-ns
+ufw-skip-to-policy-input  udp  --  anywhere		anywhere	     udp dpt:netbios-dgm
+ufw-skip-to-policy-input  tcp  --  anywhere		anywhere	     tcp dpt:netbios-ssn
+ufw-skip-to-policy-input  tcp  --  anywhere		anywhere	     tcp dpt:microsoft-ds
+ufw-skip-to-policy-input  udp  --  anywhere		anywhere	     udp dpt:bootps
+ufw-skip-to-policy-input  udp  --  anywhere		anywhere	     udp dpt:bootpc
+ufw-skip-to-policy-input  all  --  anywhere		anywhere	     ADDRTYPE match dst-type BROADCAST
+
+Chain ufw-after-logging-forward (1 references)
+target	   prot opt source		 destination
+LOG	   all	--  anywhere		 anywhere	      limit: avg 3/min burst 10 LOG level warn prefix "[UFW BLOCK] "
+
+Chain ufw-after-logging-input (1 references)
+target	   prot opt source		 destination
+LOG	   all	--  anywhere		 anywhere	      limit: avg 3/min burst 10 LOG level warn prefix "[UFW BLOCK] "
+
+Chain ufw-after-logging-output (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-after-output (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-before-forward (1 references)
+target	   prot opt source		 destination
+ACCEPT	   all	--  anywhere		 anywhere	      ctstate RELATED,ESTABLISHED
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp destination-unreachable
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp time-exceeded
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp parameter-problem
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp echo-request
+ufw-user-forward  all  --  anywhere		anywhere
+
+Chain ufw-before-input (1 references)
+target	   prot opt source		 destination
+ACCEPT	   all	--  anywhere		 anywhere
+ACCEPT	   all	--  anywhere		 anywhere	      ctstate RELATED,ESTABLISHED
+ufw-logging-deny  all  --  anywhere		anywhere	     ctstate INVALID
+DROP	   all	--  anywhere		 anywhere	      ctstate INVALID
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp destination-unreachable
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp time-exceeded
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp parameter-problem
+ACCEPT	   icmp --  anywhere		 anywhere	      icmp echo-request
+ACCEPT	   udp	--  anywhere		 anywhere	      udp spt:bootps dpt:bootpc
+ufw-not-local  all  --	anywhere	     anywhere
+ACCEPT	   udp	--  anywhere		 mdns.mcast.net	      udp dpt:mdns
+ACCEPT	   udp	--  anywhere		 239.255.255.250      udp dpt:1900
+ufw-user-input	all  --	 anywhere	      anywhere
+
+Chain ufw-before-logging-forward (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-before-logging-input (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-before-logging-output (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-before-output (1 references)
+target	   prot opt source		 destination
+ACCEPT	   all	--  anywhere		 anywhere
+ACCEPT	   all	--  anywhere		 anywhere	      ctstate RELATED,ESTABLISHED
+ufw-user-output	 all  --  anywhere	       anywhere
+
+Chain ufw-logging-allow (0 references)
+target	   prot opt source		 destination
+LOG	   all	--  anywhere		 anywhere	      limit: avg 3/min burst 10 LOG level warn prefix "[UFW ALLOW] "
+
+Chain ufw-logging-deny (2 references)
+target	   prot opt source		 destination
+RETURN	   all	--  anywhere		 anywhere	      ctstate INVALID limit: avg 3/min burst 10
+LOG	   all	--  anywhere		 anywhere	      limit: avg 3/min burst 10 LOG level warn prefix "[UFW BLOCK] "
+
+Chain ufw-not-local (1 references)
+target	   prot opt source		 destination
+RETURN	   all	--  anywhere		 anywhere	      ADDRTYPE match dst-type LOCAL
+RETURN	   all	--  anywhere		 anywhere	      ADDRTYPE match dst-type MULTICAST
+RETURN	   all	--  anywhere		 anywhere	      ADDRTYPE match dst-type BROADCAST
+ufw-logging-deny  all  --  anywhere		anywhere	     limit: avg 3/min burst 10
+DROP	   all	--  anywhere		 anywhere
+
+Chain ufw-reject-forward (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-reject-input (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-reject-output (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-skip-to-policy-forward (0 references)
+target	   prot opt source		 destination
+DROP	   all	--  anywhere		 anywhere
+
+Chain ufw-skip-to-policy-input (7 references)
+target	   prot opt source		 destination
+DROP	   all	--  anywhere		 anywhere
+
+Chain ufw-skip-to-policy-output (0 references)
+target	   prot opt source		 destination
+ACCEPT	   all	--  anywhere		 anywhere
+
+Chain ufw-track-forward (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-track-input (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-track-output (1 references)
+target	   prot opt source		 destination
+ACCEPT	   tcp	--  anywhere		 anywhere	      ctstate NEW
+ACCEPT	   udp	--  anywhere		 anywhere	      ctstate NEW
+
+Chain ufw-user-forward (1 references)
+target	   prot opt source		 destination
+
+Chain ufw-user-input (1 references)
+target	   prot opt source		 destination
+ACCEPT	   tcp	--  anywhere		 anywhere	      multiport dports http,https
+	   tcp	--  anywhere		 anywhere	      tcp dpt:ssh ctstate NEW recent: SET name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit	tcp  --	 anywhere	      anywhere		   tcp dpt:ssh ctstate NEW recent: UPDATE seconds: 30 hit_count: 6 name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit-accept  tcp  --	anywhere	     anywhere		  tcp dpt:ssh
+	   tcp	--  anywhere		 anywhere	      tcp dpt:domain ctstate NEW recent: SET name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit	tcp  --	 anywhere	      anywhere		   tcp dpt:domain ctstate NEW recent: UPDATE seconds: 30 hit_count: 6 name: DEFAULT side: source mask: 255.255.255.255
+ufw-user-limit-accept  tcp  --	anywhere	     anywhere		  tcp dpt:domain
+ACCEPT	   tcp	--  anywhere		 anywhere	      tcp dpt:http
+ACCEPT	   tcp	--  anywhere		 anywhere	      tcp dpt:https
+ACCEPT	   tcp	--  anywhere		 anywhere	      tcp dpt:ftp
+ACCEPT	   tcp	--  anywhere		 anywhere	      multiport dports 30000:30100
+ACCEPT	   tcp	--  anywhere		 anywhere	      tcp dpt:2222
+ACCEPT	   tcp	--  anywhere		 anywhere	      tcp dpt:iprop
+ACCEPT	   tcp	--  anywhere		 anywhere	      multiport dports 40000:40100
+ACCEPT	   tcp	--  anywhere		 anywhere	      tcp dpt:8443
+ACCEPT	   tcp	--  localhost		 anywhere	      tcp dpt:3000
+ACCEPT	   udp	--  localhost		 anywhere	      udp dpt:3000
+DROP	   tcp	--  anywhere		 anywhere	      tcp dpt:3000
+DROP	   udp	--  anywhere		 anywhere	      udp dpt:3000
+
+Chain ufw-user-limit (2 references)
+target	   prot opt source		 destination
+LOG	   all	--  anywhere		 anywhere	      limit: avg 3/min burst 5 LOG level warn prefix "[UFW LIMIT BLOCK] "
+REJECT	   all	--  anywhere		 anywhere	      reject-with icmp-port-unreachable
+
+Chain ufw-user-limit-accept (2 references)
+target	   prot opt source		 destination
+ACCEPT	   all	--  anywhere		 anywhere
+
+Chain ufw-user-logging-forward (0 references)
+target	   prot opt source		 destination
+
+Chain ufw-user-logging-input (0 references)
+target	   prot opt source		 destination
+
+Chain ufw-user-logging-output (0 references)
+target	   prot opt source		 destination
+
+Chain ufw-user-output (1 references)
+target	   prot opt source		 destination
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nft list rulesetsudo nft list ruleset
+# Warning: table ip filter is managed by iptables-nft, do not touch!
+table ip filter {
+	chain ufw-before-logging-input {
+	}
+
+	chain ufw-before-logging-output {
+	}
+
+	chain ufw-before-logging-forward {
+	}
+
+	chain ufw-before-input {
+		iifname "lo" counter packets 135695 bytes 6837568 accept
+		ct state related,established counter packets 1506 bytes 7628244 accept
+		ct state invalid counter packets 0 bytes 0 jump ufw-logging-deny
+		ct state invalid counter packets 0 bytes 0 drop
+		ip protocol icmp icmp type destination-unreachable counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type time-exceeded counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type parameter-problem counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type echo-request counter packets 0 bytes 0 accept
+		udp sport 67 udp dport 68 counter packets 0 bytes 0 accept
+		counter packets 22 bytes 1672 jump ufw-not-local
+		ip daddr 224.0.0.251 udp dport 5353 counter packets 0 bytes 0 accept
+		ip daddr 239.255.255.250 udp dport 1900 counter packets 0 bytes 0 accept
+		counter packets 22 bytes 1672 jump ufw-user-input
+	}
+
+	chain ufw-before-output {
+		oifname "lo" counter packets 135695 bytes 6837568 accept
+		ct state related,established counter packets 1028 bytes 67144 accept
+		counter packets 247 bytes 18660 jump ufw-user-output
+	}
+
+	chain ufw-before-forward {
+		ct state related,established counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type destination-unreachable counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type time-exceeded counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type parameter-problem counter packets 0 bytes 0 accept
+		ip protocol icmp icmp type echo-request counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw-user-forward
+	}
+
+	chain ufw-after-input {
+		udp dport 137 counter packets 12 bytes 1152 jump ufw-skip-to-policy-input
+		udp dport 138 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		tcp dport 139 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		tcp dport 445 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		udp dport 67 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		udp dport 68 counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+		fib daddr type broadcast counter packets 0 bytes 0 jump ufw-skip-to-policy-input
+	}
+
+	chain ufw-after-output {
+	}
+
+	chain ufw-after-forward {
+	}
+
+	chain ufw-after-logging-input {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-after-logging-output {
+	}
+
+	chain ufw-after-logging-forward {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-reject-input {
+	}
+
+	chain ufw-reject-output {
+	}
+
+	chain ufw-reject-forward {
+	}
+
+	chain ufw-track-input {
+	}
+
+	chain ufw-track-output {
+		ip protocol tcp ct state new counter packets 7 bytes 420 accept
+		ip protocol udp ct state new counter packets 240 bytes 18240 accept
+	}
+
+	chain ufw-track-forward {
+	}
+
+	chain INPUT {
+		type filter hook input priority filter; policy drop;
+		counter packets 137223 bytes 14467484 jump ufw-before-logging-input
+		counter packets 137223 bytes 14467484 jump ufw-before-input
+		counter packets 12 bytes 1152 jump ufw-after-input
+		counter packets 0 bytes 0 jump ufw-after-logging-input
+		counter packets 0 bytes 0 jump ufw-reject-input
+		counter packets 0 bytes 0 jump ufw-track-input
+	}
+
+	chain OUTPUT {
+		type filter hook output priority filter; policy accept;
+		counter packets 136970 bytes 6923372 jump ufw-before-logging-output
+		counter packets 136970 bytes 6923372 jump ufw-before-output
+		counter packets 247 bytes 18660 jump ufw-after-output
+		counter packets 247 bytes 18660 jump ufw-after-logging-output
+		counter packets 247 bytes 18660 jump ufw-reject-output
+		counter packets 247 bytes 18660 jump ufw-track-output
+	}
+
+	chain FORWARD {
+		type filter hook forward priority filter; policy drop;
+		counter packets 0 bytes 0 jump ufw-before-logging-forward
+		counter packets 0 bytes 0 jump ufw-before-forward
+		counter packets 0 bytes 0 jump ufw-after-forward
+		counter packets 0 bytes 0 jump ufw-after-logging-forward
+		counter packets 0 bytes 0 jump ufw-reject-forward
+		counter packets 0 bytes 0 jump ufw-track-forward
+	}
+
+	chain ufw-logging-deny {
+		ct state invalid limit rate 3/minute burst 10 packets counter packets 0 bytes 0 return
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw-logging-allow {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW ALLOW] "
+	}
+
+	chain ufw-skip-to-policy-input {
+		counter packets 12 bytes 1152 drop
+	}
+
+	chain ufw-skip-to-policy-output {
+		counter packets 0 bytes 0 accept
+	}
+
+	chain ufw-skip-to-policy-forward {
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw-not-local {
+		fib daddr type local counter packets 10 bytes 520 return
+		fib daddr type multicast counter packets 0 bytes 0 return
+		fib daddr type broadcast counter packets 12 bytes 1152 return
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 jump ufw-logging-deny
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw-user-input {
+		ip protocol tcp tcp dport { 80, 443 } counter packets 0 bytes 0 accept
+		tcp dport 22 ct state new xt match "recent" counter packets 10 bytes 520
+		tcp dport 22 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw-user-limit
+		tcp dport 22 counter packets 10 bytes 520 jump ufw-user-limit-accept
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw-user-limit
+		tcp dport 53 counter packets 0 bytes 0 jump ufw-user-limit-accept
+		tcp dport 80 counter packets 0 bytes 0 accept
+		tcp dport 443 counter packets 0 bytes 0 accept
+		tcp dport 21 counter packets 0 bytes 0 accept
+		ip protocol tcp tcp dport 30000-30100 counter packets 0 bytes 0 accept
+		tcp dport 2222 counter packets 0 bytes 0 accept
+		tcp dport 2121 counter packets 0 bytes 0 accept
+		ip protocol tcp tcp dport 40000-40100 counter packets 0 bytes 0 accept
+		tcp dport 8443 counter packets 0 bytes 0 accept
+		ip saddr 127.0.0.1 tcp dport 3000 counter packets 0 bytes 0 accept
+		ip saddr 127.0.0.1 udp dport 3000 counter packets 0 bytes 0 accept
+		tcp dport 3000 counter packets 0 bytes 0 drop
+		udp dport 3000 counter packets 0 bytes 0 drop
+	}
+
+	chain ufw-user-output {
+	}
+
+	chain ufw-user-forward {
+	}
+
+	chain ufw-user-logging-input {
+	}
+
+	chain ufw-user-logging-output {
+	}
+
+	chain ufw-user-logging-forward {
+	}
+
+	chain ufw-user-limit {
+		limit rate 3/minute burst 5 packets counter packets 0 bytes 0 log prefix "[UFW LIMIT BLOCK] "
+		counter packets 0 bytes 0 reject
+	}
+
+	chain ufw-user-limit-accept {
+		counter packets 10 bytes 520 accept
+	}
+}
+# Warning: table ip6 filter is managed by iptables-nft, do not touch!
+table ip6 filter {
+	chain ufw6-before-logging-input {
+	}
+
+	chain ufw6-before-logging-output {
+	}
+
+	chain ufw6-before-logging-forward {
+	}
+
+	chain ufw6-before-input {
+		iifname "lo" counter packets 1050 bytes 144296 accept
+		rt type 0 counter packets 0 bytes 0 drop
+		ct state related,established counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-reply counter packets 0 bytes 0 accept
+		ct state invalid counter packets 0 bytes 0 jump ufw6-logging-deny
+		ct state invalid counter packets 0 bytes 0 drop
+		meta l4proto ipv6-icmp icmpv6 type destination-unreachable counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type packet-too-big counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type time-exceeded counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type parameter-problem counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-request counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-solicit ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-solicit ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-query counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-report counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-done counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 ip6 daddr fe80::/10 udp sport 547 udp dport 546 counter packets 0 bytes 0 accept
+		ip6 daddr ff02::fb udp dport 5353 counter packets 0 bytes 0 accept
+		ip6 daddr ff02::f udp dport 1900 counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw6-user-input
+	}
+
+	chain ufw6-before-output {
+		oifname "lo" counter packets 1050 bytes 144296 accept
+		rt type 0 counter packets 0 bytes 0 drop
+		ct state related,established counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type destination-unreachable counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type packet-too-big counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type time-exceeded counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type parameter-problem counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-request counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-reply counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-solicit ip6 hoplimit 255 counter packets 10 bytes 560 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-neighbor-solicit ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type nd-router-advert ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-query counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-report counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp icmpv6 type mld-listener-done counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 255 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		ip6 saddr fe80::/10 meta l4proto ipv6-icmp xt match "icmp6" ip6 hoplimit 1 counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw6-user-output
+	}
+
+	chain ufw6-before-forward {
+		rt type 0 counter packets 0 bytes 0 drop
+		ct state related,established counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type destination-unreachable counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type packet-too-big counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type time-exceeded counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type parameter-problem counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-request counter packets 0 bytes 0 accept
+		meta l4proto ipv6-icmp icmpv6 type echo-reply counter packets 0 bytes 0 accept
+		counter packets 0 bytes 0 jump ufw6-user-forward
+	}
+
+	chain ufw6-after-input {
+		udp dport 137 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		udp dport 138 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		tcp dport 139 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		tcp dport 445 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		udp dport 546 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+		udp dport 547 counter packets 0 bytes 0 jump ufw6-skip-to-policy-input
+	}
+
+	chain ufw6-after-output {
+	}
+
+	chain ufw6-after-forward {
+	}
+
+	chain ufw6-after-logging-input {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw6-after-logging-output {
+	}
+
+	chain ufw6-after-logging-forward {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw6-reject-input {
+	}
+
+	chain ufw6-reject-output {
+	}
+
+	chain ufw6-reject-forward {
+	}
+
+	chain ufw6-track-input {
+	}
+
+	chain ufw6-track-output {
+		meta l4proto tcp ct state new counter packets 0 bytes 0 accept
+		meta l4proto udp ct state new counter packets 0 bytes 0 accept
+	}
+
+	chain ufw6-track-forward {
+	}
+
+	chain INPUT {
+		type filter hook input priority filter; policy drop;
+		counter packets 1050 bytes 144296 jump ufw6-before-logging-input
+		counter packets 1050 bytes 144296 jump ufw6-before-input
+		counter packets 0 bytes 0 jump ufw6-after-input
+		counter packets 0 bytes 0 jump ufw6-after-logging-input
+		counter packets 0 bytes 0 jump ufw6-reject-input
+		counter packets 0 bytes 0 jump ufw6-track-input
+	}
+
+	chain OUTPUT {
+		type filter hook output priority filter; policy accept;
+		counter packets 1060 bytes 144856 jump ufw6-before-logging-output
+		counter packets 1060 bytes 144856 jump ufw6-before-output
+		counter packets 0 bytes 0 jump ufw6-after-output
+		counter packets 0 bytes 0 jump ufw6-after-logging-output
+		counter packets 0 bytes 0 jump ufw6-reject-output
+		counter packets 0 bytes 0 jump ufw6-track-output
+	}
+
+	chain FORWARD {
+		type filter hook forward priority filter; policy drop;
+		counter packets 0 bytes 0 jump ufw6-before-logging-forward
+		counter packets 0 bytes 0 jump ufw6-before-forward
+		counter packets 0 bytes 0 jump ufw6-after-forward
+		counter packets 0 bytes 0 jump ufw6-after-logging-forward
+		counter packets 0 bytes 0 jump ufw6-reject-forward
+		counter packets 0 bytes 0 jump ufw6-track-forward
+	}
+
+	chain ufw6-logging-deny {
+		ct state invalid limit rate 3/minute burst 10 packets counter packets 0 bytes 0 return
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW BLOCK] "
+	}
+
+	chain ufw6-logging-allow {
+		limit rate 3/minute burst 10 packets counter packets 0 bytes 0 log prefix "[UFW ALLOW] "
+	}
+
+	chain ufw6-skip-to-policy-input {
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw6-skip-to-policy-output {
+		counter packets 0 bytes 0 accept
+	}
+
+	chain ufw6-skip-to-policy-forward {
+		counter packets 0 bytes 0 drop
+	}
+
+	chain ufw6-user-input {
+		meta l4proto tcp tcp dport { 80, 443 } counter packets 0 bytes 0 accept
+		tcp dport 22 ct state new xt match "recent" counter packets 0 bytes 0
+		tcp dport 22 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw6-user-limit
+		tcp dport 22 counter packets 0 bytes 0 jump ufw6-user-limit-accept
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0
+		tcp dport 53 ct state new xt match "recent" counter packets 0 bytes 0 jump ufw6-user-limit
+		tcp dport 53 counter packets 0 bytes 0 jump ufw6-user-limit-accept
+		tcp dport 80 counter packets 0 bytes 0 accept
+		tcp dport 443 counter packets 0 bytes 0 accept
+		tcp dport 21 counter packets 0 bytes 0 accept
+		meta l4proto tcp tcp dport 30000-30100 counter packets 0 bytes 0 accept
+		tcp dport 2222 counter packets 0 bytes 0 accept
+		tcp dport 2121 counter packets 0 bytes 0 accept
+		meta l4proto tcp tcp dport 40000-40100 counter packets 0 bytes 0 accept
+		tcp dport 8443 counter packets 0 bytes 0 accept
+		tcp dport 3000 counter packets 0 bytes 0 drop
+		udp dport 3000 counter packets 0 bytes 0 drop
+	}
+
+	chain ufw6-user-output {
+	}
+
+	chain ufw6-user-forward {
+	}
+
+	chain ufw6-user-logging-input {
+	}
+
+	chain ufw6-user-logging-output {
+	}
+
+	chain ufw6-user-logging-forward {
+	}
+
+	chain ufw6-user-limit {
+		limit rate 3/minute burst 5 packets counter packets 0 bytes 0 log prefix "[UFW LIMIT BLOCK] "
+		counter packets 0 bytes 0 reject
+	}
+
+	chain ufw6-user-limit-accept {
+		counter packets 0 bytes 0 accept
+	}
+}
+arcansel@Main:/mnt/c/Users/cyblp$ sudo tail -f /var/log/fail2ban.logsudo tail -f /var/log/fail2ban.log
+2026-03-11 10:10:11,719 fail2ban.jail		[255]: INFO    Jail 'vsftpd' started
+2026-03-11 10:10:11,761 fail2ban.filtersystemd	[255]: INFO    [nginx-http-auth] Jail is in operation now (process new journal entries)
+2026-03-11 10:10:11,761 fail2ban.filtersystemd	[255]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2026-03-11 10:10:11,820 fail2ban.filtersystemd	[255]: INFO    [vsftpd] Jail is in operation now (process new journal entries)
+2026-03-11 12:21:38,855 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:41,533 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:49,879 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:57,879 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:00,084 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:02,130 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+q
+^[  ^C
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw limit 2222/tcpsudo ufw limit 2222/tcp
+Rule updated
+Rule updated (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status numberedsudo ufw status numbered
+Status: active
+
+     To				Action	    From
+     --				------	    ----
+[ 1] 80,443/tcp			ALLOW IN    Anywhere
+[ 2] 22/tcp			LIMIT IN    Anywhere
+[ 3] 53/tcp			LIMIT IN    Anywhere
+[ 4] 80/tcp			ALLOW IN    Anywhere
+[ 5] 443/tcp			ALLOW IN    Anywhere
+[ 6] 21/tcp			ALLOW IN    Anywhere
+[ 7] 30000:30100/tcp		ALLOW IN    Anywhere
+[ 8] 2222/tcp			LIMIT IN    Anywhere
+[ 9] 2121/tcp			ALLOW IN    Anywhere
+[10] 40000:40100/tcp		ALLOW IN    Anywhere
+[11] 8443/tcp			ALLOW IN    Anywhere
+[12] 3000			ALLOW IN    127.0.0.1
+[13] 3000			DENY IN	    Anywhere
+[14] 80,443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[15] 22/tcp (v6)		LIMIT IN    Anywhere (v6)
+[16] 53/tcp (v6)		LIMIT IN    Anywhere (v6)
+[17] 80/tcp (v6)		ALLOW IN    Anywhere (v6)
+[18] 443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[19] 21/tcp (v6)		ALLOW IN    Anywhere (v6)
+[20] 30000:30100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[21] 2222/tcp (v6)		LIMIT IN    Anywhere (v6)
+[22] 2121/tcp (v6)		ALLOW IN    Anywhere (v6)
+[23] 40000:40100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[24] 8443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[25] 3000 (v6)			DENY IN	    Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status sshdsudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned: 1
+   |- Total banned:	1
+   `- Banned IP list:	172.20.144.1
+arcansel@Main:/mnt/c/Users/cyblp$ sudo tail -f /var/log/fail2ban.logsudo tail -f /var/log/fail2ban.log
+2026-03-11 12:21:38,855 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:41,533 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:49,879 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:21:57,879 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:00,084 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:22:02,130 fail2ban.filter		[255]: INFO    [sshd] Ignore ::1 by ignoreself rule
+2026-03-11 12:26:21,998 fail2ban.filter		[255]: INFO    [sshd] Found 172.20.144.1 - 2026-03-11 12:26:21
+2026-03-11 12:26:25,294 fail2ban.filter		[255]: INFO    [sshd] Found 172.20.144.1 - 2026-03-11 12:26:24
+2026-03-11 12:26:26,794 fail2ban.filter		[255]: INFO    [sshd] Found 172.20.144.1 - 2026-03-11 12:26:26
+2026-03-11 12:26:27,009 fail2ban.actions	[255]: NOTICE  [sshd] Ban 172.20.144.1
+^C
+arcansel@Main:/mnt/c/Users/cyblp$ sudo journalctl -u ssh --since "10 minutes ago"sudo journalctl -u ssh --since "10 minutes ago"
+=Mar 11 12:21:38 Main sshd[2592]: Invalid user fakeuser from ::1 port 47800
+Mar 11 12:21:38 Main sshd[2592]: Connection closed by invalid user fakeuser ::1 port 47800 [preauth]
+Mar 11 12:21:41 Main sshd[2596]: Invalid user fakeuser from ::1 port 39472
+Mar 11 12:21:41 Main sshd[2596]: Connection closed by invalid user fakeuser ::1 port 39472 [preauth]
+Mar 11 12:21:49 Main sshd[2598]: Invalid user fakeuser from ::1 port 39486
+Mar 11 12:21:49 Main sshd[2598]: Connection closed by invalid user fakeuser ::1 port 39486 [preauth]
+Mar 11 12:21:57 Main sshd[2602]: Invalid user fakeuser from ::1 port 41140
+Mar 11 12:21:57 Main sshd[2602]: Connection closed by invalid user fakeuser ::1 port 41140 [preauth]
+Mar 11 12:21:59 Main sshd[2606]: Invalid user fakeuser from ::1 port 41142
+Mar 11 12:21:59 Main sshd[2606]: Connection closed by invalid user fakeuser ::1 port 41142 [preauth]
+Mar 11 12:22:01 Main sshd[2608]: Invalid user fakeuser from ::1 port 35916
+Mar 11 12:22:01 Main sshd[2608]: Connection closed by invalid user fakeuser ::1 port 35916 [preauth]
+Mar 11 12:22:18 Main sshd[2614]: Accepted publickey for arcansel from ::1 port 48620 ssh2: RSA SHA256:G8K1QXnmfOsx3dqAa>
+Mar 11 12:22:18 Main sshd[2614]: pam_unix(sshd:session): session opened for user arcansel(uid=1000) by arcansel(uid=0)
+Mar 11 12:22:24 Main sshd[2877]: Connection closed by authenticating user arcansel 127.0.0.1 port 52154 [preauth]
+Mar 11 12:22:26 Main sshd[2880]: Connection closed by authenticating user arcansel 127.0.0.1 port 52164 [preauth]
+Mar 11 12:22:28 Main sshd[2883]: Connection closed by authenticating user arcansel 127.0.0.1 port 52166 [preauth]
+Mar 11 12:22:29 Main sshd[2886]: Connection closed by authenticating user arcansel 127.0.0.1 port 52174 [preauth]
+Mar 11 12:22:30 Main sshd[2889]: Connection closed by authenticating user arcansel 127.0.0.1 port 52180 [preauth]
+Mar 11 12:26:21 Main sshd[2994]: Invalid user fakeuser from 172.20.144.1 port 3928
+Mar 11 12:26:21 Main sshd[2994]: Connection reset by invalid user fakeuser 172.20.144.1 port 3928 [preauth]
+Mar 11 12:26:24 Main sshd[2996]: Invalid user fakeuser from 172.20.144.1 port 3930
+Mar 11 12:26:24 Main sshd[2996]: Connection reset by invalid user fakeuser 172.20.144.1 port 3930 [preauth]
+Mar 11 12:26:26 Main sshd[2998]: Invalid user fakeuser from 172.20.144.1 port 3933
+Mar 11 12:26:26 Main sshd[2998]: Connection reset by invalid user fakeuser 172.20.144.1 port 3933 [preauth]
+lines 1-25/25 (END) ESCESCqqlines 1-25/25 (END)>
+arcansel@Main:/mnt/c/Users/cyblp$ sudo journalctl -u ssh | tail -n 50sudo journalctl -u ssh | tail -n 50
+Mar 11 01:49:07 Main sshd[110153]: Server listening on :: port 2222.
+Mar 11 01:49:07 Main systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Mar 11 01:50:26 Main sshd[110154]: Connection closed by authenticating user root 127.0.0.1 port 42056 [preauth]
+Mar 11 04:02:52 Main sshd[156940]: Invalid user fakeuser from ::1 port 41634
+Mar 11 04:02:52 Main sshd[156940]: Connection closed by invalid user fakeuser ::1 port 41634 [preauth]
+Mar 11 04:03:01 Main sshd[157078]: Invalid user fakeuser from ::1 port 33024
+Mar 11 04:03:01 Main sshd[157078]: Connection closed by invalid user fakeuser ::1 port 33024 [preauth]
+Mar 11 04:03:03 Main sshd[157097]: Invalid user fakeuser from ::1 port 33040
+Mar 11 04:03:03 Main sshd[157097]: Connection closed by invalid user fakeuser ::1 port 33040 [preauth]
+Mar 11 04:03:06 Main sshd[157114]: Invalid user fakeuser from ::1 port 33056
+Mar 11 04:03:06 Main sshd[157114]: Connection closed by invalid user fakeuser ::1 port 33056 [preauth]
+Mar 11 04:13:53 Main systemd[1]: Stopping ssh.service - OpenBSD Secure Shell server...
+Mar 11 04:13:53 Main sshd[110153]: Received signal 15; terminating.
+Mar 11 04:13:53 Main systemd[1]: ssh.service: Deactivated successfully.
+Mar 11 04:13:53 Main systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+-- Boot 7ecc713a7e6440328d2e9133324e7e09 --
+Mar 11 12:06:10 Main systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Mar 11 12:06:10 Main sshd[2249]: Server listening on 0.0.0.0 port 2222.
+Mar 11 12:06:10 Main sshd[2249]: Server listening on :: port 2222.
+Mar 11 12:06:10 Main systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Mar 11 12:08:18 Main sshd[2267]: Connection closed by 127.0.0.1 port 46404
+Mar 11 12:11:27 Main sshd[2272]: Accepted publickey for arcansel from ::1 port 52752 ssh2: RSA SHA256:G8K1QXnmfOsx3dqAaaT1kV7oH7sNR3YTPSrbXHayXT4
+Mar 11 12:11:27 Main sshd[2272]: pam_unix(sshd:session): session opened for user arcansel(uid=1000) by arcansel(uid=0)
+Mar 11 12:11:44 Main sshd[2537]: Connection closed by authenticating user root ::1 port 51606 [preauth]
+Mar 11 12:12:14 Main sshd[2547]: Connection closed by 127.0.0.1 port 37486
+Mar 11 12:21:38 Main sshd[2592]: Invalid user fakeuser from ::1 port 47800
+Mar 11 12:21:38 Main sshd[2592]: Connection closed by invalid user fakeuser ::1 port 47800 [preauth]
+Mar 11 12:21:41 Main sshd[2596]: Invalid user fakeuser from ::1 port 39472
+Mar 11 12:21:41 Main sshd[2596]: Connection closed by invalid user fakeuser ::1 port 39472 [preauth]
+Mar 11 12:21:49 Main sshd[2598]: Invalid user fakeuser from ::1 port 39486
+Mar 11 12:21:49 Main sshd[2598]: Connection closed by invalid user fakeuser ::1 port 39486 [preauth]
+Mar 11 12:21:57 Main sshd[2602]: Invalid user fakeuser from ::1 port 41140
+Mar 11 12:21:57 Main sshd[2602]: Connection closed by invalid user fakeuser ::1 port 41140 [preauth]
+Mar 11 12:21:59 Main sshd[2606]: Invalid user fakeuser from ::1 port 41142
+Mar 11 12:21:59 Main sshd[2606]: Connection closed by invalid user fakeuser ::1 port 41142 [preauth]
+Mar 11 12:22:01 Main sshd[2608]: Invalid user fakeuser from ::1 port 35916
+Mar 11 12:22:01 Main sshd[2608]: Connection closed by invalid user fakeuser ::1 port 35916 [preauth]
+Mar 11 12:22:18 Main sshd[2614]: Accepted publickey for arcansel from ::1 port 48620 ssh2: RSA SHA256:G8K1QXnmfOsx3dqAaaT1kV7oH7sNR3YTPSrbXHayXT4
+Mar 11 12:22:18 Main sshd[2614]: pam_unix(sshd:session): session opened for user arcansel(uid=1000) by arcansel(uid=0)
+Mar 11 12:22:24 Main sshd[2877]: Connection closed by authenticating user arcansel 127.0.0.1 port 52154 [preauth]
+Mar 11 12:22:26 Main sshd[2880]: Connection closed by authenticating user arcansel 127.0.0.1 port 52164 [preauth]
+Mar 11 12:22:28 Main sshd[2883]: Connection closed by authenticating user arcansel 127.0.0.1 port 52166 [preauth]
+Mar 11 12:22:29 Main sshd[2886]: Connection closed by authenticating user arcansel 127.0.0.1 port 52174 [preauth]
+Mar 11 12:22:30 Main sshd[2889]: Connection closed by authenticating user arcansel 127.0.0.1 port 52180 [preauth]
+Mar 11 12:26:21 Main sshd[2994]: Invalid user fakeuser from 172.20.144.1 port 3928
+Mar 11 12:26:21 Main sshd[2994]: Connection reset by invalid user fakeuser 172.20.144.1 port 3928 [preauth]
+Mar 11 12:26:24 Main sshd[2996]: Invalid user fakeuser from 172.20.144.1 port 3930
+Mar 11 12:26:24 Main sshd[2996]: Connection reset by invalid user fakeuser 172.20.144.1 port 3930 [preauth]
+Mar 11 12:26:26 Main sshd[2998]: Invalid user fakeuser from 172.20.144.1 port 3933
+Mar 11 12:26:26 Main sshd[2998]: Connection reset by invalid user fakeuser 172.20.144.1 port 3933 [preauth]
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status numberedsudo ufw status numbered
+Status: active
+
+     To				Action	    From
+     --				------	    ----
+[ 1] 80,443/tcp			ALLOW IN    Anywhere
+[ 2] 22/tcp			LIMIT IN    Anywhere
+[ 3] 53/tcp			LIMIT IN    Anywhere
+[ 4] 80/tcp			ALLOW IN    Anywhere
+[ 5] 443/tcp			ALLOW IN    Anywhere
+[ 6] 21/tcp			ALLOW IN    Anywhere
+[ 7] 30000:30100/tcp		ALLOW IN    Anywhere
+[ 8] 2222/tcp			LIMIT IN    Anywhere
+[ 9] 2121/tcp			ALLOW IN    Anywhere
+[10] 40000:40100/tcp		ALLOW IN    Anywhere
+[11] 8443/tcp			ALLOW IN    Anywhere
+[12] 3000			ALLOW IN    127.0.0.1
+[13] 3000			DENY IN	    Anywhere
+[14] 80,443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[15] 22/tcp (v6)		LIMIT IN    Anywhere (v6)
+[16] 53/tcp (v6)		LIMIT IN    Anywhere (v6)
+[17] 80/tcp (v6)		ALLOW IN    Anywhere (v6)
+[18] 443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[19] 21/tcp (v6)		ALLOW IN    Anywhere (v6)
+[20] 30000:30100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[21] 2222/tcp (v6)		LIMIT IN    Anywhere (v6)
+[22] 2121/tcp (v6)		ALLOW IN    Anywhere (v6)
+[23] 40000:40100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[24] 8443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[25] 3000 (v6)			DENY IN	    Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client set sshd unbanip 172.20.144.1sudo fail2ban-client set sshd unbanip 172.20.144.1
+1
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status sshdsudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	1
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 2sudo ufw delete 2
+Deleting:
+ limit 22/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 15sudo ufw delete 15
+Deleting:
+ limit 53/tcp
+Proceed with operation (y|n)? n
+Aborted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 154
+Deleting:
+ limit 22/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/vsftpd.confsudo nano /etc/vsftpd.conf
+(B==(B(B[ Reading... ](B(B[ Read 169 lines ](B(B  GNU nano 7.2					      /etc/vsftpd.conf							(B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute	(B^C(B Location	   (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace	(B^U(B Paste(B^J(B Justify     (B^/(B Go To Line  (BM-E(B Redo(BM-6(B Copy# Example config file /etc/vsftpd.conf## The default compiled in settings are fairly paranoid. This sample file# loosens things up a bit, to make the ftp daemon more usable.# Please see vsftpd.conf.5 for all compiled in defaults.## READ THIS: This example file is NOT an exhaustive list of vsftpd options.# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's# capabilities.### Run standalone?	 vsftpd can run either from an inetd or as a standalone# daemon started from an initscript.# Allow anonymous FTP? (Disabled by default).(Banonymous_enable=NO# Uncomment this to allow local users to log in.(Blocal_enable=YES# Uncomment this to enable any form of FTP write command.(Bwrite_enable=YESchroot_local_user=YESallow_writeable_chroot=YESpasv_min_port=40000pasv_max_port=4010078
+userlist_enable=YES78
+userlist_file=/etc/vsftpd.userlist78
+userlist_deny=NO78
+78
+listen=YES78
+#(B78
+# This directive enables listening on IPv6 sockets. By default, listening(B78
+# on the IPv6 "any" address (::) will accept connections from both IPv6(B78M# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's(B78M# READ THIS: This example file is NOT an exhaustive list of vsftpd options.(B78M#(B(B*(BM78Mlisten_port=2121(BM-D(B DOS Format	(BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format	      (BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/vsftpd.conf										    (B (B[ Writing... ](B(B (B(B[ Wrote 171 lines ](B(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute	(B^C(B Location(BU(B Undo	(BM-A(B Set Mark(BX(B Exit  (B^R(B Read File   (B^\(B Replace	  (B^U(B Paste(B^J(B Justify	 (B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy>arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart vsftpdsudo systemctl restart vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ ss -tulpn | grep vsftpdss -tulpn | grep vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhost 2121ftp localhost 2121
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): ftpdedicado
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ ftp 172.20.155.61 2121ftp 172.20.155.61 2121
+Connected to 172.20.155.61.
+220 (vsFTPd 3.0.5)
+Name (172.20.155.61:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -p- localhostnmap -p- localhost
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 12:37 WET
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00013s latency).
+Not shown: 65530 closed tcp ports (conn-refused)
+PORT	 STATE SERVICE
+80/tcp	 open  http
+2121/tcp open  ccproxy-ftp
+2222/tcp open  EtherNetIP-1
+5001/tcp open  commplex-link
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 2.12 seconds
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete <numero_da_regra_21>sudo ufw delete <numero_da_regra_21>>>>>>>>>>>>>>>>>>>5>5
+Deleting:
+ allow 21/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 518
+Deleting:
+ limit 2222/tcp
+Proceed with operation (y|n)? n
+Aborted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 187
+Deleting:
+ allow 30000:30100/tcp
+Proceed with operation (y|n)? n
+Aborted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 179
+Deleting:
+ allow 2121/tcp
+Proceed with operation (y|n)? n
+Aborted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 19785nmap -p- localhostftp 172.20.155.61 2121localhostss -tulpn | grep vsftpdudo systemctl restartnano /etc/vsftpd.confufw delete 1452fail2ban-client status sshdet sshd unbanip 172.20.144.1ufw status numberedjournalctl -u ssh | tail -n 50--since "10 minutes ago"tail -f /var/log/fail2ban.logfail2ban-client status sshdufw status numberedlimit 2222/tcptail -f /var/log/fail2ban.lognft list rulesetiptables -Lfail2ban-client status sshdsystemctl status fail2banfail2ban-client status sshdiptables -Lnft list rulesettail -f /var/log/fail2ban.lognft list rulesettail -f /var/log/fail2ban.logufw limit 2222/tcpstatus numberedfail2ban-client status sshdtail -f /var/log/fail2ban.logfail2ban-client status sshdufw status numbered
+Status: active
+
+     To				Action	    From
+     --				------	    ----
+[ 1] 80,443/tcp			ALLOW IN    Anywhere
+[ 2] 53/tcp			LIMIT IN    Anywhere
+[ 3] 80/tcp			ALLOW IN    Anywhere
+[ 4] 443/tcp			ALLOW IN    Anywhere
+[ 5] 30000:30100/tcp		ALLOW IN    Anywhere
+[ 6] 2222/tcp			LIMIT IN    Anywhere
+[ 7] 2121/tcp			ALLOW IN    Anywhere
+[ 8] 40000:40100/tcp		ALLOW IN    Anywhere
+[ 9] 8443/tcp			ALLOW IN    Anywhere
+[10] 3000			ALLOW IN    127.0.0.1
+[11] 3000			DENY IN	    Anywhere
+[12] 80,443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[13] 53/tcp (v6)		LIMIT IN    Anywhere (v6)
+[14] 80/tcp (v6)		ALLOW IN    Anywhere (v6)
+[15] 443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[16] 21/tcp (v6)		ALLOW IN    Anywhere (v6)
+[17] 30000:30100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[18] 2222/tcp (v6)		LIMIT IN    Anywhere (v6)
+[19] 2121/tcp (v6)		ALLOW IN    Anywhere (v6)
+[20] 40000:40100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[21] 8443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[22] 3000 (v6)			DENY IN	    Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status numbereddelete 196
+Deleting:
+ allow 21/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart vsftpdsudo systemctl restart vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhost 2121ftp localhost 2121
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunofto p
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhost 2121
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> user
+(username) alunoftp
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhost 2121sudo systemctl restart vsftpdftp localhost 2121
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> user
+(username) alunoftp
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> exit
+221 Goodbye.
+arcansel@Main:/mnt/c/Users/cyblp$ ftp localhost 2121sudo systemctl restart vsftpdufw delete 16systemctl restart vsftpdufw delete 16status numbereddelete 19status numbereddelete 19785nmap -p- localhostftp 172.20.155.61 2121nmap -p- localhostftp 172.20.155.61 2121localhostss -tulpn | grep vsftpdudo systemctl restarts -tulpn | grepudo systemctl restartnano /etc/vsftpd.confufw delete 1452fail2ban-client status sshdet sshd unbanip 172.20.144.1tatus sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	1
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status vsftpdsudo fail2ban-client status vsftpd
+Status for the jail: vsftpd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	0
+|  `- Journal matches:
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	0
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status vsftpd
+Status for the jail: vsftpd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	0
+|  `- Journal matches:
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	0
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client get vsftpd logpathsudo fail2ban-client get vsftpd logpath
+No file is currently monitored
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/fail2ban/jail.localsudo nano /etc/fail2ban/jail.local
+(B==(B(B[ Reading... ](B(B[ Read 22 lines ](B(B	 GNU nano 7.2					 /etc/fail2ban/jail.local					       (B(B^G(B Help(B^O(B Write Out   (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute     (B^C(B Location	  (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace     (B^U(B Paste(B^J(B Justify     (B^/(B Go To Line	 (BM-E(B Redo(BM-6(B Copy(B[DEFAULT](Bbantime = 3600findtime = 600maxretry = 3backend = systemd(B[sshd](Benabled = trueport = 2222logpath = /var/log/auth.logmaxretry = 3(B[vsftpd](Benabled = trueport = ftp,ftp-data,ftpslogpath = /var/log/auth.logmaxretry = 3(B[nginx-http-auth](Benabled = truelogpath = /var/log/nginx/error.logmaxretry = 3maxetry = 3(B*(B
+
+
+
+[vsftpd	     (B[vsftpd](Benabled = trueport = 2121filter = vsftpdlogpath = /var/log/auth.logmaxretry = 5bantime = 10mfindtime = 10m(BM-D(B DOS Format	    (BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format	  (BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/fail2ban/jail.local										(B (B[ Writing... ](B(B (B(B[ Wrote 25 lines ](B(B^O(B Write Out   (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	   (B^C(B Location(BU(B Undo	   (BM-A(B Set Mark(BX(B Exit  (B^R(B Read File	  (B^\(B Replace     (B^U(B Paste(B^J(B Justify	    (B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy(B*(B 3(BM-D(B DOS Format	(BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format	      (BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/fail2ban/jail.local									    (B (B[ Writing... ](B(B (B(B[ Wrote 25 lines ](B(B^O(B Write Out   (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute     (B^C(B Location(BU(B Undo       (BM-A(B Set Mark(BX(B Exit  (B^R(B Read File   (B^\(B Replace	 (B^U(B Paste(B^J(B Justify	(B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy>arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client get vsftpd filtersudo fail2ban-client get vsftpd filter
+2026-03-11 12:51:08,325 fail2ban		[3567]: ERROR	NOK: ('Invalid command (no get action or not yet implemented)',)
+Invalid command (no get action or not yet implemented)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart fail2bansudo systemctl restart fail2ban
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart fail2banfail2ban-client get vsftpd filter
+2026-03-11 12:51:29,770 fail2ban		[3601]: ERROR	NOK: ('Invalid command (no get action or not yet implemented)',)
+Invalid command (no get action or not yet implemented)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status vsftpdsudo fail2ban-client status vsftpd
+Status for the jail: vsftpd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	0
+|  `- Journal matches:
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	0
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ ftp 172.20.155.61 2121ftp 172.20.155.61 2121
+Connected to 172.20.155.61.
+220 (vsFTPd 3.0.5)
+Name (172.20.155.61:arcansel): alunoftp
+234 Proceed with negotiation.
+[SSL Cipher TLS_AES_256_GCM_SHA384]
+200 PBSZ set to 0.
+200 PROT now Private.
+[Encrypted data transfer.]
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> user
+(username) alunoftp
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> user
+(username) alunoftp
+331 Please specify the password.
+Password:
+530 Login incorrect.
+Login failed.
+ftp> user
+(username) alunoftp
+421 Service not available, remote server has closed connection
+Login failed.
+ftp> exit
+arcansel@Main:/mnt/c/Users/cyblp$ ftp 172.20.155.61 2121sudo fail2ban-client status vsftpd
+Status for the jail: vsftpd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	3
+|  `- Journal matches:
+`- Actions
+   |- Currently banned: 1
+   |- Total banned:	1
+   `- Banned IP list:	172.20.155.61
+arcansel@Main:/mnt/c/Users/cyblp$ pam_unix(vsftpd:auth): authentication failurepam_unix(vsftpd:auth): authentication failure
+bash: syntax error near unexpected token `vsftpd:auth'
+arcansel@Main:/mnt/c/Users/cyblp$ sudo tail -f /var/log/auth.logsudo tail -f /var/log/auth.log
+2026-03-11T12:51:36.962536+00:00 Main sudo: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/fail2ban-client status vsftpd
+2026-03-11T12:51:36.963663+00:00 Main sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-03-11T12:51:37.039209+00:00 Main sudo: pam_unix(sudo:session): session closed for user root
+2026-03-11T12:51:55.638372+00:00 Main vsftpd: pam_unix(vsftpd:auth): authentication failure; logname= uid=0 euid=0 tty=ftp ruser=alunoftp rhost=172.20.155.61  user=alunoftp
+2026-03-11T12:52:17.431357+00:00 Main vsftpd: message repeated 2 times: [ pam_unix(vsftpd:auth): authentication failure; logname= uid=0 euid=0 tty=ftp ruser=alunoftp rhost=172.20.155.61  user=alunoftp]
+2026-03-11T12:52:39.835596+00:00 Main sudo: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/fail2ban-client status vsftpd
+2026-03-11T12:52:39.836500+00:00 Main sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-03-11T12:52:39.910314+00:00 Main sudo: pam_unix(sudo:session): session closed for user root
+2026-03-11T12:52:56.415997+00:00 Main sudo: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log
+2026-03-11T12:52:56.417106+00:00 Main sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+^C
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client set vsftpd unbanip 172.20.155.61sudo fail2ban-client set vsftpd unbanip 172.20.155.61
+1
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status vsftpdsudo fail2ban-client status vsftpd
+Status for the jail: vsftpd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:	3
+|  `- Journal matches:
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:	1
+   `- Banned IP list:
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client status vsftpdet vsftpd unbanip 172.20.155.61tatus vsftpdsudo fail2ban-client status vsftpdsusdodo systemctl restart nginx
+arcansel@Main:/mnt/c/Users/cyblp$ sudo tail -f /var/log/nginx/access.logsudo tail -f /var/log/nginx/access.log
+127.0.0.1 - - [11/Mar/2026:03:49:30 +0000] "HEAD / HTTP/1.1" 301 0 "-" "curl/8.5.0"
+127.0.0.1 - - [11/Mar/2026:12:08:24 +0000] "GET / HTTP/1.0" 301 162 "-" "-"
+127.0.0.1 - - [11/Mar/2026:12:12:21 +0000] "GET / HTTP/1.0" 301 162 "-" "-"
+^C
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ss -tulpn | grep -E '(:80|:443|:8443|:3000|:5001|:8080)'sudo ss -tulpn | grep -E '(:80|:443|:8443|:3000|:5001|:8080)'
+tcp   LISTEN 0	    511		  0.0.0.0:8443	    0.0.0.0:*	 users:(("nginx",pid=3921,fd=8),("nginx",pid=3920,fd=8),("nginx",pid=3919,fd=8),("nginx",pid=3918,fd=8),("nginx",pid=3917,fd=8),("nginx",pid=3916,fd=8),("nginx",pid=3915,fd=8),("nginx",pid=3914,fd=8),("nginx",pid=3913,fd=8),("nginx",pid=3911,fd=8),("nginx",pid=3910,fd=8),("nginx",pid=3909,fd=8),("nginx",pid=3908,fd=8),("nginx",pid=3907,fd=8),("nginx",pid=3906,fd=8),("nginx",pid=3905,fd=8),("nginx",pid=3904,fd=8))
+tcp   LISTEN 0	    511		  0.0.0.0:80	    0.0.0.0:*	 users:(("nginx",pid=3921,fd=7),("nginx",pid=3920,fd=7),("nginx",pid=3919,fd=7),("nginx",pid=3918,fd=7),("nginx",pid=3917,fd=7),("nginx",pid=3916,fd=7),("nginx",pid=3915,fd=7),("nginx",pid=3914,fd=7),("nginx",pid=3913,fd=7),("nginx",pid=3911,fd=7),("nginx",pid=3910,fd=7),("nginx",pid=3909,fd=7),("nginx",pid=3908,fd=7),("nginx",pid=3907,fd=7),("nginx",pid=3906,fd=7),("nginx",pid=3905,fd=7),("nginx",pid=3904,fd=7))
+tcp   LISTEN 0	    5		127.0.0.1:5001	    0.0.0.0:*	 users:(("python3",pid=260,fd=4))
+tcp   LISTEN 0	    511			*:3000		  *:*	 users:(("node",pid=3934,fd=26))
+arcansel@Main:/mnt/c/Users/cyblp$ sudo journalctl -fsudo journalctl -f
+Mar 11 13:03:27 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:04:00 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:04:33 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:04:40 Main sudo[3954]: pam_unix(sudo:session): session closed for user root
+Mar 11 13:04:42 Main sudo[4442]: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/ss -tulpn
+Mar 11 13:04:42 Main sudo[4442]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Mar 11 13:04:42 Main sudo[4442]: pam_unix(sudo:session): session closed for user root
+Mar 11 13:05:07 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:05:29 Main sudo[4446]: arcansel : TTY=pts/2 ; PWD=/mnt/c/Users/cyblp ; USER=root ; COMMAND=/usr/bin/journalctl -f
+Mar 11 13:05:29 Main sudo[4446]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Mar 11 13:05:40 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+Mar 11 13:06:13 Main systemd-resolved[208]: Clock change detected. Flushing caches.
+^C
+arcansel@Main:/mnt/c/Users/cyblp$ ps aux | grep nodeps aux | grep node
+root	     103  0.0  0.0 153068  1540 ?	 Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/core24_1349.snap /snap/core24/1349 -o ro,nodev,allow_other,suid
+root	     106  0.0  0.0 302596  6404 ?	 Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/snapd_25935.snap /snap/snapd/25935 -o ro,nodev,allow_other,suid
+root	     109  0.0  0.0 153068  1540 ?	 Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/seclists_1214.snap /snap/seclists/1214 -o ro,nodev,allow_other,suid
+arcansel    3933  0.0  0.0   2804  1536 pts/5	 S+   12:57   0:00 sh -c node build/app
+arcansel    3934  1.4  1.0 1400792 174556 pts/5	 Sl+  12:57   0:07 node build/app
+arcansel    4455  0.0  0.0   4092  1920 pts/2	 S+   13:06   0:00 grep --color=auto node
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano ~/.juice-shop/config/default.ymlsudo nano ~/.juice-shop/config/default.yml
+(B==(B(B[ Directory '/home/arcansel/.juice-shop/config' does not exist ](B(B  GNU nano 7.2			    /home/arcansel/.juice-shop/config/default.yml				    (B(B^G(B Help(B^O(B Write Out   (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	    (B^C(B Location    (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File	 (B^\(B Replace	    (B^U(B Paste(B^J(B Justify	   (B^/(B Go To Line  (BM-E(B Redo(BM-6(B Copy>arcansel@Main:/mnt/c/Users/cyblp$ sudo touch /var/log/juice-shop.logsudo touch /var/log/juice-shop.log
+arcansel@Main:/mnt/c/Users/cyblp$ sudo chown arcansel:arcansel /var/log/juice-shop.logsudo chown arcansel:arcansel /var/log/juice-shop.log
+arcansel@Main:/mnt/c/Users/cyblp$ tail -f /var/log/juice-shop.logtail -f /var/log/juice-shop.log
+info: Required file index.html is present (OK)
+info: Required file styles.css is present (OK)
+info: Required file main.js is present (OK)
+info: Required file tutorial.js is present (OK)
+info: Required file runtime.js is present (OK)
+info: Required file vendor.js is present (OK)
+info: Port 3000 is available (OK)
+info: Domain https://www.alchemy.com/ is reachable (OK)
+info: Chatbot training data botDefaultTrainingData.json validated (OK)
+info: Server listening on port 3000
+^C
+arcansel@Main:/mnt/c/Users/cyblp$ ss -tulpn | grep 3000ss -tulpn | grep 3000
+tcp   LISTEN 0	    511			*:3000		  *:*	 users:(("node",pid=4487,fd=24))
+arcansel@Main:/mnt/c/Users/cyblp$ pkill nodepkill node
+arcansel@Main:/mnt/c/Users/cyblp$ ss -tulpn | grep 3000ss -tulpn | grep 3000
+tcp   LISTEN 0	    511			*:3000		  *:*	 users:(("node",pid=4544,fd=26))
+arcansel@Main:/mnt/c/Users/cyblp$ ss -tulpn | grep 3000
+tcp   LISTEN 0	    511			*:3000		  *:*	 users:(("node",pid=4573,fd=26))
+arcansel@Main:/mnt/c/Users/cyblp$ ps aux | grep node
+root	     103  0.0  0.0 153068  1540 ?	 Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/core24_1349.snap /snap/core24/1349 -o ro,nodev,allow_other,suid
+root	     106  0.0  0.0 302596  6404 ?	 Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/snapd_25935.snap /snap/snapd/25935 -o ro,nodev,allow_other,suid
+root	     109  0.0  0.0 153068  1540 ?	 Ssl  10:15   0:00 snapfuse /var/lib/snapd/snaps/seclists_1214.snap /snap/seclists/1214 -o ro,nodev,allow_other,suid
+arcansel    4572  0.0  0.0   2804  1536 pts/5	 S+   13:13   0:00 sh -c node build/app
+arcansel    4573  5.3  0.9 1386932 148400 pts/5	 Sl+  13:13   0:03 node build/app
+arcansel    4588  0.0  0.0   4092  1920 pts/2	 S+   13:14   0:00 grep --color=auto node
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status numbered | grep 3000sudo ufw status numbered | grep 3000
+[ 5] 30000:30100/tcp		ALLOW IN    Anywhere
+[10] 3000			ALLOW IN    127.0.0.1
+[11] 3000			DENY IN	    Anywhere
+[16] 30000:30100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[21] 3000 (v6)			DENY IN	    Anywhere (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status verbosesudo ufw status verbose
+[sudo] password for arcansel:
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To			   Action      From
+--			   ------      ----
+80,443/tcp		   ALLOW IN    Anywhere
+53/tcp			   LIMIT IN    Anywhere
+80/tcp			   ALLOW IN    Anywhere
+443/tcp			   ALLOW IN    Anywhere
+30000:30100/tcp		   ALLOW IN    Anywhere
+2222/tcp		   LIMIT IN    Anywhere
+2121/tcp		   ALLOW IN    Anywhere
+40000:40100/tcp		   ALLOW IN    Anywhere
+8443/tcp		   ALLOW IN    Anywhere
+3000			   ALLOW IN    127.0.0.1
+3000			   DENY IN     Anywhere
+80,443/tcp (v6)		   ALLOW IN    Anywhere (v6)
+53/tcp (v6)		   LIMIT IN    Anywhere (v6)
+80/tcp (v6)		   ALLOW IN    Anywhere (v6)
+443/tcp (v6)		   ALLOW IN    Anywhere (v6)
+30000:30100/tcp (v6)	   ALLOW IN    Anywhere (v6)
+2222/tcp (v6)		   LIMIT IN    Anywhere (v6)
+2121/tcp (v6)		   ALLOW IN    Anywhere (v6)
+40000:40100/tcp (v6)	   ALLOW IN    Anywhere (v6)
+8443/tcp (v6)		   ALLOW IN    Anywhere (v6)
+3000 (v6)		   DENY IN     Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ss -tulpnsudo ss -tulpn
+Netid	     State	   Recv-Q	 Send-Q		       Local Address:Port		Peer Address:Port	Process
+udp	     UNCONN	   0		 0			  127.0.0.54:53			     0.0.0.0:*		 users:(("systemd-resolve",pid=208,fd=16))
+udp	     UNCONN	   0		 0		       127.0.0.53%lo:53			     0.0.0.0:*		 users:(("systemd-resolve",pid=208,fd=14))
+udp	     UNCONN	   0		 0		      10.255.255.254:53			     0.0.0.0:*
+udp	     UNCONN	   0		 0			   127.0.0.1:323		     0.0.0.0:*
+udp	     UNCONN	   0		 0			       [::1]:323			[::]:*
+tcp	     LISTEN	   0		 511			     0.0.0.0:8443		     0.0.0.0:*		 users:(("nginx",pid=3921,fd=8),("nginx",pid=3920,fd=8),("nginx",pid=3919,fd=8),("nginx",pid=3918,fd=8),("nginx",pid=3917,fd=8),("nginx",pid=3916,fd=8),("nginx",pid=3915,fd=8),("nginx",pid=3914,fd=8),("nginx",pid=3913,fd=8),("nginx",pid=3911,fd=8),("nginx",pid=3910,fd=8),("nginx",pid=3909,fd=8),("nginx",pid=3908,fd=8),("nginx",pid=3907,fd=8),("nginx",pid=3906,fd=8),("nginx",pid=3905,fd=8),("nginx",pid=3904,fd=8))
+tcp	     LISTEN	   0		 511			     0.0.0.0:80			     0.0.0.0:*		 users:(("nginx",pid=3921,fd=7),("nginx",pid=3920,fd=7),("nginx",pid=3919,fd=7),("nginx",pid=3918,fd=7),("nginx",pid=3917,fd=7),("nginx",pid=3916,fd=7),("nginx",pid=3915,fd=7),("nginx",pid=3914,fd=7),("nginx",pid=3913,fd=7),("nginx",pid=3911,fd=7),("nginx",pid=3910,fd=7),("nginx",pid=3909,fd=7),("nginx",pid=3908,fd=7),("nginx",pid=3907,fd=7),("nginx",pid=3906,fd=7),("nginx",pid=3905,fd=7),("nginx",pid=3904,fd=7))
+tcp	     LISTEN	   0		 1000		      10.255.255.254:53			     0.0.0.0:*
+tcp	     LISTEN	   0		 4096			     0.0.0.0:2222		     0.0.0.0:*		 users:(("sshd",pid=2249,fd=3),("systemd",pid=1,fd=69))
+tcp	     LISTEN	   0		 32			     0.0.0.0:2121		     0.0.0.0:*		 users:(("vsftpd",pid=3252,fd=3))
+tcp	     LISTEN	   0		 4096			  127.0.0.54:53			     0.0.0.0:*		 users:(("systemd-resolve",pid=208,fd=17))
+tcp	     LISTEN	   0		 4096		       127.0.0.53%lo:53			     0.0.0.0:*		 users:(("systemd-resolve",pid=208,fd=15))
+tcp	     LISTEN	   0		 5			   127.0.0.1:5001		     0.0.0.0:*		 users:(("python3",pid=260,fd=4))
+tcp	     LISTEN	   0		 511				   *:3000			   *:*		 users:(("node",pid=4605,fd=26))
+tcp	     LISTEN	   0		 4096				[::]:2222			[::]:*		 users:(("sshd",pid=2249,fd=4),("systemd",pid=1,fd=70))
+arcansel@Main:/mnt/c/Users/cyblp$ sudo fail2ban-client statussudo fail2ban-client status
+Status
+|- Number of jail:	3
+`- Jail list:	nginx-http-auth, sshd, vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete <número>sudo ufw delete <número>11
+Deleting:
+ allow 80,443/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 112
+Deleting:
+ limit 53/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 12
+Deleting:
+ allow 80/tcp
+Proceed with operation (y|n)? n
+Aborted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 121
+Deleting:
+ allow 80,443/tcp
+Proceed with operation (y|n)? y
+Rule deleted (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status numberedsudo ufw status numbered
+Status: active
+
+     To				Action	    From
+     --				------	    ----
+[ 1] 53/tcp			LIMIT IN    Anywhere
+[ 2] 80/tcp			ALLOW IN    Anywhere
+[ 3] 443/tcp			ALLOW IN    Anywhere
+[ 4] 30000:30100/tcp		ALLOW IN    Anywhere
+[ 5] 2222/tcp			LIMIT IN    Anywhere
+[ 6] 2121/tcp			ALLOW IN    Anywhere
+[ 7] 40000:40100/tcp		ALLOW IN    Anywhere
+[ 8] 8443/tcp			ALLOW IN    Anywhere
+[ 9] 3000			ALLOW IN    127.0.0.1
+[10] 3000			DENY IN	    Anywhere
+[11] 80/tcp (v6)		ALLOW IN    Anywhere (v6)
+[12] 443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[13] 30000:30100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[14] 2222/tcp (v6)		LIMIT IN    Anywhere (v6)
+[15] 2121/tcp (v6)		ALLOW IN    Anywhere (v6)
+[16] 40000:40100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[17] 8443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[18] 3000 (v6)			DENY IN	    Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status numbereddelete 11
+Deleting:
+ limit 53/tcp
+Proceed with operation (y|n)? y
+Rule deleted
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete 1status numbered
+Status: active
+
+     To				Action	    From
+     --				------	    ----
+[ 1] 80/tcp			ALLOW IN    Anywhere
+[ 2] 443/tcp			ALLOW IN    Anywhere
+[ 3] 30000:30100/tcp		ALLOW IN    Anywhere
+[ 4] 2222/tcp			LIMIT IN    Anywhere
+[ 5] 2121/tcp			ALLOW IN    Anywhere
+[ 6] 40000:40100/tcp		ALLOW IN    Anywhere
+[ 7] 8443/tcp			ALLOW IN    Anywhere
+[ 8] 3000			ALLOW IN    127.0.0.1
+[ 9] 3000			DENY IN	    Anywhere
+[10] 80/tcp (v6)		ALLOW IN    Anywhere (v6)
+[11] 443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[12] 30000:30100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[13] 2222/tcp (v6)		LIMIT IN    Anywhere (v6)
+[14] 2121/tcp (v6)		ALLOW IN    Anywhere (v6)
+[15] 40000:40100/tcp (v6)	ALLOW IN    Anywhere (v6)
+[16] 8443/tcp (v6)		ALLOW IN    Anywhere (v6)
+[17] 3000 (v6)			DENY IN	    Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -p- 172.20.155.61nmap -p- 172.20.155.61
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 13:52 WET
+Nmap scan report for 172.20.155.61
+Host is up (0.00016s latency).
+Not shown: 65530 closed tcp ports (conn-refused)
+PORT	 STATE SERVICE
+80/tcp	 open  http
+2121/tcp open  ccproxy-ftp
+2222/tcp open  EtherNetIP-1
+3000/tcp open  ppp
+8443/tcp open  https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 2.34 seconds
+arcansel@Main:/mnt/c/Users/cyblp$ nmap -A 172.20.155.61nmap -A 172.20.155.61
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-11 13:53 WET
+Nmap scan report for 172.20.155.61
+Host is up (0.00020s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT	 STATE SERVICE	VERSION
+80/tcp	 open  http	nginx
+|_http-title: Did not follow redirect to https://172.20.155.61:8443/
+2121/tcp open  ftp	vsftpd 3.0.5
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn:
+|_  ftp
+| ssl-cert: Subject: commonName=Main.localdomain
+| Subject Alternative Name: DNS:Main.localdomain
+| Not valid before: 2026-02-06T09:52:43
+|_Not valid after:  2036-02-04T09:52:43
+2222/tcp open  ssh	OpenSSH 9.6p1 Ubuntu 3ubuntu13.14 (Ubuntu Linux; protocol 2.0)
+3000/tcp open  ppp?
+| fingerprint-strings:
+|   GetRequest:
+|     HTTP/1.1 200 OK
+|     Access-Control-Allow-Origin: *
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Feature-Policy: payment 'self'
+|     X-Recruiting: /#/jobs
+|     Accept-Ranges: bytes
+|     Cache-Control: public, max-age=0
+|     Last-Modified: Wed, 11 Mar 2026 13:15:23 GMT
+|     ETag: W/"1252f-19cdd09a885"
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 75055
+|     Vary: Accept-Encoding
+|     Date: Wed, 11 Mar 2026 13:53:38 GMT
+|     Connection: close
+|     <!--
+|     Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
+|     SPDX-License-Identifier: MIT
+|     <!doctype html>
+|     <html lang="en" data-beasties-container>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>OWASP Juice Shop</title>
+|     <meta name="description" content="Probably the most modern and sophisticated insecure web application">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link id="favicon" rel="icon"
+|   HTTPOptions, RTSPRequest:
+|     HTTP/1.1 204 No Content
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+|     Vary: Access-Control-Request-Headers
+|     Content-Length: 0
+|     Date: Wed, 11 Mar 2026 13:53:39 GMT
+|     Connection: close
+|   Help, NCP:
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+8443/tcp open  ssl/http nginx
+| ssl-cert: Subject: commonName=loja.local/organizationName=Loja/stateOrProvinceName=Porto/countryName=PT
+| Not valid before: 2026-03-11T03:00:45
+|_Not valid after:  2027-03-11T03:00:45
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn:
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.94SVN%I=7%D=3/11%Time=69B173E3%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,8000,"HTTP/1\.1\x20200\x20OK\r\nAccess-Control-Allow-Origin
+SF::\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nFeature-Policy:\x20payment\x20'self'\r\nX-Recruiting:\x20/#
+SF:/jobs\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-ag
+SF:e=0\r\nLast-Modified:\x20Wed,\x2011\x20Mar\x202026\x2013:15:23\x20GMT\r
+SF:\nETag:\x20W/\"1252f-19cdd09a885\"\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=UTF-8\r\nContent-Length:\x2075055\r\nVary:\x20Accept-Encoding\r\n
+SF:Date:\x20Wed,\x2011\x20Mar\x202026\x2013:53:38\x20GMT\r\nConnection:\x2
+SF:0close\r\n\r\n<!--\n\x20\x20~\x20Copyright\x20\(c\)\x202014-2026\x20Bjo
+SF:ern\x20Kimminich\x20&\x20the\x20OWASP\x20Juice\x20Shop\x20contributors\
+SF:.\n\x20\x20~\x20SPDX-License-Identifier:\x20MIT\n\x20\x20-->\n\n<!docty
+SF:pe\x20html>\n<html\x20lang=\"en\"\x20data-beasties-container>\n<head>\n
+SF:\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>OWASP\x20Juice\x20S
+SF:hop</title>\n\x20\x20<meta\x20name=\"description\"\x20content=\"Probabl
+SF:y\x20the\x20most\x20modern\x20and\x20sophisticated\x20insecure\x20web\x
+SF:20application\">\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"width
+SF:=device-width,\x20initial-scale=1\">\n\x20\x20<link\x20id=\"favicon\"\x
+SF:20rel=\"icon\"\x20")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:onnection:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,EA,"HTTP/1\.1\x2020
+SF:4\x20No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Cont
+SF:rol-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access
+SF:-Control-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Wed,\x2011
+SF:\x20Mar\x202026\x2013:53:39\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(
+SF:RTSPRequest,EA,"HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-All
+SF:ow-Origin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH
+SF:,POST,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Leng
+SF:th:\x200\r\nDate:\x20Wed,\x2011\x20Mar\x202026\x2013:53:39\x20GMT\r\nCo
+SF:nnection:\x20close\r\n\r\n");
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.23 seconds
+arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ code .
+arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ exit
+exit
+
+Script done on 2026-03-11 14:15:33+00:00 [COMMAND_EXIT_CODE="0"]

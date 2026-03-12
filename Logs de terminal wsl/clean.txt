@@ -1,0 +1,1324 @@
+Script started on 2026-03-10 17:12:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+arcansel@Main:/mnt/c/Users/cyblp$ hostname -I
+172.20.155.61
+arcansel@Main:/mnt/c/Users/cyblp$ sudo apt update && sudo apt upgrade -y
+sudo apt install unattended-upgradessudo apt update && sudo apt upgrade -y
+sudo apt install unattended-upgrades
+[sudo] password for arcansel:
+0% [Working]		Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Waiting for headers]			Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [Waiting for headers] [2 InRelease 13.7 kB/126 kB 11%]							  Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 2492 B/126 kB 2%] [2 InRelease 22.1 kB/126 kB 18%]0% [3 InRelease 29.1 kB/126 kB 23%] [2 InRelease 69.7 kB/126 kB 55%]									  0% [3 InRelease 62.7 kB/126 kB 50%]					0% [Working]0% [Waiting for headers]			    Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [4 InRelease 5292 B/126 kB 4%] [Waiting for headers]							      0% [Waiting for headers]			      Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1504 kB]
+0% [5 Packages 2559 B/1504 kB 0%]0% [5 Packages 143 kB/1504 kB 9%]				   Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1807 kB]
+0% [6 Packages 5359 B/1807 kB 0%] [5 Packages 274 kB/1504 kB 18%]22% [6 Packages 220 kB/1807 kB 12%] [5 Packages 551 kB/1504 kB 37%]								       33% [6 Packages 997 kB/1807 kB 55%]33% [5 Packages store 0 B] [6 Packages 1011 kB/1807 kB 56%]								Get:7 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [241 kB]
+36% [5 Packages store 0 B] [6 Packages 1580 kB/1807 kB 87%] [7 Translation-en 8161 B/241 kB 3%]												      39% [5 Packages store 0 B] [6 Packages 1807 kB/1807 kB 100%] [Waiting for headers]										  Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+39% [5 Packages store 0 B] [6 Packages 1807 kB/1807 kB 100%] [8 Components-amd64 21.5 kB/21.5 kB 100%]													    Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [10.1 kB]
+												      39% [5 Packages store 0 B] [6 Packages 1807 kB/1807 kB 100%] [9 Commands-amd64 10.1 kB/10.1 kB 100%]												      39% [5 Packages store 0 B] [6 Packages 1807 kB/1807 kB 100%] [Waiting for headers]										  Get:10 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [976 kB]
+39% [5 Packages store 0 B] [6 Packages 1807 kB/1807 kB 100%] [10 Packages 1312 B/976 kB 0%]											      39% [5 Packages store 0 B] [10 Packages 20.9 kB/976 kB 2%]							  43% [Waiting for headers] [10 Packages 634 kB/976 kB 65%]43% [7 Translation-en store 0 B] [Waiting for headers] [10 Packages 643 kB/976 kB 66%]										       Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main Translation-en [332 kB]
+45% [7 Translation-en store 0 B] [11 Translation-en 9561 B/332 kB 3%] [10 Packages 924 kB/976 kB 95%]													  46% [7 Translation-en store 0 B] [11 Translation-en 86.6 kB/332 kB 26%] [Waiting for headers]												    Get:12 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [74.2 kB]
+46% [7 Translation-en store 0 B] [11 Translation-en 86.6 kB/332 kB 26%] [12 Components-amd64 22.2 kB/74.2 kB 30%]														  47% [11 Translation-en 220 kB/332 kB 66%] [12 Components-amd64 33.4 kB/74.2 kB 45%]47% [8 Components-amd64 store 0 B] [11 Translation-en 221 kB/332 kB 66%] [12 Components-amd64 33.4 kB/74.2 kB 45%]															 48% [11 Translation-en 263 kB/332 kB 79%] [12 Components-amd64 33.4 kB/74.2 kB 45%]48% [9 Commands-amd64 store 0 B] [11 Translation-en 263 kB/332 kB 79%] [12 Components-amd64 33.4 kB/74.2 kB 45%]														    48% [11 Translation-en 263 kB/332 kB 79%] [12 Components-amd64 33.4 kB/74.2 kB 45%]48% [6 Packages store 0 B] [11 Translation-en 263 kB/332 kB 79%] [12 Components-amd64 33.4 kB/74.2 kB 45%]													   48% [6 Packages store 0 B] [Waiting for headers] [12 Components-amd64 72.6 kB/74.2 kB 98%]											       Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [177 kB]
+48% [6 Packages store 0 B] [13 Components-amd64 19.9 kB/177 kB 11%] [12 Components-amd64 74.2 kB/74.2 kB 100%]														    48% [6 Packages store 0 B] [13 Components-amd64 19.9 kB/177 kB 11%] [Waiting for headers]											      Get:14 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [20.6 kB]
+49% [6 Packages store 0 B] [13 Components-amd64 19.9 kB/177 kB 11%] [14 Commands-amd64 6555 B/20.6 kB 32%]													    49% [6 Packages store 0 B] [13 Components-amd64 24.7 kB/177 kB 14%] [Waiting for headers]											      Get:15 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2599 kB]
+49% [6 Packages store 0 B] [13 Components-amd64 27.5 kB/177 kB 16%] [15 Packages 2466 B/2599 kB 0%]												      50% [6 Packages store 0 B] [Waiting for headers] [15 Packages 143 kB/2599 kB 6%]										      Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [16.7 kB]
+51% [6 Packages store 0 B] [16 Commands-amd64 16.4 kB/16.7 kB 98%] [15 Packages 143 kB/2599 kB 6%]												    51% [6 Packages store 0 B] [Waiting for headers] [15 Packages 152 kB/2599 kB 6%]										    Get:17 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1565 kB]
+51% [6 Packages store 0 B] [17 Packages 8042 B/1565 kB 1%] [15 Packages 157 kB/2599 kB 6%]											    64% [17 Packages 975 kB/1565 kB 62%] [15 Packages 1318 kB/2599 kB 51%]64% [10 Packages store 0 B] [17 Packages 975 kB/1565 kB 62%] [15 Packages 1318 kB/2599 kB 51%]											      70% [10 Packages store 0 B] [Waiting for headers] [15 Packages 1843 kB/2599 kB 71%]										    Get:18 http://archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [318 kB]
+71% [10 Packages store 0 B] [18 Translation-en 19.1 kB/318 kB 6%] [15 Packages 1849 kB/2599 kB 71%]												      73% [18 Translation-en 208 kB/318 kB 65%] [15 Packages 2026 kB/2599 kB 78%]73% [11 Translation-en store 0 B] [18 Translation-en 208 kB/318 kB 65%] [15 Packages 2026 kB/2599 kB 78%]													   75% [18 Translation-en 226 kB/318 kB 71%] [15 Packages 2361 kB/2599 kB 91%]75% [12 Components-amd64 store 0 B] [18 Translation-en 226 kB/318 kB 71%] [15 Packages 2361 kB/2599 kB 91%]													    76% [12 Components-amd64 store 0 B] [15 Packages 2434 kB/2599 kB 94%]								      Get:19 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [386 kB]
+76% [12 Components-amd64 store 0 B] [19 Components-amd64 8409 B/386 kB 2%] [15 Packages 2434 kB/2599 kB 94%]														77% [19 Components-amd64 16.4 kB/386 kB 4%] [15 Packages 2465 kB/2599 kB 95%]77% [14 Commands-amd64 store 0 B] [19 Components-amd64 16.4 kB/386 kB 4%] [15 Packages 2467 kB/2599 kB 95%]													   77% [19 Components-amd64 16.4 kB/386 kB 4%] [15 Packages 2498 kB/2599 kB 96%]77% [13 Components-amd64 store 0 B] [19 Components-amd64 16.4 kB/386 kB 4%] [15 Packages 2498 kB/2599 kB 96%]														  78% [13 Components-amd64 store 0 B] [19 Components-amd64 36.0 kB/386 kB 9%] [Waiting for headers]												    Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+78% [13 Components-amd64 store 0 B] [19 Components-amd64 36.0 kB/386 kB 9%] [20 Components-amd64 212 B/212 B 100%]														    78% [13 Components-amd64 store 0 B] [19 Components-amd64 61.2 kB/386 kB 16%] [Waiting for headers]													Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 c-n-f Metadata [544 B]
+78% [13 Components-amd64 store 0 B] [19 Components-amd64 69.6 kB/386 kB 18%] [Waiting for headers]												    Get:22 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+78% [13 Components-amd64 store 0 B] [19 Components-amd64 69.6 kB/386 kB 18%] [22 Components-amd64 212 B/212 B 100%]														      78% [13 Components-amd64 store 0 B] [19 Components-amd64 78.0 kB/386 kB 20%]									      80% [13 Components-amd64 store 0 B] [Waiting for headers]								Get:23 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [32.9 kB]
+80% [13 Components-amd64 store 0 B] [23 Commands-amd64 10.9 kB/32.9 kB 33%]									      80% [13 Components-amd64 store 0 B] [Waiting for headers]								Get:24 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2748 kB]
+80% [13 Components-amd64 store 0 B] [24 Packages 5715 B/2748 kB 0%]								      82% [24 Packages 297 kB/2748 kB 11%]82% [16 Commands-amd64 store 0 B] [24 Packages 297 kB/2748 kB 11%]								      82% [24 Packages 300 kB/2748 kB 11%]82% [17 Packages store 0 B] [24 Packages 306 kB/2748 kB 11%]								  93% [24 Packages 2068 kB/2748 kB 75%]93% [18 Translation-en store 0 B] [24 Packages 2068 kB/2748 kB 75%]								     95% [24 Packages 2338 kB/2748 kB 85%]95% [15 Packages store 0 B] [24 Packages 2338 kB/2748 kB 85%]								    97% [15 Packages store 0 B] [Waiting for headers]						      Get:25 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+97% [15 Packages store 0 B] [Waiting for headers]						  Get:26 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 c-n-f Metadata [556 B]
+97% [15 Packages store 0 B] [Waiting for headers]						  Get:27 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+97% [15 Packages store 0 B] [27 Components-amd64 940 B/940 B 100%]								    97% [15 Packages store 0 B] [Waiting for headers]						      Get:28 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7284 B]
+97% [15 Packages store 0 B] [28 Components-amd64 2800 B/7284 B 38%]								      98% [15 Packages store 0 B] [Waiting for headers]							Get:29 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [10.5 kB]
+98% [15 Packages store 0 B] [29 Components-amd64 7879 B/10.5 kB 75%]									98% [15 Packages store 0 B] [Waiting for headers]						  Get:30 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [212 B]
+98% [15 Packages store 0 B] [Waiting for headers]						  Get:31 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+						 98% [15 Packages store 0 B]			       98% [Working]98% [20 Components-amd64 store 0 B]					  98% [Working]98% [21 Commands-amd64 store 0 B]				 98% [Working]98% [22 Components-amd64 store 0 B]				    98% [Working]98% [19 Components-amd64 store 0 B]				       98% [Working]98% [23 Commands-amd64 store 0 B]				      99% [Working]99% [24 Packages store 0 B]				 99% [Working]99% [25 Components-amd64 store 0 B]				    99% [Working]99% [26 Commands-amd64 store 0 B]				   99% [Working]99% [27 Components-amd64 store 0 B]				      99% [Working]99% [28 Components-amd64 store 0 B]					 99% [Working]99% [29 Components-amd64 store 0 B]				    100% [Working]100% [30 Components-amd64 store 0 B]					  100% [Working]100% [31 Components-amd64 store 0 B]					100% [Working]		    Fetched 13.2 MB in 2s (7203 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 4%Reading package lists... 4%Reading package lists... 36%Reading package lists... 36%Reading package lists... 50%Reading package lists... 50%Reading package lists... 50%Reading package lists... 50%Reading package lists... 50%Reading package lists... 50%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 56%Reading package lists... 56%Reading package lists... 59%Reading package lists... 59%Reading package lists... 63%Reading package lists... 63%Reading package lists... 64%Reading package lists... 64%Reading package lists... 68%Reading package lists... 71%Reading package lists... 71%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 83%Reading package lists... 83%Reading package lists... 86%Reading package lists... 86%Reading package lists... 87%Reading package lists... 87%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+8 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+Calculating upgrade... 0%Calculating upgrade... 10%Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  libauthen-sasl-perl libclone-perl libdata-dump-perl libencode-locale-perl libfile-basedir-perl
+  libfile-desktopentry-perl libfile-listing-perl libfile-mimeinfo-perl libfont-afm-perl libgles2 libhtml-form-perl
+  libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl
+  libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libio-html-perl
+  libio-socket-ssl-perl libio-stringy-perl libipc-system-simple-perl liblwp-mediatypes-perl liblwp-protocol-https-perl
+  libmailtools-perl libnet-dbus-perl libnet-http-perl libnet-smtp-ssl-perl libnet-ssleay-perl libnotify-bin libnotify4
+  libtie-ixhash-perl libtimedate-perl libtry-tiny-perl liburi-perl libwww-perl libwww-robotrules-perl
+  libx11-protocol-perl libxaw7 libxft2 libxml-parser-perl libxml-twig-perl libxml-xpathengine-perl libxmu6 libxt6t64
+  libxv1 libxxf86dga1 node-auto-bind node-base node-cache-base node-cli-boxes node-cli-cursor node-cli-truncate
+  node-collection-visit node-coveralls node-get-value node-growl node-has-value node-has-values node-is-primitive
+  node-lcov-parse node-log-driver node-map-visit node-mixin-deep node-object-visit node-pascalcase node-restore-cursor
+  node-sellside-emitter node-set-value node-shell-quote node-stack-utils node-tap-mocha-reporter node-tap-parser
+  node-union-value node-unset-value node-widest-line node-ws node-yaml perl-openssl-defaults x11-xserver-utils zutty
+Use 'sudo apt autoremove' to remove them.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libzvbi-common libwinpr2-2t64 libcjson1 libbson-1.0-0t64 libsvn1
+  libmongoc-1.0-0t64 libavcodec60 libzvbi0t64 gobuster libavutil58 libswscale7
+  libswresample4 libavformat60 libfreerdp2-2t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  libnftables1 nftables
+The following packages will be upgraded:
+  libpq5 libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 python3.12 python3.12-minimal
+6 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+6 standard LTS security updates
+Need to get 8381 kB of archives.
+After this operation, 4096 B of additional disk space will be used.
+0% [Working]		Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.12 [2345 kB]
+0% [1 libpython3.12t64 3906 B/2345 kB 0%]3% [1 libpython3.12t64 285 kB/2345 kB 12%]					     26% [Working]	       Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.12 [651 kB]
+26% [2 python3.12 8192 B/651 kB 1%]				      35% [Waiting for headers]				Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.12 [2069 kB]
+35% [3 libpython3.12-stdlib 17.9 kB/2069 kB 1%]						      58% [Waiting for headers]				Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.12 [2334 kB]
+59% [4 python3.12-minimal 46.1 kB/2334 kB 2%]						  84% [Waiting for headers]			    Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.12 [837 kB]
+84% [5 libpython3.12-minimal 19.4 kB/837 kB 2%]						      95% [Waiting for headers]				Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpq5 amd64 16.13-0ubuntu0.24.04.1 [146 kB]
+96% [6 libpq5 45.1 kB/146 kB 31%]				  100% [Working]	      Fetched 8381 kB in 2s (5111 kB/s)
+
+78(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 85965 files and directories currently installed.)
+Preparing to unpack .../0-libpython3.12t64_3.12.3-1ubuntu0.12_amd64.deb ...
+7Progress: [  0%] [..................................................................................................] 87Progress: [  4%] [###...............................................................................................] 8Unpacking libpython3.12t64:amd64 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.11) ...
+7Progress: [  8%] [#######...........................................................................................] 8Preparing to unpack .../1-python3.12_3.12.3-1ubuntu0.12_amd64.deb ...
+7Progress: [ 12%] [###########.......................................................................................] 8Unpacking python3.12 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.11) ...
+7Progress: [ 16%] [###############...................................................................................] 8Preparing to unpack .../2-libpython3.12-stdlib_3.12.3-1ubuntu0.12_amd64.deb ...
+7Progress: [ 20%] [###################...............................................................................] 8Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.11) ...
+7Progress: [ 24%] [#######################...........................................................................] 8Preparing to unpack .../3-python3.12-minimal_3.12.3-1ubuntu0.12_amd64.deb ...
+7Progress: [ 28%] [###########################.......................................................................] 8Unpacking python3.12-minimal (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.11) ...
+7Progress: [ 32%] [###############################...................................................................] 8Preparing to unpack .../4-libpython3.12-minimal_3.12.3-1ubuntu0.12_amd64.deb ...
+7Progress: [ 36%] [###################################...............................................................] 8Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.12) over (3.12.3-1ubuntu0.11) ...
+7Progress: [ 40%] [#######################################...........................................................] 8Preparing to unpack .../5-libpq5_16.13-0ubuntu0.24.04.1_amd64.deb ...
+7Progress: [ 44%] [###########################################.......................................................] 8Unpacking libpq5:amd64 (16.13-0ubuntu0.24.04.1) over (16.11-0ubuntu0.24.04.1) ...
+7Progress: [ 48%] [###############################################...................................................] 8Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.12) ...
+7Progress: [ 52%] [##################################################................................................] 87Progress: [ 56%] [######################################################............................................] 8Setting up libpq5:amd64 (16.13-0ubuntu0.24.04.1) ...
+7Progress: [ 60%] [##########################################################........................................] 87Progress: [ 64%] [##############################################################....................................] 8Setting up python3.12-minimal (3.12.3-1ubuntu0.12) ...
+7Progress: [ 68%] [##################################################################................................] 87Progress: [ 72%] [######################################################################............................] 8Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.12) ...
+7Progress: [ 76%] [##########################################################################........................] 87Progress: [ 80%] [##############################################################################....................] 8Setting up python3.12 (3.12.3-1ubuntu0.12) ...
+7Progress: [ 84%] [##################################################################################................] 87Progress: [ 88%] [######################################################################################............] 8Setting up libpython3.12t64:amd64 (3.12.3-1ubuntu0.12) ...
+7Progress: [ 92%] [##########################################################################################........] 87Progress: [ 96%] [##############################################################################################....] 8Processing triggers for systemd (255.4-1ubuntu8.12) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+
+78Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+unattended-upgrades is already the newest version (2.9.1+nmu4ubuntu1).
+unattended-upgrades set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libauthen-sasl-perl libclone-perl libdata-dump-perl libencode-locale-perl libfile-basedir-perl
+  libfile-desktopentry-perl libfile-listing-perl libfile-mimeinfo-perl libfont-afm-perl libgles2 libhtml-form-perl
+  libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl
+  libhttp-daemon-perl libhttp-date-perl libhttp-message-perl libhttp-negotiate-perl libio-html-perl
+  libio-socket-ssl-perl libio-stringy-perl libipc-system-simple-perl liblwp-mediatypes-perl liblwp-protocol-https-perl
+  libmailtools-perl libnet-dbus-perl libnet-http-perl libnet-smtp-ssl-perl libnet-ssleay-perl libnotify-bin libnotify4
+  libtie-ixhash-perl libtimedate-perl libtry-tiny-perl liburi-perl libwww-perl libwww-robotrules-perl
+  libx11-protocol-perl libxaw7 libxft2 libxml-parser-perl libxml-twig-perl libxml-xpathengine-perl libxmu6 libxt6t64
+  libxv1 libxxf86dga1 node-auto-bind node-base node-cache-base node-cli-boxes node-cli-cursor node-cli-truncate
+  node-collection-visit node-coveralls node-get-value node-growl node-has-value node-has-values node-is-primitive
+  node-lcov-parse node-log-driver node-map-visit node-mixin-deep node-object-visit node-pascalcase node-restore-cursor
+  node-sellside-emitter node-set-value node-shell-quote node-stack-utils node-tap-mocha-reporter node-tap-parser
+  node-union-value node-unset-value node-widest-line node-ws node-yaml perl-openssl-defaults x11-xserver-utils zutty
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+arcansel@Main:/mnt/c/Users/cyblp$ sudo dpkg-reconfigure unattended-upgradessudo dpkg-reconfigure unattended-upgrades
+(B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Package configuration┌────────────────────────────────────────┤ Configuring unattended-upgrades ├────────────────────────────────────────┐│														      │ │ Applying updates on a frequent basis is an important part of keeping systems secure. By default, updates need to  │ │ be applied manually using package management tools. Alternatively, you can choose to have this system		  │ │ automatically download and install important updates.								│ │														      │ │ Automatically download and install stable updates?								    │ │															  │ │				       <Yes>					 <No>					│ │														      │ └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘															   (Barcansel@Main:/mnt/c/Users/cyblp$ sudo ufw default deny incoming
+sudo ufw default allow outgoingarcansel@Main:/mnt/c/Users/cyblp$ sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+Default incoming policy changed to 'deny'
+(be sure to update your rules accordingly)
+Default outgoing policy changed to 'allow'
+(be sure to update your rules accordingly)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw allow 8080/tcp
+sudo ufw allow 2222/tcp
+sudo ufw allow 2121/tcparcansel@Main:/mnt/c/Users/cyblp$ sudo ufw allow 8080/tcp
+sudo ufw allow 2222/tcp
+sudo ufw allow 2121/tcp
+Rule added
+Rule added (v6)
+Rule added
+Rule added (v6)
+Rule added
+Rule added (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw enablesudo ufw enable
+Firewall is active and enabled on system startup
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw status verbosesudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To			   Action      From
+--			   ------      ----
+80,443/tcp		   ALLOW IN    Anywhere
+22/tcp			   LIMIT IN    Anywhere
+53/tcp			   LIMIT IN    Anywhere
+80/tcp			   ALLOW IN    Anywhere
+443/tcp			   ALLOW IN    Anywhere
+21/tcp			   ALLOW IN    Anywhere
+30000:30100/tcp		   ALLOW IN    Anywhere
+8080/tcp		   ALLOW IN    Anywhere
+2222/tcp		   ALLOW IN    Anywhere
+2121/tcp		   ALLOW IN    Anywhere
+80,443/tcp (v6)		   ALLOW IN    Anywhere (v6)
+22/tcp (v6)		   LIMIT IN    Anywhere (v6)
+53/tcp (v6)		   LIMIT IN    Anywhere (v6)
+80/tcp (v6)		   ALLOW IN    Anywhere (v6)
+443/tcp (v6)		   ALLOW IN    Anywhere (v6)
+21/tcp (v6)		   ALLOW IN    Anywhere (v6)
+30000:30100/tcp (v6)	   ALLOW IN    Anywhere (v6)
+8080/tcp (v6)		   ALLOW IN    Anywhere (v6)
+2222/tcp (v6)		   ALLOW IN    Anywhere (v6)
+2121/tcp (v6)		   ALLOW IN    Anywhere (v6)
+
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/ssh/sshd_configsudo nano /etc/ssh/sshd_config
+(B==(B(B[ Reading... ](B(B[ Read 134 lines ](B(B  GNU nano 7.2					    /etc/ssh/sshd_config						(B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute	(B^C(B Location	   (BM-U(B Undo(BM-A(B Set Mark(B^X(B Exit(B^R(B Read File   (B^\(B Replace	(B^U(B Paste(B^J(B Justify     (B^/(B Go To Line  (BM-E(B Redo(BM-6(B Copy# This is the sshd server system-wide configuration file.  See# sshd_config(5) for more information.# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games# The strategy used for options in the default sshd_config shipped with# OpenSSH is to specify options with their default value where# possible, but leave them commented.  Uncommented options override the# default value.(BInclude /etc/ssh/sshd_config.d/*.confPasswordAuthentication noPubkeyAuthentication yesPermitRootLogin no# When systemd socket activation is used (the default), the socket# configuration must be re-generated after changing Port, AddressFamily, or# ListenAddress.## For changes to take effect, run:##   systemctl daemon-reload#   systemctl restart ssh.socket##Port 22(B78
+#AddressFamily any(B78
+#ListenAddress 0.0.0.0(B78
+#ListenAddress ::(B78
+78
+#HostKey /etc/ssh/ssh_host_rsa_key(B78
+#HostKey /etc/ssh/ssh_host_ecdsa_key(B78
+#HostKey /etc/ssh/ssh_host_ed25519_key(B78
+78
+# Ciphers and keying(B78
+#RekeyLimit default none(B78
+78
+# Logging(B78
+#SyslogFacility AUTH(B78
+#LogLevel INFO(B78
+78
+# Authentication:(B78
+78
+#LoginGraceTime 2m(B78
+#PermitRootLogin prohibit-password(B78
+#StrictModes yes(B78
+#MaxAuthTries 6(B78
+#MaxSessions 10(B78
+78
+#PubkeyAuthentication yes(B78
+78
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.(B78
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2(B78
+78
+#AuthorizedPrincipalsFile none(B78
+78
+#AuthorizedKeysCommand none(B78
+#AuthorizedKeysCommandUser nobody(B78
+78
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts(B78
+#HostbasedAuthentication no(B78
+# Change to yes if you don't trust ~/.ssh/known_hosts for(B78
+# HostbasedAuthentication(B78
+#IgnoreUserKnownHosts no(B78
+# Don't read the user's ~/.rhosts and ~/.shosts files(B78
+#IgnoreRhosts yes(B78
+78
+# To disable tunneled clear text passwords, change to no here!(B78
+#PasswordAuthentication yes(B78
+#PermitEmptyPasswords no(B78
+78
+# Change to yes to enable challenge-response passwords (beware issues with(B78
+# some PAM modules and threads)(B78
+KbdInteractiveAuthentication no78
+78
+# Kerberos options(B78
+#KerberosAuthentication no(B78
+#KerberosOrLocalPasswd yes(B78
+#KerberosTicketCleanup yes(B78
+#KerberosGetAFSToken no(B78
+78
+# GSSAPI options(B78
+#GSSAPIAuthentication no(B78
+#GSSAPICleanupCredentials yes(B78
+#GSSAPIStrictAcceptorCheck yes(B78
+#GSSAPIKeyExchange no(B78
+78
+# Set this to 'yes' to enable PAM authentication, account processing,(B78
+# and session processing. If this is enabled, PAM authentication will(B78
+# be allowed through the KbdInteractiveAuthentication and(B78
+# PasswordAuthentication.  Depending on your PAM configuration,(B78
+# PAM authentication via KbdInteractiveAuthentication may bypass(B78
+# the setting of "PermitRootLogin prohibit-password".(B78
+# If you just want the PAM account and session checks to run without(B78
+# PAM authentication, then enable this but set PasswordAuthentication(B78
+# and KbdInteractiveAuthentication to 'no'.(B78
+UsePAM yes78
+78
+#AllowAgentForwarding yes(B78
+#AllowTcpForwarding yes(B78
+#GatewayPorts no(B78
+X11Forwarding yes78
+#X11DisplayOffset 10(B78
+#X11UseLocalhost yes(B78
+#PermitTTY yes(B78
+PrintMotd no78
+#PrintLastLog yes(B78
+#TCPKeepAlive yes(B78
+#PermitUserEnvironment no(B78
+#Compression delayed(B78
+#ClientAliveInterval 0(B78
+#ClientAliveCountMax 3(B78
+#UseDNS no(B78
+#PidFile /run/sshd.pid(B78
+#MaxStartups 10:30:100(B78
+#PermitTunnel no(B78
+#ChrootDirectory none(B78
+#VersionAddendum none(B78
+78
+# no default banner path(B78
+#Banner none(B78
+78
+# Allow client to pass locale environment variables(B78
+AcceptEnv LANG LC_*78
+78
+# override default of no subsystems(B78
+Subsystem	(Bsftp	  (B/usr/lib/openssh/sftp-server78
+78
+# Example of overriding settings on a per-user basis(B78
+#Match User anoncvs(B78
+#	X11Forwarding no(B78
+#	AllowTcpForwarding no(B78
+#	PermitTTY no(B78
+#	ForceCommand cvs server(B78
+78M#PermitUserEnvironment no(B78M#TCPKeepAlive yes(B78M#PrintLastLog yes(B78MPrintMotd no78M#PermitTTY yes(B78M#X11UseLocalhost yes(B78M#X11DisplayOffset 10(B78MX11Forwarding yes78M#GatewayPorts no(B78M#AllowTcpForwarding yes(B78M#AllowAgentForwarding yes(B78M78MUsePAM yes78M# and KbdInteractiveAuthentication to 'no'.(B78M# PAM authentication, then enable this but set PasswordAuthentication(B78M# If you just want the PAM account and session checks to run without(B78M# the setting of "PermitRootLogin prohibit-password".(B78M# PAM authentication via KbdInteractiveAuthentication may bypass(B78M# PasswordAuthentication.	 Depending on your PAM configuration,(B78M# be allowed through the KbdInteractiveAuthentication and(B78M# and session processing. If this is enabled, PAM authentication will(B78M# Set this to 'yes' to enable PAM authentication, account processing,(B78M78M#GSSAPIKeyExchange no(B78M#GSSAPIStrictAcceptorCheck yes(B78M#GSSAPICleanupCredentials yes(B78M#GSSAPIAuthentication no(B78M# GSSAPI options(B78M78M#KerberosGetAFSToken no(B78M#KerberosTicketCleanup yes(B78M#KerberosOrLocalPasswd yes(B78M#KerberosAuthentication no(B78M# Kerberos options(B78M78MKbdInteractiveAuthentication no78M# some PAM modules and threads)(B78M# Change to yes to enable challenge-response passwords (beware issues with(B78M78M#PermitEmptyPasswords no(B78M#PasswordAuthentication yes(B78M# To disable tunneled clear text passwords, change to no here!(B78M78M#IgnoreRhosts yes(B78M# Don't read the user's ~/.rhosts and ~/.shosts files(B78M#IgnoreUserKnownHosts no(B78M# HostbasedAuthentication(B78M# Change to yes if you don't trust ~/.ssh/known_hosts for(B78M#HostbasedAuthentication no(B78M# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts(B78M78M#AuthorizedKeysCommandUser nobody(B78M#AuthorizedKeysCommand none(B78M78M#AuthorizedPrincipalsFile none(B78M78M#AuthorizedKeysFile	    .ssh/authorized_keys .ssh/authorized_keys2(B78M# Expect .ssh/authorized_keys2 to be disregarded by default in future.(B78M78M#PubkeyAuthentication yes(B78M78M#MaxSessions 10(B78M#MaxAuthTries 6(B78M#StrictModes yes(B78M#PermitRootLogin prohibit-password(B78M#LoginGraceTime 2m(B78M78M# Authentication:(B78M78M#LogLevel INFO(B78M#SyslogFacility AUTH(B78M# Logging(B78M78M#RekeyLimit default none(B78M# Ciphers and keying(B78M78M#HostKey /etc/ssh/ssh_host_ed25519_key(B78M#HostKey /etc/ssh/ssh_host_ecdsa_key(B78M#HostKey /etc/ssh/ssh_host_rsa_key(B78M78M#ListenAddress ::(B78M#ListenAddress 0.0.0.0(B78M#AddressFamily any(B78M#Port 22(B78M#(B78M#   systemctl restart ssh.socket(B78M#	 systemctl daemon-reload(B78M#(B78M# For changes to take effect, run:(B78M#(B78M# ListenAddress.(B78M# configuration must be re-generated after changing Port, AddressFamily, or(B78M# When systemd socket activation is used (the default), the socket(B78MPermitRootLogin no78MPubkeyAuthentication yes78MPasswordAuthentication no78M78MInclude /etc/ssh/sshd_config.d/*.conf78M78M# default value.(B78M# possible, but leave them commented.  Uncommented options override the(B78M# OpenSSH is to specify options with their default value where(B78M# The strategy used for options in the default sshd_config shipped with(B78M78M# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games(B78M78M# sshd_config(5) for more information.(B78M# This is the sshd server system-wide configuration file.	 See(B78M78
+#AddressFamily any(B(B*(BPort 22Port 2222(BM-D(B DOS Format	  (BM-A(B Append(BB(B Backup File(BC(B Cancel(BM-M(B Mac Format		(BM-P(B Prepend(B^T(B Browse(BFile Name to Write: /etc/ssh/sshd_config										      (B (B[ Writing... ](B(B (B(B[ Wrote 134 lines ](B(B^O(B Write Out	  (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	  (B^C(B Location(BU(B Undo	  (BM-A(B Set Mark(BX(B Exit  (B^R(B Read File	 (B^\(B Replace	    (B^U(B Paste(B^J(B Justify	   (B^/(B Go To Line  (BM-E(B Redo (BM-6(B Copy>arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/ssh/sshd_config
+(B==(B(B[ Reading... ](B(B[ Read 134 lines ](B(B  GNU nano 7.2		     /etc/ssh/sshd_config			  (B(B^G(B Help(B^O(B Write Out	 (B^W(B Where Is   (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	(B^\(B Replace	  (B^U(B Paste(B^J(B Justify# This is the sshd server system-wide configuration file.  See# sshd_config(5) for more information.# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sb(B>(B# The strategy used for options in the default sshd_config shipped with# OpenSSH is to specify options with their default value where# possible, but leave them commented.  Uncommented options override the# default value.(BInclude /etc/ssh/sshd_config.d/*.confPasswordAuthentication noPubkeyAuthentication yesPermitRootLogin no# When systemd socket activation is used (the default), the socket# configuration must be re-generated after changing Port, AddressFamily, (B>(B# ListenAddress.## For changes to take effect, run:##   systemctl daemon-reload#   systemctl restart ssh.socket#(BPort 222278
+#AddressFamily any(B78
+#ListenAddress 0.0.0.0(B78
+#ListenAddress ::(B78
+78
+#HostKey /etc/ssh/ssh_host_rsa_key(B78
+#HostKey /etc/ssh/ssh_host_ecdsa_key(B78
+#HostKey /etc/ssh/ssh_host_ed25519_key(B78
+78
+# Ciphers and keying(B78
+#RekeyLimit default none(B78
+78
+# Logging(B78
+#SyslogFacility AUTH(B78
+#LogLevel INFO(B78
+78
+# Authentication:(B78
+78
+#LoginGraceTime 2m(B78M# configuration must be re-generated after changing Port, AddressFamily, (B>(B78M# When systemd socket activation is used (the default), the socket(B78MPermitRootLogin no78MPubkeyAuthentication yes78MPasswordAuthentication no78M78MInclude /etc/ssh/sshd_config.d/*.conf78M78M# default value.(B78M# possible, but leave them commented.  Uncommented options override the(B78M# OpenSSH is to specify options with their default value where(B78M# The strategy used for options in the default sshd_config shipped with(B78M78M# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sb(B>(B78M78M# sshd_config(5) for more information.(B78M# This is the sshd server system-wide configuration file.  See(B78M78
+#AddressFamily any(B78
+#ListenAddress 0.0.0.0(B78
+#ListenAddress ::(B78
+78
+#HostKey /etc/ssh/ssh_host_rsa_key(B78
+#HostKey /etc/ssh/ssh_host_ecdsa_key(B78
+#HostKey /etc/ssh/ssh_host_ed25519_key(B78
+78
+# Ciphers and keying(B78
+#RekeyLimit default none(B78
+78
+# Logging(B78
+#SyslogFacility AUTH(B78
+#LogLevel INFO(B78
+78
+# Authentication:(B78
+78
+#LoginGraceTime 2m(B78
+#PermitRootLogin prohibit-password(B78
+#StrictModes yes(B78
+#MaxAuthTries 6(B78
+#MaxSessions 10(B78
+78
+#PubkeyAuthentication yes(B78
+78
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.(B78
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2(B78
+78
+#AuthorizedPrincipalsFile none(B78
+78
+#AuthorizedKeysCommand none(B(B*(BMaxAuthTries 6MaLoginGraceTime 2mLoginGraceTime 2m  30 378
+#AuthorizedKeysCommandUser nobody(B78M#HostKey /etc/ssh/ssh_host_ecdsa_key(B78M#HostKey /etc/ssh/ssh_host_rsa_key(B78M78M#ListenAddress ::(B78M#ListenAddress 0.0.0.0(B78M#AddressFamily any(B78MPort 222278M#(B78M#   systemctl restart ssh.socket(B78M#   systemctl daemon-reload(B78M#(B78M# For changes to take effect, run:(B78M#(B78M# ListenAddress.(B78M# configuration must be re-generated after changing Port, AddressFamily, (B>(B78M# When systemd socket activation is used (the default), the socket(B78MPermitRootLogin no78MPubkeyAuthentication yes78MPasswordAuthentication no78M78MInclude /etc/ssh/sshd_config.d/*.conf78M78M# default value.(B78M# possible, but leave them commented.  Uncommented options override the(B78M# OpenSSH is to specify options with their default value where(B78M# The strategy used for options in the default sshd_config shipped with(B78M78M# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sb(B>(B78M78M# sshd_config(5) for more information.(B78M# This is the sshd server system-wide configuration file.  See(B78M78
+#AddressFamily any(B78
+#ListenAddress 0.0.0.0(B78
+#ListenAddress ::(B78
+78
+#HostKey /etc/ssh/ssh_host_rsa_key(B78
+#HostKey /etc/ssh/ssh_host_ecdsa_key(B78
+#HostKey /etc/ssh/ssh_host_ed25519_key(B78
+78
+# Ciphers and keying(B78
+#RekeyLimit default none(B78
+78
+# Logging(B78
+#SyslogFacility AUTH(B78
+#LogLevel INFO(B78
+78
+# Authentication:(B78
+78
+LoginGraceTime 3078
+#PermitRootLogin prohibit-password(B78
+#StrictModes yes(B78
+MaxAuthTries 378
+#MaxSessions 10(B78
+78
+#PubkeyAuthentication yes(B78
+78
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.(B78
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2(B78
+78
+#AuthorizedPrincipalsFile none(B78
+78
+#AuthorizedKeysCommand none(B78
+#AuthorizedKeysCommandUser nobody(B78
+78
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hos(B>(B78
+#HostbasedAuthentication no(B78
+# Change to yes if you don't trust ~/.ssh/known_hosts for(B78
+# HostbasedAuthentication(B78
+#IgnoreUserKnownHosts no(BPermitRootLogin no#IgnoreUserKnownHosts no78
+# Don't read the user's ~/.rhosts and ~/.shosts files(B78
+#IgnoreRhosts yes(B78
+78
+# To disable tunneled clear text passwords, change to no here!(B78
+#PasswordAuthentication yes(B78
+#PermitEmptyPasswords no(B78
+78
+# Change to yes to enable challenge-response passwords (beware issues with(B78
+# some PAM modules and threads)(B78
+KbdInteractiveAuthentication no(BSave modified buffer?							    Y(B Yes(B N(B No	(B^C(B Cancel>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/ssh/sshd_config
+(B==(B(B[ Reading... ](B(B[ Read 134 lines ](B(B  GNU nano 7.2		     /etc/ssh/sshd_config			  (B(B^G(B Help(B^O(B Write Out	 (B^W(B Where Is   (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	(B^\(B Replace	  (B^U(B Paste(B^J(B Justify# This is the sshd server system-wide configuration file.  See# sshd_config(5) for more information.# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sb(B>(B# The strategy used for options in the default sshd_config shipped with# OpenSSH is to specify options with their default value where# possible, but leave them commented.  Uncommented options override the# default value.(BInclude /etc/ssh/sshd_config.d/*.confPasswordAuthentication noPubkeyAuthentication yesPermitRootLogin no# When systemd socket activation is used (the default), the socket# configuration must be re-generated after changing Port, AddressFamily, (B>(B# ListenAddress.## For changes to take effect, run:##   systemctl daemon-reload#   systemctl restart ssh.socket#(BPort 222278
+#AddressFamily any(B78
+#ListenAddress 0.0.0.0(B78
+#ListenAddress ::(B78
+78
+#HostKey /etc/ssh/ssh_host_rsa_key(B78
+#HostKey /etc/ssh/ssh_host_ecdsa_key(B78
+#HostKey /etc/ssh/ssh_host_ed25519_key(B78
+78
+# Ciphers and keying(B78
+#RekeyLimit default none(B78
+78
+# Logging(B78
+#SyslogFacility AUTH(B78
+#LogLevel INFO(B78
+78
+# Authentication:(B78
+78
+#LoginGraceTime 2m(B>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/ssh/sshd_config
+(B==(B(B[ Reading... ](B(B[ Read 134 lines ](B(B  GNU nano 7.2		     /etc/ssh/sshd_config			  (B(B^G(B Help(B^O(B Write Out	 (B^W(B Where Is   (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	(B^\(B Replace	  (B^U(B Paste(B^J(B Justify# This is the sshd server system-wide configuration file.  See# sshd_config(5) for more information.# This sshd was compiled with PATH=/usr/local/sbin:/usr/local/bin:/usr/sb(B>(B# The strategy used for options in the default sshd_config shipped with# OpenSSH is to specify options with their default value where# possible, but leave them commented.  Uncommented options override the# default value.(BInclude /etc/ssh/sshd_config.d/*.confPasswordAuthentication noPubkeyAuthentication yesPermitRootLogin no# When systemd socket activation is used (the default), the socket# configuration must be re-generated after changing Port, AddressFamily, (B>(B# ListenAddress.## For changes to take effect, run:##   systemctl daemon-reload#   systemctl restart ssh.socket#(BPort 2222PubkeAuthentin no(B*(BM78MMCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.comMACs hmac-sha2-512-etm@openssh.comKexAlgorithms curve25519-sha256	   (BM-D(B DOS Format	 (BM-A(B Append	 (BM-B(B Backup File(BC(B Cancel	 (BM-M(B Mac Format    (BM-P(B Prepend	     (B^T(B Browse(BFile Name to Write: /etc/ssh/sshd_config				      (B (B[ Writing... ](B(B (B(B[ Wrote 139 lines ](B(B^O(B Write Out	 (B^W(B Where Is   (B^K(B Cut  (B^T(B Execute(BX(B Exit	      (B^R(B Read File	(B^\(B Replace	  (B^U(B Paste	    (B^J(B Justify>arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart sshsudo systemctl restart ssh
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/vsftpd.confsudo nano /etc/vsftpd.conf
+(B==(B(B[ Reading... ](B(B[ Read 158 lines ](B(B  GNU nano 7.2		       /etc/vsftpd.conf				  (B(B^G(B Help(B^O(B Write Out	 (B^W(B Where Is   (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	(B^\(B Replace	  (B^U(B Paste(B^J(B Justify# Example config file /etc/vsftpd.conf## The default compiled in settings are fairly paranoid. This sample file# loosens things up a bit, to make the ftp daemon more usable.# Please see vsftpd.conf.5 for all compiled in defaults.## READ THIS: This example file is NOT an exhaustive list of vsftpd option(B>(B# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's# capabilities.### Run standalone?  vsftpd can run either from an inetd or as a standalone# daemon started from an initscript.# Allow anonymous FTP? (Disabled by default).(Banonymous_enable=NO# Uncomment this to allow local users to log in.(Blocal_enable=YES# Uncomment this to enable any form of FTP write command.(Bwrite_enable=YESchroot_local_user=YESallow_writeable_chroot=YESpasv_min_port=30000pasv_max_port=30100pasv_min_port=3(B*(B0000400000100401000100	  (BM-D(B DOS Format	(BM-A(B Append	(BM-B(B Backup File(BC(B Cancel		(BM-M(B Mac Format    (BM-P(B Prepend	    (B^T(B Browse(BFile Name to Write: /etc/vsftpd.conf					     (B (B[ Writing... ](B(B (B(B[ Wrote 158 lines ](B(B^O(B Write Out	(B^W(B Where Is	  (B^K(B Cut  (B^T(B Execute(BX(B Exit	     (B^R(B Read File  (B^\(B Replace	 (B^U(B Paste	   (B^J(B Justify>arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw allow 40000:40100/tcpsudo ufw allow 40000:40100/tcp
+Rule added
+Rule added (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ listen_port=2121listen_port=2121
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart vsftpdsudo systemctl restart vsftpd
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confsudo nano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 85 lines ](B(B	 GNU nano 7.2		    /etc/nginx/nginx.conf			 (B(B^G(B Help(B^O(B Write Out	(B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File  (B^\(B Replace	 (B^U(B Paste(B^J(B Justifyuser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events { (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; # server_names_hash_bucket_size 64; # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;(B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/jav(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B78
+#	# pop3_capabilities "TOP" "USER";(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B78
+#(B78
+#	server {(B78
+#listen	    localhost:110;(B78
+#protocol   pop3;(B78
+#proxy	    on;(B78
+#	}(B78
+#(B78
+#	server {(B78
+#listen	    localhost:143;(B78
+#protocol   imap;(B78
+#proxy	    on;(B78
+#	}(B78
+#}(B78
+78M78M ##(B78M # Virtual Host Configs(B78M ##(B78M78M # gzip_types text/plain text/css application/json application/jav(B>(B78M # gzip_http_version 1.1;(B78M # gzip_buffers 16 8k;(B78M # gzip_comp_level 6;(B78M # gzip_proxied any;(B78M # gzip_vary on;(B78M78M (Bgzip on;78M78M ##(B78M # Gzip Settings(B78M ##(B78M78M (Baccess_log /var/log/nginx/access.log;78M78M ##(B78M # Logging Settings(B78M ##(B78M78M (Bssl_prefer_server_ciphers on;78M (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78M78M ##(B78M # SSL Settings(B78M ##(B78M78M (Bdefault_type application/octet-stream;78M (Binclude /etc/nginx/mime.types;78M78M # server_name_in_redirect off;(B78M # server_names_hash_bucket_size 64;(B78M78M (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M}78M # multi_accept on;(Blimit_req_zone $b;(B*(BM (Bautoindex off;}78M (Bworker_connections 768;78Mevents {78M78Minclude /etc/nginx/modules-enabled/*.conf;78Merror_log /var/log/nginx/error.log;78Mpid /run/nginx.pid;78Mworker_processes auto;78Muser www-data;}n;78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;(B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/jav(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B78
+#	# pop3_capabilities "TOP" "USER";(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B78
+#(B78
+#	server {(B78
+#listen	    localhost:110;(B78
+#protocol   pop3;(B78
+#proxy	    on;(B78
+#	}(B78
+#(B78
+#	server {(B78
+#listen	    localhost:143;(B78
+#protocol   imap;(B78
+#proxy	    on;(B78
+#	}(B78
+#}(B78
+}78M78M ##(B78M # Virtual Host Configs(B78M ##(B78M78M # gzip_types text/plain text/css application/json application/jav(B>(B78M # gzip_http_version 1.1;(B78M # gzip_buffers 16 8k;(B78M # gzip_comp_level 6;(B78M # gzip_proxied any;(B78M # gzip_vary on;(B78M78M (Bgzip on;78M78M ##(B78M # Gzip Settings(B78M ##(B78M78M (Baccess_log /var/log/nginx/access.log;78M78M ##(B78M # Logging Settings(B78M ##(B78M78M (Bssl_prefer_server_ciphers on;78M (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78M78M ##(B78M # SSL Settings(B78M ##(B78M78M (Bdefault_type application/octet-stream;78M (Binclude /etc/nginx/mime.types;78M78M # server_name_in_redirect off;(B78M # server_names_hash_bucket_size 64;(B78M78M (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s;78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {78M78Minclude /etc/nginx/modules-enabled/*.conf;78Merror_log /var/log/nginx/error.log;78Mpid /run/nginx.pid;78Mworker_processes auto;78Muser www-data;}n;78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78
+ (Bssl_prefer_server_ciphers on;78M (BM(B(B78location ~ /\.(env|log|bak|git) {deny all;}       (B	     (Bdeny all;} (B}	    (Blocation ~~ /\.(env|log|bak|git)
+deny all; ##(B
+}     (B}78M(B(B78location ~ \.\./ {deny all;}	     (B
+}   # SSL Settings(Bdeny all;} (Bdeny all;} (Bdeny all;} (Bdeny all;} (B
+deny all;}     ##(B ~ \.\./ {deny all;}78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;(B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/jav(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B78
+#	# pop3_capabilities "TOP" "USER";(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B78
+#(B78
+#	server {(B78
+#listen	    localhost:110;(B78
+#protocol   pop3;(B78
+#proxy	    on;(B78
+#	}(B78
+#(B78
+#	server {(B78
+#listen	    localhost:143;(B78
+#protocol   imap;(B78
+#proxy	    on;(B78
+#	}(B78
+#}(B78
+}78M78M ##(B78M # Virtual Host Configs(B78M ##(B78M78M # gzip_types text/plain text/css application/json application/jav(B>(B78M # gzip_http_version 1.1;(B78M # gzip_buffers 16 8k;(B78M # gzip_comp_level 6;(B78M # gzip_proxied any;(B78M # gzip_vary on;(B78M78M (Bgzip on;78M78M ##(B78M # Gzip Settings(B78M ##(B78M78M (Baccess_log /var/log/nginx/access.log;78M78M ##(B78M # Logging Settings(B78M ##(B78M78M (Bssl_prefer_server_ciphers on;78M (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, re(B>(B78M78M ##(B78M # SSL Settings(B78M ##(B78M78M (Bdefault_type application/octet-stream;78M (Binclude /etc/nginx/mime.types;78M78M # server_name_in_redirect off;(B78M # server_names_hash_bucket_size 64;(B78M78M (Blocation ~ \.\./ {deny all;}    (B78M (Blocation ~ /\.(env|log|bak|git) {deny all;}78M78M (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s;78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {78M78Minclude /etc/nginx/modules-enabled/*.conf;78Merror_log /var/log/nginx/error.log;78Mpid /run/nginx.pid;78Mworker_processes auto;78Muser www-data;*}n;78
+ (Blocation ~ \.\./ {deny all;}	   (B78
+78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;off;78
+ (Bdefault_type application/octet-stream;78MM (B78add_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains(B><(B'self' 'unsafe-inline'";(B<(Bomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self'(B>(Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains(B><(B'self' 'unsafe-inline'";add_header Content-Security-Policy "default-src 'self'; script-src 'self'(B>(B>(B==(B  GNU nano 7.2		     /etc/nginx/nginx.conf *			   (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' (B>(B (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}    (B^G(B Help(B^O(B Write Out	  (B^W(B Where Is    (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File   (B^\(B Replace     (B^U(B Paste(B^J(B Justify>(B(B  GNU nano 7.2		  /etc/nginx/nginx.conf *		       (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains"add_header Content-Security-Policy "default-src 'self'; script-src 'self' (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}	 (B^G(B Help(B^O(B Write Out   (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	(B^\(B Replace	   (B^U(B Paste(B^J(B Justify==(B /etc/nginx/nginx.conf *   (B;'u(B>^G(B Help(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	 (B^\(B Replace	    (B^U(B Paste(B^J(B Justify>(B(B  GNU nano 7.2		 /etc/nginx/nginx.conf *		      (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' ' (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}	   (B^G(B Help(B^O(B Write Out	 (B^W(B Where Is    (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	  (B^\(B Replace     (B^U(B Paste(B^J(B Justify==(B  (Bu(B>^G(B Help(B^O(B Write Out   (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	(B^\(B Replace	   (B^U(B Paste(B^J(B Justify>(B(B  GNU nano 7.2		/etc/nginx/nginx.conf *			       (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'u(B>(B (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}	  (B^G(B Help(B^O(B Write Out	(B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^X(B Exit(B^R(B Read File	 (B^\(B Replace	    (B^U(B Paste(B^J(B Justify==(B   /etc/nginx/nginx.conf *	 (Bnsafe(B>^G(B Help(B^O(B Write Out (B^W(B Where Is  (B^K(B Cut(B^T(B Execute	 (B^C(B Location(B^X(B Exit(B^R(B Read File (B^\(B Replace   (B^U(B Paste     (B^J(B Justify   (B^/(B Go To Line>(B(B  GNU nano 7.2		      /etc/nginx/nginx.conf *			  (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'un (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}	 (B^G(B Help(B^O(B Write Out (B^W(B Where Is  (B^K(B Cut(B^T(B Execute	 (B^C(B Location(B^X(B Exit(B^R(B Read File (B^\(B Replace   (B^U(B Paste     (B^J(B Justify   (B^/(B Go To Lin==(B   /etc/nginx/nginx.conf *		(Bsafe-inlin(B>^G(B Help(B^O(B Write Out  (B^W(B Where Is   (B^K(B Cut(B^T(B Execute	(B^C(B Location(B^X(B Exit(B^R(B Read File  (B^\(B Replace    (B^U(B Paste(B^J(B Justify    (B^/(B Go To Line>(B(B  GNU nano 7.2		      /etc/nginx/nginx.conf *			    (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe- (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}	(B^G(B Help(B^O(B Write Out  (B^W(B Where Is   (B^K(B Cut(B^T(B Execute	   (B^C(B Location(B^X(B Exit(B^R(B Read File  (B^\(B Replace	 (B^U(B Paste(B^J(B Justify    (B^/(B Go To Lin==(B	/etc/nginx/nginx.conf *			(Binline'";(B^G(B Help(B^O(B Write Out	  (B^W(B Where Is     (B^K(B Cut(B^T(B Execute(B^C(B Location(B^X(B Exit(B^R(B Read File    (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line>(B(B  GNU nano 7.2			   /etc/nginx/nginx.conf *			  (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}    (B^G(B Help(B^O(B Write Out	   (B^W(B Where Is     (B^K(B Cut(B^T(B Execute(B^C(B Locat(B^X(B Exit(B^R(B Read File	  (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To==(B    /etc/nginx/nginx.conf *			(B'";(B^G(B Help(B^O(B Write Out   (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	   (B^C(B Location    (BM-U(B Undo(B^X(B Exit(B^R(B Read File	(B^\(B Replace	   (B^U(B Paste(B^J(B Justify	  (B^/(B Go To Line  (BM-E(B Redo>(B(B	GNU nano 7.2				   /etc/nginx/nginx.conf *				 (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}    (B^G(B Help(B^O(B Write Out   (B^W(B Where Is    (B^K(B Cut(B^T(B Execute	    (B^C(B Location    (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace	    (B^U(B Paste(B^J(B Justify	   (B^/(B Go To Line  (BM-E(B Redo==(B	  /etc/nginx/nginx.conf *		(B(B^G(B Help(B^O(B Write Out	 (B^W(B Where Is     (B^K(B Cut(B^T(B Execute(B^C(B Location	 (BM-U(B Undo(B^X(B Exit(B^R(B Read File    (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line	(BM-E(B Redo>(B(B  GNU nano 7.2					  /etc/nginx/nginx.conf *				    (B (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=iplimit:10m rate=10r/s; (Badd_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}	 (B^G(B Help(B^O(B Write Out	(B^W(B Where Is	    (B^K(B Cut(B^T(B Execute(B^C(B Location	(BM-U(B Undo(B^X(B Exit(B^R(B Read File	   (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo==(B	 /etc/nginx/nginx.conf *	   (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	(B^K(B Cut(B^T(B Execute(B^C(B Location	    (BM-U(B Undo(B^X(B Exit(B^R(B Read File    (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains"; (Badd_header X-XSS-Protection "1; mode=block"; (Badd_header X-Content-Type-Options "nosniff";
+							    limit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;78M78
+78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78
+ (Bssl_prefer_server_ciphers on;78
+
+ ##(B78M78MM (Blimit_req zone=limit burst=20 nodelay;off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {78M78Minclude /etc/nginx/modules-enabled/*.conf;78Merror_log /var/log/nginx/error.log;78Mpid /run/nginx.pid;}n;78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}	   (B78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;(B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B78
+#	# pop3_capabilities "TOP" "USER";(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B78
+#(B78
+#	server {(B78
+#listen	    localhost:110;(B78
+#protocol   pop3;(B78
+#proxy	    on;(B78
+#	}(B}78M # gzip_comp_level 6;(B78M # gzip_proxied any;(B78M # gzip_vary on;(B78M78M (Bgzip on;78M78M ##(B78M # Gzip Settings(B78M ##(B78M78M (Baccess_log /var/log/nginx/access.log;78M78M ##(B78M # Logging Settings(B78M ##(B78M78M (Bssl_prefer_server_ciphers on;78M (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78M78M ##(B78M # SSL Settings(B78M ##(B78M78M (Bdefault_type application/octet-stream;78M (Binclude /etc/nginx/mime.types;78M78M # server_name_in_redirect off;(B78M # server_names_hash_bucket_size 64;(B78M78M (Blimit_req zone=limit burst=20 nodelay;78M78M (Blocation ~ \.\./ {deny all;}    (B78M (Blocation ~ /\.(env|log|bak|git) {deny all;}78M78M (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78M (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78M (Badd_header X-XSS-Protection "1; mode=block";78M (Badd_header X-Content-Type-Options "nosniff";78M (Badd_header X-Frame-Options "SAMEORIGIN";78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {78M78Minclude /etc/nginx/modules-enabled/*.conf;78Merror_log /var/log/nginx/error.log;78Mpid /run/nginx.pid;78Mworker_processes auto;78Muser www-data;}78MMserver {    listen 80;server_name loja.local;	  location / { proxy_pass http://localhost:3000;proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr;	 }}http {}h78
+ ##(B78
+ # Basic Settings(B}on / 78M { (B{{ {  {   {	{    listen 808;0;}78
+ # Basic Settings(B78
+ ##(B78
+78
+ (Bsendfile on;78
+ (Btcp_nopush on;78
+ (Btypes_hash_max_size 2048;78
+78
+ (Bserver_tokens off;78
+ (Bautoindex off;78
+ (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;78
+78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}	   (B78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+ (Bssl_prefer_server_ciphers on;
+
+ ##(B78M78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M}78M78M}78Mproxy_set_header X-Real-IP $remote_addr;78Mproxy_set_header Host $host;78Mproxy_pass http://localhost:3000;78M{78Mlocation /78M78Mserver_name loja.local;78Mlisten 8080;78M78Mserver {78M78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {	   proxy_set_header Host $host;	       proxy_set_header X-Real-IP $remote_addr;78M78M (Blimit_req zone=limit burst=20 nodelay;}78
+78
+ (Bsendfile on;78
+ (Btcp_nopush on;78
+ (Btypes_hash_max_size 2048;78
+78
+ (Bserver_tokens off;78
+ (Bautoindex off;78
+ (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;78
+78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}	   (B78
+78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+} (B (B (B (B  (B (B (B (B (B (B  (B (B (B (B (B (B  (B (B  (B (B (B (B (B (B (B (B (B(B
+      ##(B (B (B (B (B	(B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B  (B (B (B (B (B (B (B (B (B(B
+ # SSL Settings(B
+      ##(Boff;78M ##(B78M78Mhttp {78M78M}78M78M}78M (Blimit_req zone=limit burst=20 nodelay;78M78Mproxy_set_header X-Real-IP $remote_addr;78Mproxy_set_header Host $host;78Mproxy_pass http://localhost:3000;78M{78Mlocation / 78M78Mserver_name loja.local;78Mlisten 8080;78M78Mserver {78M78M} (B78M(B (B (B78M(B (B78location ~ /\.(env|log|bak|git) {deny all;}
+} ##(B
+deny all;}deny all;}78M (B78location ~ \.\./ {deny all;}
+} # Basic Settings(B
+deny all;} ##(B78M(BM(B (B78add_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block";add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains"; (Badd_header X-XSS-Protection "1; mode=block"; (Badd_header X-Content-Type-Options "nosniff";}78
+78
+http {78
+78
+ ##(B78
+ # Basic Settings(B78
+ ##(B78
+78
+ (Bsendfile on;78
+ (Btcp_nopush on;78
+ (Btypes_hash_max_size 2048;78
+78
+ (Bserver_tokens off;78
+ (Bautoindex off;78
+ (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;78
+78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";	   (B78
+78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream; (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B	 (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B(B
+     (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B	 (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B	(B (B (B (B (B (B (B (B (B (B (B(B
+     ##(B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B	 (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B(B
+     # SSL Settings(B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B	(B (B (B (B (B (B (B (B (B (B (B(B
+	 ##(B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B (B  (B (B (B (B (B (B (B (B (B (B (B(B
+
+    (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE	     (BM-D(B DOS Format(BM-A(B Append		  (BM-B(B Backup File(BC(B Cancel	      (BM-M(B Mac Format(BM-P(B Prepend		   (B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf										(B (B[ Writing... ](B(B (B(B[ Wrote 111 lines ](B(B^O(B Write Out    (B^W(B Where Is	 (B^K(B Cut	     (B^T(B Execute(B^C(B Location     (BM-U(B Undo(BX(B Exit  (B^R(B Read File	   (B^\(B Replace      (B^U(B Paste	   (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -t
+sudo systemctl restart nginxarcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -t
+sudo systemctl restart nginx
+2026/03/10 17:46:53 [emerg] 7751#7751: "server" directive is not allowed here in /etc/nginx/nginx.conf:12
+nginx: configuration file /etc/nginx/nginx.conf test failed
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xeu nginx.service" for details.
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart nginxnginx -tano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 111 lines ](B(B  GNU nano 7.2					   /etc/nginx/nginx.conf					      (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	  (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events { (Bworker_connections 768; # multi_accept on;(B}server {listen 8080;server_name loja.local;location /{proxy_pass http://localhost:3000;proxy_set_header Host $host;proxy_set_header X-Real-IP $remote_addr; (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;} (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+}78
+78
+}78
+}(B*(Bhttp {
+
+ ##(B
+ # Basic Settings(B
+ ##(B
+
+ (Bsendfile on;
+ (Btcp_nopush on;
+ (Btypes_hash_max_size 2048;
+ (B
+ (Bserver_tokens off;
+ (Bautoindex off;
+ (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;   (B
+
+ # server_names_hash_bucket_size 64;(B
+ # server_name_in_redirect off;(B
+
+ (Binclude /etc/nginx/mime.types;
+ (Bdefault_type application/octet-stream;
+
+ ##(B
+ # SSL Settings(B
+ ##(B
+78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {78M78Minclude /etc/nginx/modules-enabled/*.conf;78Merror_log /var/log/nginx/error.log;78Mpid /run/nginx.pid;78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;(B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B78
+#	# pop3_capabilities "TOP" "USER";(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B78
+#(B78
+#	server {(B78
+#listen	    localhost:110;(B78
+#protocol   pop3;(B78
+#proxy	    on;(B78
+#	}(B78
+#(B78
+#	server {(B78
+#listen	    localhost:143;(BM}server {listen 8080;    server_name loja.local;	 location /{proxy_pass http://localhost:3000;proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; (B (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;} (B (Badd_header X-Frame-Options "SAMEORIGIN"; (Badd_header X-Content-Type-Options "nosniff"; (Badd_header X-XSS-Protection "1; mode=block"; (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains"; (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Blimit_req zone=limit burst=20 nodelay;    }}   s}78M (Binclude /etc/nginx/sites-enabled/*;78M (Binclude /etc/nginx/conf.d/*.conf;78M78M ##(B}s  78
+ (Blimit_req zone=limit burst=20 nodelay;78
+} 78
+78
+}78
+78
+#mail {#(B78
+#	# See sample authentication script at:#(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript#(B78
+#(B78
+#	# auth_http localhost/auth.php;#(B78
+#	# pop3_capabilities "TOP" "USER";#(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";#(B		  (BM-D(B DOS Format(BM-A(B Append	       (BM-B(B Backup File(BC(B Cancel		   (BM-M(B Mac Format(BM-P(B Prepend		(B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf									     (B (B[ Writing... ](B(B (B(B[ Wrote 111 lines ](B(B^O(B Write Out	  (B^W(B Where Is     (B^K(B Cut	  (B^T(B Execute(B^C(B Location	    (BM-U(B Undo(BX(B Exit  (B^R(B Read File	(B^\(B Replace	    (B^U(B Paste	(B^J(B Justify(B^/(B Go To Line	  (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confsystemctl restart nginxnginx -t
+2026/03/10 17:48:15 [emerg] 8005#8005: "server" directive is not allowed here in /etc/nginx/nginx.conf:67
+nginx: configuration file /etc/nginx/nginx.conf test failed
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -tano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 111 lines ](B(B  GNU nano 7.2					   /etc/nginx/nginx.conf					      (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	  (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events { (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	(B78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;(B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+server {78
+78
+listen 8080;78
+server_name loja.local;78
+78
+location /78
+{78
+proxy_pass http://localhost:3000;78
+proxy_set_header Host $host;78
+proxy_set_header X-Real-IP $remote_addr;78
+(B78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}78
+(B78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+}78
+78
+}78
+78
+#mail {(B}(B*(B
+#	# See sample authentication script at:(B
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B
+#(B
+#	# auth_http localhost/auth.php;(B
+#	# pop3_capabilities "TOP" "USER";(B
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B
+#(B
+#	server {(B
+#listen	    localhost:110;(B
+#protocol   pop3;(B
+#proxy	    on;(B
+#	}(B
+#(B
+#	server {(B
+#listen	    localhost:143;(B
+#protocol   imap;(B
+#proxy	    on;(B
+#	}(B
+#}(B
+
+
+
+      78M78M}78M (Binclude /etc/nginx/sites-enabled/*;78M (Binclude /etc/nginx/conf.d/*.conf;78M78M ##(B78M # Virtual Host Configs(B78M ##(B78M78M # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application(B>(B78M # gzip_http_version 1.1;(B78M # gzip_buffers 16 8k;(Bcomp_level 6;    # gzip_buffers 16 8k;(B78M # gzip_proxied any;(B78M # gzip_vary on;(B78M78M (Bgzip on;78M78M ##(B78M # Gzip Settings(B78M ##(B78M# gzip_buffers 16 8k;(B # gzip_buffers 16 8k;(B78M78M (Baccess_log /var/log/nginx/access.log;78M78M ##(B78M # Logging Settings(B78M ##(B78M78M (Bssl_prefer_server_ciphers on;78M (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78M78M ##(B78M # SSL Settings(B78M ##(B78M78M (Bdefault_type application/octet-stream;78M (Binclude /etc/nginx/mime.types;78M78M # server_name_in_redirect off;(B78M # server_names_hash_bucket_size 64;(B78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	 (B78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78M78M}78M # multi_accept on;(B78M (Bworker_connections 768;78Mevents {}78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78MM (B (B (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	  (B (Bserver {	   listen 8080;	   server_name loja.local;    location /    {	proxy_pass http://localhost:3000;proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr;location ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;}add_header X-Frame-Options "SAMEORIGIN";add_header X-Content-Type-Options "nosniff";add_header X-XSS-Protection "1; mode=block"; (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Blimit_req zone=limit burst=20 nodelay;    }}  }78
+(B78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+}  78M78Mserver_name loja.local; 78Mlisten 8080; 78M78M (Bserver {78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;   (B78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {h78M78M78M}78M # multi_accept on;(B}h	       (Blisten 8080;		 (Blisten 8080;	       (Bserver_name loja.local;	    (Bserver_name loja.local;	     (Blocation /	     (Blocation /	 (B{		(B{	    (Bproxy_pass http://localhost:3000;	       (Bproxy_pass http://localhost:3000;78
+proxy_set_header Host $host;78
+proxy_set_header X-Real-IP $remote_addr;78
+ (B78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}78
+ (B78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+}78
+78
+}	  (Bproxy_set_header Host $host;	(Bproxy_set_header Host $host;		(Bproxy_set_header X-Real-IP $remote_addr;	  (Bproxy_set_header X-Real-IP $remote_addr;l (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ /\.(env|log|bak|git) {deny all;} (Blocation ~ \.\./ {deny all;} (Blocation ~ \.\./ {deny all;} (Badd_header X-Frame-Options "SAMEORIGIN"; (Badd_header X-Frame-Options "SAMEORIGIN"; (Badd_header X-Content-Type-Options "nosniff"; (Badd_header X-Content-Type-Options "nosniff"; (Badd_header X-XSS-Protection "1; mode=block"; (Badd_header X-XSS-Protection "1; mode=block"; (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains"; (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains"; (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'"; (Blimit_req zone=limit burst=20 nodelay; (Blimit_req zone=limit burst=20 nodelay;	   (B}		  (B}}		   (BM-D(B DOS Format(BM-A(B Append		(BM-B(B Backup File(BC(B Cancel		    (BM-M(B Mac Format(BM-P(B Prepend		 (B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf									      (B (B[ Writing... ](B(B (B(B[ Wrote 113 lines ](B(B^O(B Write Out	   (B^W(B Where Is     (B^K(B Cut	   (B^T(B Execute(B^C(B Location     (BM-U(B Undo(BX(B Exit  (B^R(B Read File	 (B^\(B Replace	     (B^U(B Paste	 (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+2026/03/10 17:50:40 [emerg] 8460#8460: zero size shared memory zone "iplimit"
+nginx: configuration file /etc/nginx/nginx.conf test failed
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -tano /etc/nginx/nginx.confginx -tano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 113 lines ](B(B  GNU nano 7.2					   /etc/nginx/nginx.conf					      (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	  (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events { (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	(B78
+ (Bserver {78
+78
+		(Blisten 8080;78
+		(Bserver_name loja.local;78
+78
+		(Blocation /78
+		(B{78
+ (Bproxy_pass http://localhost:3000;78
+ (Bproxy_set_header Host $host;78
+ (Bproxy_set_header X-Real-IP $remote_addr;78
+(B78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}78
+(B78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+		(B}78
+78
+}78
+(B78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78M (Bserver {78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	(B78M (Bautoindex off;78M (Bserver_tokens off;78M78
+		(B}78
+78
+}78
+(B78
+ # server_names_hash_bucket_size 64;(B(B*(B (B}78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	(B78M (Bautoindex off;78M (Bserver_tokens off;78Mserver 78M { (B{78
+ (Blimit_req zone=limit burst=20 nodelay;78
+		(B}78
+78
+ (B}78
+ (B78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;	      (BM-D(B DOS Format(BM-A(B Append		   (BM-B(B Backup File(BC(B Cancel	       (BM-M(B Mac Format(BM-P(B Prepend	    (B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf										 (B (B[ Writing... ](B(B (B(B[ Wrote 114 lines ](B(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut	      (B^T(B Execute(B^C(B Location	(BM-U(B Undo(BX(B Exit	(B^R(B Read File    (B^\(B Replace	(B^U(B Paste	    (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+2026/03/10 17:54:04 [emerg] 9061#9061: zero size shared memory zone "iplimit"
+nginx: configuration file /etc/nginx/nginx.conf test failed
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -tano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 114 lines ](B(B  GNU nano 7.2					   /etc/nginx/nginx.conf					      (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	  (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events { (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	(B78
+ (Bserver78
+ (B{78
+78
+		(Blisten 8080;78
+		(Bserver_name loja.local;78
+78
+		(Blocation /78
+		(B{78
+ (Bproxy_pass http://localhost:3000;78
+ (Bproxy_set_header Host $host;78
+ (Bproxy_set_header X-Real-IP $remote_addr;78
+(B78
+ (Blocation ~ /\.(env|log|bak|git) {deny all;}78
+ (Blocation ~ \.\./ {deny all;}78
+(B78
+ (Badd_header X-Frame-Options "SAMEORIGIN";78
+ (Badd_header X-Content-Type-Options "nosniff";78
+ (Badd_header X-XSS-Protection "1; mode=block";78
+ (Badd_header Strict-Transport-Security "max-age=31536000; includeSubDomains";78
+ (Badd_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'";78
+78
+ (Blimit_req zone=limit burst=20 nodelay;78
+		(B}78
+78
+ (B}78
+(B78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78M (Badd_header X-Content-Type-Options "nosniff";78M (Badd_header X-Frame-Options "SAMEORIGIN";78M(B78M (Blocation ~ \.\./ {deny all;}78M (Blocation ~ /\.(env|log|bak|git) {deny all;}78M(B78M (Bproxy_set_header X-Real-IP $remote_addr;78M (Bproxy_set_header Host $host;78M (Bproxy_pass http://localhost:3000;78M		       (B{78M		     (Blocation /78M78M		       (Bserver_name loja.local;78M		   (Blisten 8080;78M78M (B{78M (Bserver78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	(B78M (Bautoindex off;78M (Bserver_tokens off;78
+		(B}78
+78
+ (B}78
+(B78
+ # server_names_hash_bucket_size 64;(B}(B*(B
+ # server_name_in_redirect off;(B
+
+ (Binclude /etc/nginx/mime.types;
+ (Bdefault_type application/octet-stream;
+
+ ##(B
+ # SSL Settings(B
+ ##(B
+
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+ (Bssl_prefer_server_ciphers on;
+
+ ##(B
+ # Logging Settings(B
+ ##(B
+
+ (Baccess_log /var/log/nginx/access.log;
+ 78M (Bserver
+
+ ##(B
+ # Gzip Settings(B
+ ##(B
+
+ (Bgzip on;  78M78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;   (B78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78M78Mhttp {78M78Mserv
+ ##(B
+	     (BM-D(B DOS Format(BM-A(B Append		  (BM-B(B Backup File(BC(B Cancel	      (BM-M(B Mac Format(BM-P(B Prepend		   (B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf										(B (B[ Writing... ](B(B (B(B[ Wrote 88 lines ](B(B^O(B Write Out    (B^W(B Where Is	(B^K(B Cut	    (B^T(B Execute(B^C(B Location     (BM-U(B Undo(BX(B Exit  (B^R(B Read File	  (B^\(B Replace      (B^U(B Paste	  (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+2026/03/10 17:56:42 [emerg] 9531#9531: zero size shared memory zone "iplimit"
+nginx: configuration file /etc/nginx/nginx.conf test failed
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -tano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 88 lines ](B(B	 GNU nano 7.2					  /etc/nginx/nginx.conf						     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events { (Bworker_connections 768; # multi_accept on;(B}http { ## # Basic Settings ## (Bsendfile on; (Btcp_nopush on; (Btypes_hash_max_size 2048; (Bserver_tokens off; (Bautoindex off; (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;   (B78
+ # server_names_hash_bucket_size 64;(B78
+ # server_name_in_redirect off;(B78
+78
+ (Binclude /etc/nginx/mime.types;78
+ (Bdefault_type application/octet-stream;78
+78
+ ##(B78
+ # SSL Settings(B78
+ ##(B78
+78
+ (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE78
+ (Bssl_prefer_server_ciphers on;78
+78
+ ##(B78
+ # Logging Settings(B78
+ ##(B78
+78
+ (Baccess_log /var/log/nginx/access.log;78
+78
+ ##(B78
+ # Gzip Settings(B78
+ ##(B78
+78
+ (Bgzip on;78
+78
+ # gzip_vary on;(B78
+ # gzip_proxied any;(B78
+ # gzip_comp_level 6;	 (B78
+ # gzip_buffers 16 8k;(B78
+ # gzip_http_version 1.1;(B78
+ # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application(B>(B78
+78
+ ##(B78
+ # Virtual Host Configs(B78
+ ##(B78
+78
+ (Binclude /etc/nginx/conf.d/*.conf;78
+ (Binclude /etc/nginx/sites-enabled/*;78
+}78
+78
+78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B78
+#	# pop3_capabilities "TOP" "USER";(B78
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B}(B*(B
+#(B
+#	server {(B
+#listen	    localhost:110;(B
+#protocol   pop3;(B
+#proxy	    on;(B
+#	}(B
+#(B
+(B<(Bcation/xml+rss text/javascript;#	    server {(B				 # gzip_types text/plain text/css application/json application/javascript text/xml application/xml applicati(B
+#listen	    localhost:143;(B
+#protocol   imap;(B
+#proxy	    on;(B
+#	}(B
+#}(B
+
+	##(B   # Gzip Settings(B		##(B   (Baccess_log /var/log/nginx/access.log;					   ##(B	  # Logging Settings(B			 ##(B	(Bssl_prefer_server_ciphers on;				    (Bssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE      78M78M ##(B78M # SSL Settings(B78M ##(B78M78M (Bdefault_type application/octet-stream;78M (Binclude /etc/nginx/mime.types;78M78M # server_name_in_redirect off;(B78M # server_names_hash_bucket_size 64;(B78M (B78M (Blimit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;   (B78M (Bautoindex off;78M (Bserver_tokens off;78M78M (Btypes_hash_max_size 2048;78M (Btcp_nopush on;78M (Bsendfile on;78M78M ##(B78M # Basic Settings(B78M ##(B78Mn;78
+78
+#mail {(B78
+#	# See sample authentication script at:(B78
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript(B78
+#(B78
+#	# auth_http localhost/auth.php;(B
+#	# pop3_capabilities "TOP" "USER";(B
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";(B
+#(B
+#	server {(B
+#listen	    localhost:110;(B
+#protocol   pop3;(B
+#proxy	    on;(B
+#	}(B
+#(B
+#	server {(B
+#listen	    localhost:143;(B
+#protocol   imap;(B
+#proxy	    on;(B
+#	}(B
+#}(B
+
+	      (Bsendfile on;		##(B   # Basic Settings(B		  ##(B	http {	  } # multi_accept on;(B		   (Bworker_connections 768;			  events {	include /etc/nginx/modules-enabled/*.conf;					  error_log /var/log/nginx/error.log;				      pid /run/nginx.pid;		  worker_processes auto;		    user www-data;	      78    ##	  # Gzip Settings    ##(Bgzip on;    ##	   # Virtual Host Configs    ##(Binclude /etc/nginx/conf.d/*.conf;include /etc/nginx/sites-enabled/*;}} 78Maccess_log /var/log/nginx/access.log; 78M78M	   ## (B78M    # Logging Settings (B78M	   ## (B78M78M	  # ssl_prefer_server_ciphers on; (B78M	   # ssl_protocols TLSv1.2 TLSv1.3; (B78M    # Se vieres a usar HTTPS, usa só isto: (B78M78M	## (B78M    # SSL Settings (B78M    ## (B78M78Mdefault_type application/octet-stream; 78Minclude /etc/nginx/mime.types; 78M78M	  # server_name_in_redirect off; (B		(BM-D(B DOS Format(BM-A(B Append	     (BM-B(B Backup File(BC(B Cancel		 (BM-M(B Mac Format(BM-P(B Prepend	      (B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf										   (B (B[ Writing... ](B(B (B(B[ Wrote 82 lines ](B(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut	       (B^T(B Execute(B^C(B Location	 (BM-U(B Undo(BX(B Exit	 (B^R(B Read File    (B^\(B Replace	 (B^U(B Paste	     (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+2026/03/10 17:58:17 [emerg] 9813#9813: zero size shared memory zone "iplimit"
+nginx: configuration file /etc/nginx/nginx.conf test failed
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -tano /etc/nginx/nginx.conf
+(B==(B(B[ Reading... ](B(B[ Read 82 lines ](B(B	 GNU nano 7.2					  /etc/nginx/nginx.conf						     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redouser www-data;worker_processes auto;pid /run/nginx.pid;error_log /var/log/nginx/error.log;include /etc/nginx/modules-enabled/*.conf;events {worker_connections 768;	# multi_accept on;(B}http {    ##    # Basic Settings	 ##(Bsendfile on;tcp_nopush on;types_hash_max_size 2048;server_tokens off;autoindex off;limit_req_zone $binary_remote_addr zone=limit:10m rate=10r/s;	 limit_req_zone $binary_remote_addr zone=l(B*(Bilimit:10m rate=10r/s;plimit:10m rate=10r/s;		(BM-D(B DOS Format(BM-A(B Append	     (BM-B(B Backup File(BC(B Cancel		 (BM-M(B Mac Format(BM-P(B Prepend	      (B^T(B Browse(BFile Name to Write: /etc/nginx/nginx.conf										   (B (B[ Writing... ](B(B (B(B[ Wrote 82 lines ](B(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut	       (B^T(B Execute(B^C(B Location	 (BM-U(B Undo(BX(B Exit	 (B^R(B Read File    (B^\(B Replace	 (B^U(B Paste	     (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/nginx.confginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/sites-available/loja.localsudo nano /etc/nginx/sites-available/loja.local
+(B==(B(B[ New File ](B(B  GNU nano 7.2				   /etc/nginx/sites-available/loja.local				      (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	   (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	  (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo(B*(Blocation / {proxy_pass http://127.0.0.1:3000;(Bproxy_set_header Host $host;proxy_set_header X-Real-IP $remote_addr;proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;proxy_set_header X-Forwarded-Proto $scheme;limit_req zone=limit burst=20 nodelay;add_header X-Frame-Options "SAMEORIGIN" always;add_header X-Content-Type-Options "nosniff" always;add_header Referrer-Policy "strict-origin-when-cross-origin" always;}}	 78M78M} 78Mreturn 403; 78Mdeny all; 78Mlocation ~ \.\./ { 78M78M} 78Mreturn 403; 78Mdeny all; 78Mlocation ~ /\.(env|log|bak|git) { 78M78Merror_log /var/log/nginx/loja_error.log; 78Maccess_log /var/log/nginx/loja_access.log; 78M78Mserver_name loja.local; 78Mlisten 8080; 78Mserver {s	  78
+add_header X-Frame-Options "SAMEORIGIN" always; 78
+add_header X-Content-Type-Options "nosniff" always; 78
+add_header Referrer-Policy "strict-origin-when-cross-origin" always; 78
+} 78
+}78
+	     (BM-D(B DOS Format(BM-A(B Append		  (BM-B(B Backup File(BC(B Cancel	      (BM-M(B Mac Format(BM-P(B Prepend		   (B^T(B Browse(BFile Name to Write: /etc/nginx/sites-available/loja.local								(B (B[ Writing... ](B(B (B(B[ Wrote 31 lines ](B(B^O(B Write Out    (B^W(B Where Is	(B^K(B Cut	    (B^T(B Execute(B^C(B Location     (BM-U(B Undo(BX(B Exit  (B^R(B Read File	  (B^\(B Replace      (B^U(B Paste	  (B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/sites-available/loja.local
+(B==(B(B[ Reading... ](B(B[ Read 31 lines ](B(B	 GNU nano 7.2				  /etc/nginx/sites-available/loja.local					     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redoserver {listen 8080;server_name loja.local;access_log /var/log/nginx/loja_access.log;error_log /var/log/nginx/loja_error.log;location ~ /\.(env|log|bak|git) {deny all;return 403;}location ~ \.\./ {deny all;return 403;}location / {proxy_pass http://127.0.0.1:3000;(Bproxy_set_header Host $host;proxy_set_header X-Real-IP $remote_addr;proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;proxy_set_header X-Forwarded-Proto $scheme;limit_req zone=limit burst=20 nodelay;    listen 8080(B*(B;;;;6;66;666;0;;9;78
+add_header X-Frame-Options "SAMEORIGIN" always;78
+add_header X-Content-Type-Options "nosniff" always;78
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;78
+}78
+}78
+}   }		  (BM-D(B DOS Format(BM-A(B Append	       (BM-B(B Backup File(BC(B Cancel		   (BM-M(B Mac Format(BM-P(B Prepend		(B^T(B Browse(BFile Name to Write: /etc/nginx/sites-available/loja.local							     (B (B[ Writing... ](B(B (B(B[ Wrote 31 lines ](B(B^O(B Write Out	 (B^W(B Where Is     (B^K(B Cut		 (B^T(B Execute(B^C(B Location	   (BM-U(B Undo(BX(B Exit  (B^R(B Read File    (B^\(B Replace	   (B^U(B Paste	       (B^J(B Justify(B^/(B Go To Line	 (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete allow 8080/tcp
+sudo ufw allow 6669/tcparcansel@Main:/mnt/c/Users/cyblp$ sudo ufw delete allow 8080/tcp
+sudo ufw allow 6669/tcp
+Rule deleted
+Rule deleted (v6)
+Rule added
+Rule added (v6)
+arcansel@Main:/mnt/c/Users/cyblp$ sudo ufw allow 6669/tcpdelete allow 8080/tcpnano /etc/nginx/sites-available/loja.localginx -tano /etc/nginx/sites-available/loja.local
+(B==(B(B[ Reading... ](B(B[ Read 31 lines ](B(B	 GNU nano 7.2				  /etc/nginx/sites-available/loja.local					     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redoserver {listen 6669;server_name loja.local;access_log /var/log/nginx/loja_access.log;error_log /var/log/nginx/loja_error.log;location ~ /\.(env|log|bak|git) {deny all;return 403;}location ~ \.\./ {deny all;return 403;}location / {proxy_pass http://127.0.0.1:3000;(Bproxy_set_header Host $host;proxy_set_header X-Real-IP $remote_addr;proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;proxy_set_header X-Forwarded-Proto $scheme;limit_req zone=limit burst=20 nodelay;78
+add_header X-Frame-Options "SAMEORIGIN" always;78
+add_header X-Content-Type-Options "nosniff" always;78
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;78
+}78
+}78
+>arcansel@Main:/mnt/c/Users/cyblp$ sudo rm /etc/nginx/sites-enabled/defaultsudo rm /etc/nginx/sites-enabled/default
+arcansel@Main:/mnt/c/Users/cyblp$ sudo nginx -tsudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+arcansel@Main:/mnt/c/Users/cyblp$ sudo systemctl restart nginxsudo systemctl restart nginx
+arcansel@Main:/mnt/c/Users/cyblp$ 127.0.0.1 loja.local127.0.0.1 loja.local
+127.0.0.1: command not found
+arcansel@Main:/mnt/c/Users/cyblp$ 127.0.0.1 loja.localsudo systemctl restart nginxnginx -trm /etc/nginx/sites-enabled/defaultnano /etc/nginx/sites-available/loja.localhostshostshostshostshostshostshosts
+(B==(B(B[ Reading... ](B(B[ Read 12 lines ](B(B	 GNU nano 7.2					       /etc/hosts						     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo# This file was automatically generated by WSL. To stop automatic generation of this file, add the following entry to(B>(B# [network]# generateHosts = false(B127.0.0.1       (Blocalhost127.0.1.1	  (BMain.localdomain	    (BMain# The following lines are desirable for IPv6 capable hosts(B::1     ip6-localhost ip6-loopbackfe00::0 ip6-localnetff00::0 ip6-mcastprefixff02::1 ip6-allnodesff02::2 ip6-allrouters127.0.0.1locahost(B*(B	    loja.local		   (BM-D(B DOS Format(BM-A(B Append		(BM-B(B Backup File(BC(B Cancel		    (BM-M(B Mac Format(BM-P(B Prepend		 (B^T(B Browse(BFile Name to Write: /etc/hosts											      (B (B[ Writing... ](B(B (B(B[ Wrote 12 lines ](B(B^O(B Write Out	  (B^W(B Where Is     (B^K(B Cut	  (B^T(B Execute(B^C(B Location	    (BM-U(B Undo(BX(B Exit  (B^R(B Read File	(B^\(B Replace	    (B^U(B Paste	(B^J(B Justify(B^/(B Go To Line	  (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/hosts127.0.0.1 loja.localsudo systemctl restart nginxnginx -trm /etc/nginx/sites-enabled/defaultnano /etc/nginx/sites-available/loja.local
+(B==(B(B[ Reading... ](B(B[ Read 31 lines ](B(B	 GNU nano 7.2				  /etc/nginx/sites-available/loja.local					     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redoserver {listen 6669;server_name loja.local;access_log /var/log/nginx/loja_access.log;error_log /var/log/nginx/loja_error.log;location ~ /\.(env|log|bak|git) {deny all;return 403;}location ~ \.\./ {deny all;return 403;}location / {proxy_pass http://127.0.0.1:3000;(Bproxy_set_header Host $host;proxy_set_header X-Real-IP $remote_addr;proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;proxy_set_header X-Forwarded-Proto $scheme;limit_req zone=limit burst=20 nodelay;78
+add_header X-Frame-Options "SAMEORIGIN" always;78
+add_header X-Content-Type-Options "nosniff" always;78
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;78
+}78
+}78
+>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/nginx/sites-available/loja.localhosts
+(B==(B(B[ Reading... ](B(B[ Read 12 lines ](B(B	 GNU nano 7.2					       /etc/hosts						     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo# This file was automatically generated by WSL. To stop automatic generation of this file, add the following entry to(B>(B# [network]# generateHosts = false(B127.0.0.1       (Bloja.local127.0.1.1	   (BMain.localdomain	     (BMain# The following lines are desirable for IPv6 capable hosts(B::1     ip6-localhost ip6-loopbackfe00::0 ip6-localnetff00::0 ip6-mcastprefixff02::1 ip6-allnodesff02::2 ip6-allrouters127.0.0.1lo(B*(B loja.locall loja.localo loja.localc loja.locala loja.locall loja.localh loja.localo loja.locals loja.localt loja.local		  (BM-D(B DOS Format(BM-A(B Append	       (BM-B(B Backup File(BC(B Cancel		   (BM-M(B Mac Format(BM-P(B Prepend		(B^T(B Browse(BFile Name to Write: /etc/hosts											     (B (B[ Writing... ](B(B (B(B[ Wrote 12 lines ](B(B^O(B Write Out	 (B^W(B Where Is     (B^K(B Cut		 (B^T(B Execute(B^C(B Location	   (BM-U(B Undo(BX(B Exit  (B^R(B Read File    (B^\(B Replace	   (B^U(B Paste	       (B^J(B Justify(B^/(B Go To Line	 (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/hosts
+(B==(B(B[ Reading... ](B(B[ Read 12 lines ](B(B	 GNU nano 7.2					       /etc/hosts						     (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	  (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	 (B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo# This file was automatically generated by WSL. To stop automatic generation of this file, add the following entry to(B>(B# [network]# generateHosts = false(B127.0.0.1       (Blocalhost loja.local127.0.1.1	     (BMain.localdomain	       (BMain# The following lines are desirable for IPv6 capable hosts(B::1	 ip6-localhost ip6-loopbackfe00::0 ip6-localnetff00::0 ip6-mcastprefixff02::1 ip6-allnodesff02::2 ip6-allrouters>arcansel@Main:/mnt/c/Users/cyblp$ sudo nano /etc/wsl.confsudo nano /etc/wsl.conf
+(B==(B(B[ Reading... ](B(B[ Read 5 lines ](B(B	GNU nano 7.2					     /etc/wsl.conf						    (B(B^G(B Help(B^O(B Write Out    (B^W(B Where Is	 (B^K(B Cut(B^T(B Execute(B^C(B Location     (BM-U(B Undo(B^X(B Exit(B^R(B Read File	(B^\(B Replace(B^U(B Paste(B^J(B Justify(B^/(B Go To Line   (BM-E(B Redo(B[boot](Bsystemd=true(B[user](Bdefault=arcanseldefault=arcanse(B*(B(B[network](BgenerateHosts = false		   (BM-D(B DOS Format(BM-A(B Append		(BM-B(B Backup File(BC(B Cancel		    (BM-M(B Mac Format(BM-P(B Prepend		 (B^T(B Browse(BFile Name to Write: /etc/wsl.conf										      (B (B[ Writing... ](B(B (B(B[ Wrote 8 lines ](B(B^O(B Write Out	 (B^W(B Where Is     (B^K(B Cut		 (B^T(B Execute(B^C(B Location	   (BM-U(B Undo(BX(B Exit  (B^R(B Read File    (B^\(B Replace	   (B^U(B Paste	       (B^J(B Justify(B^/(B Go To Line	 (BM-E(B Redo>arcansel@Main:/mnt/c/Users/cyblp$ exit
+exit
+
+Script done on 2026-03-10 18:30:38+00:00 [COMMAND_EXIT_CODE="0"]
